@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>关于我们</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/guanyuwomen.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			img{
+				vertical-align: middle;
+			}
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">关于我们</span>
+			<div class="right" style="color: #f62525; font-size: 0.93rem;">
+				
+			</div>
+		</div>
+		
+		<div class="actionbar_white" style="height: 56px; background: #f0f0f0;"></div>
+		<div class="content" id="aboutUse">
+			<span class="juzhong"><img src="../../util/img/logo1.png" style="width: 4.68rem;margin-top: 2.28rem;"/> </span>
+			<div class="text-01">版本v<span id="versions"></span></div>
+		</div>
+		<div class="horizontal content_01" onclick="openYonghuxieyi()">
+				<span>用户协议</span>
+				<div class="zhanweifu" style="text-align: right;color: #999999;margin-right: 0.5REM;"><!--当前缓存5.MB--></div>
+				<span class="item_right youjiantou"></span>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/shezhi.js"></script>
+		<script>
+			$(function(){
+				$("#versions").text(versionNumber);
+			})
+		</script>
+	</body>
+</html>

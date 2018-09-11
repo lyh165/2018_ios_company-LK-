@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>修改昵称</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../util/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/xiugaincheng.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css"/>
+		<style type="text/css">
+			img{
+				vertical-align: middle;
+			}
+			input::-webkit-input-placeholder{
+				color: #333333;
+
+				}
+
+			input::-moz-input-placeholder{
+				color: #333333;
+				}
+			input::-ms-input-placeholder{
+				color: #333333;
+				}
+			.mt{
+				margin-top: 42vh !important;
+			}
+			.dv_dialog_box1{
+				z-index: 889;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">修改昵称</span>
+			<div class="right" style="color: #f62525; font-size: 0.93rem;">
+				
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 3.5rem; background: #f0f0f0;"></div>
+		
+		<ul class="content">
+			<li class="horizontal">
+				<input type="text" id="userName" style="background: none; border: none;margin-top: 0.2rem;"/>
+			</li>
+		</ul>
+		<span class="text_01">昵称长度为6-18位，一个汉字为两个字符</span>
+		
+		<div class="dibu">
+			<button class="button" onclick="submit_name()">提交</button>
+		</div>
+		<div class="dv_dialog_box1" id="update_name_successful" style="display: none;">
+			<div class="dv_dialog mt">
+				<div class="dv_title">修改成功</div>
+				<div class="dividerccc" style="background:#CCCCCC; height: 1px ; border:none"></div>
+				<div class="close horizontal">
+					<div class="dialog_ok" onclick="sure()">确定</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/xiugainchang.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>在线商城</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../util/base.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/commodity.css" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.indexedlist.css" />
+		<style type="text/css">
+			.mui-indexed-list-search {
+				line-height: 4rem;
+			}
+			
+			input[type=color],
+			input[type=date],
+			input[type=datetime-local],
+			input[type=datetime],
+			input[type=email],
+			input[type=month],
+			input[type=number],
+			input[type=password],
+			input[type=search],
+			input[type=tel],
+			input[type=text],
+			input[type=time],
+			input[type=url],
+			input[type=week],
+			select,
+			textarea {
+				height: 34px;
+				padding-left: 2.1rem;
+				line-height: 34px;
+				font-size: 14px;
+				background-color: rgb(243, 243, 243);
+				border: none;
+			}
+			
+			.mui-icon.mui-icon-search {
+				position: absolute;
+				top: 5px;
+				left: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<!-- 主界面不动、菜单移动 -->
+		<!-- 侧滑导航根容器 -->
+
+		<header class="actionbar">
+			<div class="mui-input-row mui-search">
+				<span class="mui-icon mui-icon-search"></span>
+				<input type="text" id="sousuo" class="" oninput="getSearchShopPro()" placeholder="输入瓷砖中文名/石材名">
+			</div>
+			<div class="right rightiMessage"><img id="wodexiaoxi" src="../../../form_mobile/util/img/u5.png" />
+			</div>
+		</header>
+		<div class="mui-content">
+			<ul class="ul_1" id="searchData_1">
+				<li class="li">
+					<a href="../xiangqing/shop.html" style="right: 5px;">	
+						<input type="text" style="display: none;"> 	
+							<div class="mui-media-object">
+								<img src="http://www.kexingzhineng.com/Tile_Admin/file/2018-07/201807261113292041532574809204.jpg" style="width: 10.18rem;">
+							</div>  
+					</a>  	
+					<div class="mui-media-body">罗马瓷砖 </div>	
+					<div class="price1">
+						<span class="price">￥100 <del>￥120</del></span>
+						<span class="shopping" >库存1000</span>
+					</div>
+				</li>
+				<li class="li">
+					<a href="../xiangqing/shop.html" style="right: 5px;">	
+						<input type="text" style="display: none;"> 	
+							<div class="mui-media-object">
+								<img src="http://www.kexingzhineng.com/Tile_Admin/file/2018-07/201807261113292041532574809204.jpg" style="width: 10.18rem;">
+							</div>  
+					</a>  	
+					<div class="mui-media-body">罗马瓷砖 </div>	
+					<div class="price1">
+						<span class="price">￥100 <del>￥120</del></span>
+						<span class="shopping" >库存1000</span>
+					</div>
+				</li>
+				<li class="li">
+					<a href="../xiangqing/shop.html" style="right: 5px;">	
+						<input type="text" style="display: none;"> 	
+							<div class="mui-media-object">
+								<img src="http://www.kexingzhineng.com/Tile_Admin/file/2018-07/201807261113292041532574809204.jpg" style="width: 10.18rem;">
+							</div>  
+					</a>  	
+					<div class="mui-media-body">罗马瓷砖 </div>	
+					<div class="price1">
+						<span class="price">￥100 <del>￥120</del></span>
+						<span class="shopping" >库存1000</span>
+					</div>
+				</li>
+				<li class="li">
+					<a href="../xiangqing/shop.html" style="right: 5px;">	
+						<input type="text" style="display: none;"> 	
+							<div class="mui-media-object">
+								<img src="http://www.kexingzhineng.com/Tile_Admin/file/2018-07/201807261113292041532574809204.jpg" style="width: 10.18rem;">
+							</div>  
+					</a>  	
+					<div class="mui-media-body">罗马瓷砖 </div>	
+					<div class="price1">
+						<span class="price">￥100 <del>￥120</del></span>
+						<span class="shopping" >库存1000</span>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../form_util/mui/js/mui.indexedlist.js"></script>
+		<script src="../../../form_util/mui/js/update.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/commodity.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

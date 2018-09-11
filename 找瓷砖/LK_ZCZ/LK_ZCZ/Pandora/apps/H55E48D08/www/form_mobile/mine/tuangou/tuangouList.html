@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>瓷砖快报</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../html/tab4/wodefabu/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../../form_mobile/util/base.css" />
+		<link rel="stylesheet" type="text/css" href="cizhuankuaibao.css" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			img {
+				vertical-align: middle;
+			}
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left " id="back">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<div class="text" style="color: #333333;position: relative;">
+				<span>团购列表</span>
+			</div>
+			<div class="right" style="color: #f62525; font-size: 0.93rem;">
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 3.75rem; background: #f0f0f0;"></div>
+		<div id="groupList">
+
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js "></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js "></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js "></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js "></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js "></script>
+		<script src="../../../form_util/util/util_js/strUtil.js "></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js "></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js "></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../util/base.js "></script>
+		<script src="../../../form_util/mui/js/mui.picker.min.js" type="text/javascript"></script>
+		<script src="../../shopping_cart/order/js/shopping_evakuate.js"></script>
+		<script src="js/groupList.js"></script>
+		<script>
+			/*返回键的设置*/
+			mui.init({
+				keyEventBind: {
+					backbutton: true //打开back按键监听
+				}
+			});
+			/*返回键调用的函数*/
+			mui.back = function() {
+				back();
+			}
+			document.getElementById('back').addEventListener('tap', function() {
+				back();
+			})
+
+			function back() {
+				var page = plus.webview.getWebviewById("index");
+				if(page) {
+					page.evalJS("initData()");
+				}
+				mui.openWindow({
+					url: "../../index/index.html",
+					id: "index"
+				});
+			}
+		</script>
+	</body>
+
+</html>

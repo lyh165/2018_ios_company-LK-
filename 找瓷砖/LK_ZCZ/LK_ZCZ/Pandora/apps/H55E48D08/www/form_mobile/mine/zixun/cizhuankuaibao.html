@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>瓷砖快报</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../html/tab4/wodefabu/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../../form_mobile/util/base.css" />
+		<link rel="stylesheet" type="text/css" href="../tuangou/cizhuankuaibao.css" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			img {
+				vertical-align: middle;
+			}
+			
+			.lianxikefu {
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<div class="text" style="color: #333333;position: relative;">
+				<span>瓷砖</span>
+				<div class="text_one">快报</div>
+			</div>
+			<div class="right" style="color: #f62525; font-size: 0.93rem;">
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 3.75rem; background: #f0f0f0;"></div>
+		<div id="groupList">
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js "></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js "></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js "></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js "></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js "></script>
+		<script src="../../../form_util/util/util_js/strUtil.js "></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js "></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js "></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../util/base.js "></script>
+		<script>
+			$(function() {
+				getUtilBulletinList();
+			})
+			function initData(){
+				getUtilBulletinList();
+			}
+			function getUtilBulletinList() {
+				var jsonAjax = {
+					"url": "app_getUtilBulletinList.do",
+					"methodName": "updateOver_back",
+					"overMethodName": "getUtilBulletinList_back",
+				}
+				getAjaxData(jsonAjax);
+			}
+
+			function getUtilBulletinList_back(jsonObj) {
+				var jsonInfo = strToJson(jsonObj.data);
+				var data = strToJson(jsonInfo.data);
+				var num = 1;
+				var content = '';
+				if(data == '') {
+					content += '<span class="content-text">没查询到相关数据</span>';
+				} else {
+					$.each(data, function(e, obj) {
+						num++;
+						content += '<div class="content_product" onclick=openBulletinDetail("' + obj.bulletin_id + '") style="height: 7.2rem;">';
+						content += '<span class="content-text1">' + obj.bulletin_title + '</span>';
+						content += '<div class="content-img"><img src="' + path_url_img + obj.bulletin_logo + '" style="width: 7.75rem;height: 5.3rem"/></div>';
+						content += '<span class="content-text2">' + obj.bulletin_num + '人浏览</span></div>';
+					});
+				}
+				$("#groupList").html(content);
+			}
+
+			function openBulletinDetail(id) {
+				var page = plus.webview.getWebviewById("shouhoudizhi");
+				if(page) {
+					page.evalJS("initData('"+id+"')");
+				}
+				mui.openWindow({
+					url: "cizhuankuaibao_detail.html",
+					id: 'cizhuankuaibao_detail',
+					extras: { //这是要传的数据
+						"bulletin_id":id,
+					},
+				});
+			}
+		</script>
+	</body>
+
+</html>

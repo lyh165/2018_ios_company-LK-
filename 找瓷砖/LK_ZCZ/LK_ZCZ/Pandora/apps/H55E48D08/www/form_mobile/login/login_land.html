@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<style type="text/css">
+			input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{
+				margin-bottom: 0;
+				border: none;
+				width: 50%;
+			}
+			.picture img{
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="actionbar">
+			<div class="left1"></div>
+			<span class="text" style="color: #333333;">登录</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 60px;"></div>
+
+		<div class="item_register">
+			<span class="picture"><img src="../util/img/u1.png"/></span>
+			<span class="account_number">账号</span>
+			<span>
+				<input type="tel" class="edt_gg" placeholder="请输入手机号" id="user_phone">
+			</span>
+		</div>
+		<div class="item_register1">
+			<span class="picture"><img src="../util/img/u2.png"/></span>
+			<span class="account_number">密码</span>
+			<span>
+				<input type="password" class="edt_gg" placeholder="请输入密码" id="user_paw">
+			</span>
+		</div>
+
+		<div class="gordon1"><button class="gordon" id="login">登录</button></div>
+		<div class="forget_the_password" id="forget">忘记密码？</div>
+		<div class="lmmediate_registration" id="registra">立即注册</div>
+
+		<script src="../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../util/base.js"></script>
+		<script src="../util/push.js"></script>
+		<script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+		<script src="js/login_land.js"></script>
+		<script>
+//			mui.init({
+//				keyEventBind: {
+//					backbutton: true //打开back按键监听
+//				}
+//			});
+//			mui.back = function() {
+//				plus.runtime.quit();
+//			}
+		</script>
+	</body>
+
+</html>

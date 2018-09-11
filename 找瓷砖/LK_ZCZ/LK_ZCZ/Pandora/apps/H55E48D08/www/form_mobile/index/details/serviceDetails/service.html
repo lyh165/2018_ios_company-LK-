@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>服务详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../../util/base.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../../form_util/mui/css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../../../../form_util/mui/css/mui.picker.css" />
+		<link href="css/service.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../mine/gerenxinxi/css/dialog.css"/>
+	</head>
+
+	<body>
+		<input type="text" value="" id="service_phone" style="display: none;" />
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">服务详情</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="gekai" style="height: 3.75rem;"></div>
+		<div class="content">
+			<div class="top">
+				<span class="text_01" id="service_name"></span>
+				<span class="text_02" id="service_money"></span>
+				<div class="text_03" id="shop_name"></div>
+			</div>
+			<div class="top_01">
+				<span class="text_01">工作地址</span>
+			</div>
+			<div class="top_01" style="margin-bottom: 0.75rem;">
+				<span><img src="../../../util/img/u13.png" style="width: 0.7rem; margin-bottom: 1rem;"/></span>
+				<span class="text_04" id="shop_add" onclick="openAddress()"></span>
+				<span><img src="../../../util/img/jiantou.png" style="width: 0.43rem;position: absolute;right: 1rem;top: 1rem;"/></span>
+			</div>
+			<div class="top_01">
+				<span class="text_01">服务描述</span>
+			</div>
+			<div class="div1a">
+				<span class="text_01 mleft" id="service_describe"></span>
+			</div>
+			
+			<div class="zhiwei">
+				<div id="serviceDetails">
+					<img id="serviceImg" src="" style="width: 21.5rem; margin-top: 0.75rem;" />
+
+				</div>
+				<div style="height: 10rem;"></div>
+
+			</div>
+		</div>
+		<div class="dibu">
+			<div class="xiaoxi">
+				<span><img src="../../../util/img/xiaox01.png" style="width: 1.38rem;margin-bottom: 0.8rem;margin-right: 0.5rem;"/>在线咨询</span>
+			</div>
+			<div class="dianhua" onclick="changeDelete()">
+				<span><img src="../../../util/img/dianhua01.png" style="width: 1.38rem;margin-bottom: 0.8rem;margin-right: 0.5rem;"/>打电话</span>
+			</div>
+		</div>
+		<div class="dv_dialog_box1" id="phoneTanKuang" style="display: none;">
+			<div class="dv_dialog">
+				<div class="dv_title" id="user_phone"></div>
+				<div class="dividerccc" style="background:#CCCCCC; height: 1px ; border:none"></div>
+				<div class="close horizontal">
+					<div class="dialog_cancel" onclick="changname_cancel()">取消</div>
+					<a id="playFactoryPhone" class="dialog_ok" style="background: #F62525;color: #ffffff;border-radius: 0 0 10px 0">呼叫</a>
+				</div>
+			</div>
+		</div>
+		<script src="../../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../../../../form_util/mui/js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../util/base.js"></script>
+		<script src="js/serviceDetails.js"></script>
+	</body>
+
+</html>

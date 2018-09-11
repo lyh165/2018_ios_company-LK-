@@ -1,0 +1,38 @@
+body{
+	background: #F0F0F0;
+}
+ul {
+	
+	height: 100%;
+	background: #FFFFFF;
+	padding: 0;
+}
+li {
+	padding-left: 0.93rem;
+	list-style-type: none;
+	height: 3.12rem; ;
+	line-height: 3.12rem;
+	font-size: 0.93rem;
+	border-bottom: 1px solid #E5E5E5;
+}
+.content{
+	
+	width: 100vw;
+	background: white;
+	margin-bottom: 10px;
+}
+
+.dibu {
+	width: 100vw;
+	height: 3rem;
+	text-align: center;
+	margin-top:1rem ;
+}
+.button {
+	width: 92vw;
+	height: 2.75rem;
+	border: none;
+	background: #f62525;
+	color: #FFFFFF;
+	border-radius: 5px;
+}

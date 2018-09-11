@@ -1,0 +1,444 @@
+body {
+	padding: 0;
+	background: #F0F0F0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.top_01 {
+	width: 100vw;
+	padding-top: 0.75rem;
+	background: white;
+	padding-left: 1rem;
+	border-bottom: 1px solid #E5E5E5;
+	position: relative;
+	padding-bottom: 1rem;
+}
+
+.top_02 {
+	position: absolute;
+	right: 1rem;
+	top: 0.75rem;
+	text-align: center;
+}
+
+.top_03 {
+	margin-top: 0.8rem;
+	width: 92vw;
+	position: relative;
+	margin-bottom: 0.75rem;
+}
+
+.top_04 {
+	line-height: 2.18rem;
+	padding: 0 1rem;
+	margin-top: 0.8rem;
+	width: 100vw;
+	position: relative;
+	margin-bottom: 0.75rem;
+	background: white;
+}
+
+.top_05 {
+	line-height: 3.12rem;
+	height: 2.2rem;
+	width: 92vw;
+	position: relative;
+	margin-bottom: 0.75rem;
+	background: white;
+}
+
+.top_06 {
+	background: white;
+}
+
+.jiage {
+	color: #F62525;
+}
+
+.jiage1 {
+	color: #999999;
+}
+
+.zhiwei {
+	color: #333333;
+	border: none;
+	padding-top: 0.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background: white;
+}
+
+.text_01 {
+	width: 19.31rem;
+	font-size: 0.93rem;
+}
+
+.text_02 {
+	padding: 0 0.1rem;
+	border: 1px solid #F62525;
+	border-radius: 2px;
+	font-size: 0.62rem;
+	color: #F62525;
+}
+
+.text_03 {
+	margin-left: 0.2rem;
+}
+
+.text_04 {
+	font-size: 0.75rem;
+	color: #999999;
+}
+
+.text_05 {
+	width: 3rem;
+	height: 1.28rem;
+	text-align: center;
+	font-size: 0.81rem;
+	color: white;
+	background: #fca11f;
+	position: absolute;
+	right: 0rem;
+	top: 0.8rem;
+	border-radius: 2px;
+}
+
+.text_06 {
+	font-size: 0.93rem;
+	color: #333333;
+}
+
+.text_07 {
+	font-size: 0.93rem;
+	color: #999999;
+}
+
+.text_08 {
+	font-size: 0.81rem;
+	color: #333333;
+	text-align: 1.81rem;
+}
+
+.text_09 {
+	font-size: 0.68rem;
+	color: #999999;
+	position: absolute;
+	right: 0rem;
+}
+
+.text_10 {
+	text-align: center;
+	line-height: 2.18rem;
+	background: white;
+	margin-top: 0.75rem;
+	font-size: 0.75rem;
+	color: #999999;
+}
+
+.pinlun {
+	margin-top: 0.6rem;
+	width: 21.5rem;
+	height: 1.8rem;
+	border: 1px solid #d4d4d4;
+	color: #999999;
+	line-height: 1.75rem;
+	text-align: center;
+	font-size: 13px;
+}
+
+.content_product {
+	width: 100vw;
+	margin-top: 0.625rem;
+	height: 5.75rem;
+	background: white;
+	position: relative;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+.content_product span {
+	display: inline-block;
+}
+
+.product {
+	width: 4.37rem;
+	height: 4.37rem;
+	position: absolute;
+	margin-top: 0.60rem;
+	left: 0.93rem;
+}
+
+.content1-text {
+	height: 4.55rem;
+	position: absolute;
+	top: 0.5rem;
+	left: 5.7rem;
+	right: 3rem;
+}
+
+.content-text1 {
+	font-size: 0.93rem;
+	color: #333333;
+}
+
+.content-text2 {
+	position: absolute;
+	top: 0.2rem;
+	padding-top: 0.02rem;
+	width: 2.06rem;
+	height: 0.87rem;
+	background: #2f96ee;
+	font-size: 0.62rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.87rem;
+	margin-left: 0.3rem;
+	border-radius: 2px;
+}
+
+.content-text3 {
+	color: #999999;
+	font-size: 0.75rem;
+}
+
+.xinxi {
+	position: absolute;
+	bottom: 0;
+}
+
+.content-text4 {
+	padding: 0.05rem 0.4rem;
+	background: none;
+	font-size: 0.62rem;
+	color: #F62525;
+	text-align: center;
+	line-height: 0.87rem;
+	border-radius: 2px;
+	border: 1px solid #F62525;
+	margin:0 0.1rem;
+}
+
+.content-text5 {
+	padding: 0.05rem 0.4rem;
+	background: none;
+	font-size: 0.62rem;
+	color: #4dd2e2;
+	text-align: center;
+	line-height: 0.87rem;
+	border-radius: 2px;
+	border: 1px solid #4dd2e2;
+	margin:0 0.1rem;
+}
+
+.content-text6 {
+	padding: 0.05rem 0.1rem;
+	background: none;
+	font-size: 0.62rem;
+	color: #5cb3f5;
+	text-align: center;
+	line-height: 0.87rem;
+	border-radius: 2px;
+	border: 1px solid #5cb3f5;
+	margin:0 0.1rem;
+}
+
+.content-text7 {
+	margin-bottom: 0.625rem;
+	padding-bottom: 0.2rem;
+	padding-top: 0.2rem;
+	background: #FFFFFF;
+	font-size: 0.78rem;
+	color: #333333;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.right_arrow {
+	position: absolute;
+	right: 1rem;
+	top: 2rem;
+}
+
+.dibu {
+	background: white;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	border-top: #d5d5d7 1px solid;
+}
+
+.kefu {
+	font-size: 0.68rem;
+	color: #666666;
+	float: left;
+	width: 19.33vw;
+	text-align: center;
+}
+
+.lianxi {
+	display: block;
+}
+
+.shopping {
+	font-size: 1.06rem;
+	float: left;
+	text-align: center;
+	width: 7.18rem;
+	background: #fca11f;
+	color: #FFFFFF;
+	line-height: 3.1rem;
+}
+
+.buy {
+	float: right;
+	text-align: center;
+	width: 7.18rem;
+	background: #F62525;
+	color: #FFFFFF;
+	line-height: 3.1rem;
+}
+
+.weixin {
+	display: block;
+	color: #999999;
+	font-size: 1rem;
+}
+
+.weixin img {
+	margin-top: 1.68rem;
+	margin-bottom: 0.5rem;
+	width: 3.06rem;
+}
+
+.lianjie {
+	float: left;
+	color: #333333;
+	width: 25vw;
+	text-align: center;
+}
+
+.shop1 img {
+	width: 5.46rem;
+	height: 5.46rem;
+	position: absolute;
+	/*top: -1rem;*/
+	z-index: 999;
+}
+
+.jiage_01 {
+	position: absolute;
+	left: 7rem;
+	font-size: 1.31rem;
+	color: #F62525;
+	margin-top: 0.5rem;
+}
+.jiage_01>span{
+	display: inline-block;
+	margin-bottom: 1.5rem;
+}
+.number {
+	font-size: 0.81rem;
+}
+
+.color {
+	color: #999999;
+	font-size: 0.87rem;
+	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.color_01 {
+	font-size: 0.87rem;
+	padding: 0.1rem 0.5rem;
+	border: 1px solid #F62525;
+	border-radius: 2px;
+	color: #F62525;
+	margin-bottom: 0.5rem;
+}
+
+.di {
+	display: initial;
+}
+
+.color_02 {
+	border: 1px solid #333333;
+	color: #333333;
+}
+
+.canshu {
+	font-size: 1.06rem;
+	color: #333333;
+}
+
+.name {
+	color: #999999;
+	font-size: 0.87rem;
+}
+
+.name_01 {
+	position: absolute;
+	left: 7rem;
+	color: #333333;
+}
+
+.mui-popover.mui-popover-action .mui-table-view small {
+	display: initial;
+}
+
+.mui-popover.mui-popover-action .mui-table-view {
+	margin: 0;
+}
+
+.mui-table-view.mui-grid-view .mui-table-view-cell {
+	padding: 0;
+	margin-top: 15vh;
+}
+
+.mui-table-view-cell .mui-media {
+	border-radius: none;
+}
+
+.mui-table-view.mui-grid-view {
+	padding: 0;
+}
+
+.mui-media img {
+	width: 100vw;
+}
+
+.mui-slider-indicator .mui-number {
+	margin-top: 1rem;
+}
+
+.mui-slider-item {
+	margin-top: 15vh;
+}
+
+.mui-table-view {
+	position: absolute;
+	bottom: 0;
+}
+
+.mui-table-view-cell {
+	background: #FFFFFF;
+}
+
+.slider-img {
+	width: 100vw;
+	height: 20rem;
+	margin-top: 1rem;
+}
+
+.mui-table-view {
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.dibu button {
+	border: none !important;
+	color: white;
+}
+.mui-table-view-cell.mui-active {
+    background-color: #fff;
+}

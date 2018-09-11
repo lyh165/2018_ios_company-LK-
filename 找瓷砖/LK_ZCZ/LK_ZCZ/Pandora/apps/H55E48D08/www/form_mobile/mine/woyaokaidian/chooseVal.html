@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选择城市</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../form_util/mui/css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.indexedlist.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../../form_mobile/util/base.css" rel="stylesheet" />
+		<link href="../../index/css/index.css" rel="stylesheet" />
+		<link href="../../index/css/choose-the-city.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-bar-nav~.mui-content {
+			    padding-top: 3.75rem;
+			    background: #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav actionbar">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left header1-back mui-icon mui-icon-arrowleft mui-action-back"></a>
+			<span class="text" style="color: #333333;">选择属性值</span>
+		</header>
+		<div class="mui-content">
+			<!--<div id='list' class="mui-indexed-list">
+				<div style="height: 1rem;">
+				</div>
+				<div class="mui-indexed-list-bar">
+					<a>A</a>
+					<a>B</a>
+					<a>C</a>
+					<a>D</a>
+					<a>E</a>
+					<a>F</a>
+					<a>G</a>
+					<a>H</a>
+					<a>I</a>
+					<a>J</a>
+					<a>K</a>
+					<a>L</a>
+					<a>M</a>
+					<a>N</a>
+					<a>O</a>
+					<a>P</a>
+					<a>Q</a>
+					<a>R</a>
+					<a>S</a>
+					<a>T</a>
+					<a>U</a>
+					<a>V</a>
+					<a>W</a>
+					<a>X</a>
+					<a>Y</a>
+					<a>Z</a>
+				</div>
+				<div class="mui-indexed-list-alert"></div>
+				<div class="mui-indexed-list-inner">
+					<div class="mui-indexed-list-empty-alert">没有数据</div>
+					<ul class="mui-table-view" id="table_1">
+						<li data-value="ZUH" data-tags="ZhuHaiSanZao" class="mui-table-view-cell mui-indexed-list-item">珠海三灶机场</li>
+					</ul>
+				</div>
+			</div>-->
+			
+			<ul class="propertyUl">
+				
+			</ul>
+			<div class="dataList" style="display: none;">
+				<img src="../../util/img/wodedingdan.png"/>
+				<p>暂无数据</p>
+			</div>
+			
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.indexedlist.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="../../../form_util/mui/js/mui.indexedlist.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			var attribute_id = '';
+			function initData(id) {
+				attribute_id = id;
+				var json = {
+					"attribute_id": attribute_id,
+				}
+				var jsonAjax = {
+					"url": "app_getProAttributeValById.do",
+					"jsonData": json,
+					"methodName": "updateOver_back",
+					"overMethodName": "initData_back",
+				}
+				getAjaxData(jsonAjax);
+			}
+
+			function initData_back(jsonObj) {
+				var jsonData = strToJson(jsonObj.data);
+				var data = strToJson(jsonData.data);
+				var countdata = '';
+				
+				if(data.length!=0){
+					for(var i = 0;i<data.length;i++){
+						jQuery('.propertyUl').append('<li>'+ data[i].attribute_val +'</li>')
+					}	
+				} else{
+					jQuery('.dataList').show();
+				}
+				
+//				for(var i in data) {
+//					countdata += '<li data-group="' + i + '" class="mui-table-view-divider mui-indexed-list-group">' + i + '</li>';
+//					var datas = data[i]
+//					for(var k in datas) {
+//						countdata += '<li class="mui-table-view-cell mui-indexed-list-item One_of_the_brands" onclick="chooseVal(\'' + datas[k].attribute_val + '\')">' + datas[k].attribute_val + '</li>';
+//					}
+//				}
+//				$("#table_1").html(countdata);
+//				mui.ready(function() {
+//					var header = document.querySelector('header.mui-bar');
+//					var list = document.getElementById('list');
+//					list.style.height = (document.body.offsetHeight - header.offsetHeight) + 'px';
+//					window.indexedList = new mui.IndexedList(list);
+//				});
+			}
+			
+			jQuery('body').on('tap','.propertyUl li',function(){
+				jQuery(this).addClass('select').siblings().removeClass('selthis');
+				chooseVal(jQuery(this).text());
+			})
+			
+			
+			
+			function chooseVal(name) {
+				var json = {
+					"attribute_val": name,
+					"attribute_id": attribute_id,
+				}
+				//将参数传回上一个页面"json"
+				var mainPage = plus.webview.currentWebview().opener(); //拿到父页面对象
+				mui.fire(mainPage, "setAttributeVal", json); //fire通讯
+				mui.back();
+			}
+		</script>
+	</body>
+
+</html>

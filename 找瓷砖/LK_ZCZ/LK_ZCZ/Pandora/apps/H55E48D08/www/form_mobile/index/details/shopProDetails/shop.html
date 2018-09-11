@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>商品详情页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link href="../../../util/base.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../../form_util/mui/css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../../../../form_util/mui/css/mui.picker.css" />
+		<link rel="stylesheet" type="text/css" href="../../../util/swiper/css/swiper.min.css" />
+		<link href="../../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../../util/mui.min.css" rel="stylesheet" />
+		<link href="css/shop.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../mine/shezhi/css/dialog.css" />
+		<style type="text/css">
+			.mui-popover.mui-popover-action .mui-table-view .mui-table-view-cell:after {
+				height: 0px;
+				background-color: white;
+			}
+			
+			.color666 {
+				color: #666666;
+				display: inline-block;
+				font-size: 0.9rem;
+				margin-right: 0.2rem;
+			}
+			
+			.color666.color_01 {
+				padding: 0.1rem 0.5rem;
+				border: 1px solid #F62525;
+				border-radius: 2px;
+				color: #F62525;
+				margin-bottom: 0.5rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="display: none;">
+			<input type="text" id="product_id" value="" />
+			<input type="text" id="shop_id" value="" />
+			<input type="text" id="sku_id" value="" />
+			<input type="text" name="user_phone" id="user_phone" value="" />
+			<input type="text" id="shop_name" value="" />
+			<input type="text" id="sku_name" value="" />
+		</div>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">商品详情页</span>
+			<div class="right">
+				<!--分享-->
+				<a href="#picture" id="fenxiang"><img src="../../../util/img/fanhui.png" style="width: 1rem;" /></a>
+			</div>
+		</div>
+		<a href="#img">
+			<div id="slider-banner" class="swiper-container" style="width: 100vw;text-align: center;">
+				<!--<div id="slider" class="swiper-container mui-slider" style="margin-top: -0.4rem;">-->
+				<!--轮播-->
+				<div class="swiper-wrapper" id="fristCarousel">
+					<div class="swiper-slide ">
+						<img class="slider-img" src="" style="width: 100% ;" />
+					</div>
+					<div class="swiper-slide ">
+						<img class="slider-img" src="" style="width: 100% ;" />
+					</div>
+				</div>
+			</div>
+		</a>
+		<div class="content">
+			<div class="top_01">
+				<div class="text_01">
+					<span class="text_02" id="ziyingma">自营</span>
+					<span class="text_03" id="product_name"></span>
+				</div>
+				<div class="top_02" id="shouchang">
+				</div>
+				<div class="top_03">
+					<span class="jiage"><small>￥</small><span id="product_money">0</span></span>
+					<!--<span class="jiage1"><del><small>￥<span id="product_money_1">0</span></small>-->
+					</del>
+					</span>
+					<div class="text_04">库存<span id="suk_inventory">0</span>件</div>
+					<a href="#tuangou" style="display: ;" id="A_bulk">
+						<div class="text_05">团购</div>
+					</a>
+				</div>
+			</div>
+			<div class="top_04" id="proAttribute">
+				<span class="text_06">产品参数</span>
+			</div>
+			<div class="top_01">
+				<span class="text_07">评价(<span id="EvaluationCount">0</span>)</span>
+				<div style="width: 92vw; height: 1px;margin-top: 0.5rem;"></div>
+				<!--用户评价-->
+				<div id="UserEvaluation">
+				</div>
+				<div class="pinlun" onclick="openshopProAllEvaluation()">查看全部评论</div>
+			</div>
+			<div class="top_06">
+				<div class="text_10">商品详情介绍</div>
+				<span id="spxqjs">
+				<img src="" style="width: 100vw;"/>
+				<img src="" style="width: 100vw;"/>
+				</span>
+			</div>
+			<!--公司-->
+			<div class="content_product" onclick="openIBusinenss()">
+				<span class="product"><img id="shop_logo" src="" style="width: 4.37rem"/></span>
+				<div class="content1-text">
+					<span class="content-text1" id="shop_names">----</span>
+					<span id="shop_subject"><span class="content-text2" >公司</span></span>
+					<div class="content-text3">经营范围：<span id="shop_range"></span></div>
+					<div class="xinxi" id="shop_service">
+						<span class="content-text4">代加工</span>
+						<span class="content-text5">代设计</span>
+						<span class="content-text6">免费打扮</span>
+					</div>
+				</div>
+				<div class="right_arrow"><img src="../../../util/img/jiantou.png" style="width: 0.53rem" /></div>
+			</div>
+			<div class="content-text7" id="shop_profile">公司简历：是一家从事海洋生物开发销售的。</div>
+			<div style="height: 5rem; background: white;"></div>
+		</div>
+		<!--底部-->
+		<div class="dibu">
+			<div class="kefu" onclick="changeDelete()">
+				<span><img src="../../../util/img/kefu01.png" style="height: 1.15rem;margin-top: 0.5rem;" /> </span>
+				<span class="lianxi">联系客服</span>
+			</div>
+			<div class="kefu" onclick="openShoppingCar()">
+				<span><img src="../../../util/img/gwuche01.png" style="height: 1.15rem;margin-top: 0.5rem;" /> </span>
+				<span class="lianxi">购物车</span>
+			</div>
+			<a href="#buy" class="getProSku">
+				<div class="buy">
+					<button style="width: 100%; height: 3.1rem;" id="ljgm"></button>
+				</div>
+			</a>
+			<a href="#shopCar" class="getProSku">
+				<div class="shopping">
+					<button style="width: 100%; height: 3.1rem;" id="jrgwc"></button>
+				</div>
+			</a>
+		</div>
+		<!--分享-->
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view" style="margin: 0;">
+				<li class="mui-table-view-cell" style="height: 8.5rem;margin: 0;padding-left: 0;padding-right: 0;">
+					<div class="lianjie">
+						<span class="weixin" onclick="shareHref(1)"><img src="../../../util/img/weixin.png" /></span>
+						<span class="weixin">微信好友</span>
+					</div>
+					<div class="lianjie">
+						<span class="weixin qq" onclick="shareHref(2)"><img src="../../../util/img/qq.png" /></span>
+						<span class="weixin">QQ好友</span>
+					</div>
+					<div class="lianjie">
+						<span class="weixin weibo" onclick="shareHref(3)"><img src="../../../util/img/xinlang.png" /></span>
+						<span class="weixin">新浪微博</span>
+					</div>
+					<div class="lianjie">
+						<span class="weixin pyquan" onclick="shareHref(0)"><img src="../../../util/img/pyquan.png" /></span>
+						<span class="weixin">朋友圈</span>
+					</div>
+				</li>
+				<li class="mui-table-view-cell" style="text-align: center;">
+					<a href="#picture" style="color: #666666;"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		<!--加入购物车-->
+		<div id="shopCar" class="mui-popover mui-popover-action mui-popover-bottom" style="height: 28.78rem;overflow:visible;">
+			<ul class="mui-table-view" style="margin: 0;overflow:visible;text-align: left; ">
+				<li class="mui-table-view-cell" style="width:100vw;height: 5.68rem;margin: 0;padding-left: 1rem;padding-right: 0;position: relative;z-index: 666;overflow: visible;">
+					<span class="shop1"><img id="shop_proImg_1" src="" /></span>
+					<div class="jiage_01">
+						<span><small style="font-size: 0.81rem;">￥</small><span id="shop_pro_money_1" class="shop_money"></span><small></small></span>
+						<div style="color: #999999;font-size: 0.81rem;">商品编号：<span id="product_id_1"></span></div>
+					</div>
+					<span onclick=" closeDiv_1()"><img src="../../../util/img/chacha010101.png" style="width: 0.75rem;position: absolute;right: 1rem;" /></span>
+				</li>
+				<li class="mui-table-view-cell" style="position:relative;width: 100vw;background: #FFFFFF; padding-bottom: 5rem;">
+					<div id="guige1">
+						<!--<div class="color Title">规格</div>
+						<span class="color666 color_01">金色 </span>
+						<span class="color666">金色 </span>
+						<div class="color Title">规格</div>
+						<span class="color666 color_01">金色 </span>
+						<span class="color666">金色 </span>
+						<div class="color Title">规格</div>
+						<span class="color666 color_01">金色 </span>
+						<span class="color666">金色 </span>-->
+					</div>
+					<div class="color di">数量</div>
+					<div class="mui-numbox" style="width: 5.56rem; height: 1.62rem; padding: 0 1.68rem;float: right;">
+						<button onclick="getSumMoney_1(0)" class="mui-btn mui-btn-numbox-minus" type="button" style=" width: 1.68rem; background: white;">-</button>
+						<input class="mui-input-numbox" type="number" onblur="getSumMoney_1(0)" style="color: #222222;" id="shopProNum_1" value="1" />
+						<button onclick="getSumMoney_1(1)" class="mui-btn mui-btn-numbox-plus" type="button" style="width: 1.68rem; background: white;">+</button>
+					</div>
+				</li>
+				<li class="mui-table-view-cell" style="width:100vw;text-align: center;border-radius: 0px;position: fixed;bottom: 0;" onclick="get_car_shopisCZ()">
+					<a style="background-color: #F62525;color: #FFFFFF;border-radius: 0px;"><b>确定</b></a>
+				</li>
+			</ul>
+
+		</div>
+		<!--购买-->
+		<div id="buy" class="mui-popover mui-popover-action mui-popover-bottom" style="height: 28.78rem;overflow:visible;">
+			<ul class="mui-table-view" style="margin: 0;overflow:visible;text-align: left; ">
+				<li class="mui-table-view-cell" style="width:100vw;height: 5.68rem;margin: 0;padding-left: 1rem;padding-right: 0;position: relative;z-index: 666;overflow: visible;">
+					<span class="shop1"><img id="shop_proImg_2" src="" /></span>
+					<div class="jiage_01">
+						<span><small style="font-size: 0.81rem;">￥</small><span id="shop_pro_money_2" class="shop_money"></span><small></small></span>
+						<div style="color: #999999;font-size: 0.81rem;">商品编号：<span id="product_id_2"></span></div>
+					</div>
+					<span onclick=" closeDiv_2()"><img src="../../../util/img/chacha010101.png" style="width: 0.75rem;position: absolute;right: 1rem;" /></span>
+				</li>
+				<li class="mui-table-view-cell" style="position:relative;width: 100vw;background: #FFFFFF; padding-bottom: 5rem;">
+					<div id="guige2">
+						<!--<span class="color666 color_01" style="" id="">  金色  </span>
+							<span class="color666" style="" id="">  金色  </span>-->
+					</div>
+					<div class="color di">数量</div>
+					<div class="mui-numbox" style="height: 1.62rem; padding: 0 1.68rem;float: right;">
+						<button onclick="getSumMoney_2(0)" class="mui-btn mui-btn-numbox-minus" type="button" style=" width: 1.68rem; background: white;">-</button>
+						<input class="mui-input-numbox" type="number" onblur="getSumMoney_2(0)" style="color: #222222; overflow: initial;text-overflow:initial" id="shopProNum_2" value="1" />
+						<button onclick="getSumMoney_2(1)" class="mui-btn mui-btn-numbox-plus" type="button" style="width: 1.68rem; background: white;">+</button>
+					</div>
+				</li>
+				<li class="mui-table-view-cell" style="width:100vw;text-align: center;border-radius: 0px;position: fixed;bottom: 0;" onclick="addOrderData()">
+					<a href="" style="background-color: #F62525;color: #FFFFFF;border-radius: 0px;"><b>确定</b></a>
+				</li>
+			</ul>
+		</div>
+		<!--团购-->
+		<div id="tuangou" class="mui-popover mui-popover-action mui-popover-bottom" style="height: 28.78rem;overflow:visible;">
+			<ul class="mui-table-view" style="margin: 0;overflow:visible;text-align: left; ">
+				<li class="mui-table-view-cell" style="width:100vw;height: 5.68rem;margin: 0;padding-left: 1rem;padding-right: 0;position: relative;z-index: 666;overflow: visible;">
+					<span class="shop1"><img id="shop_proImg_3" src="" /></span>
+					<div class="jiage_01">
+						<span><small style="font-size: 0.81rem;">￥</small><span id="shop_pro_money_3" class="shop_money"></span><small></small></span>
+						<div style="color: #999999;font-size: 0.81rem;">商品编号：<span id="product_id_3"></span></div>
+					</div>
+					<span onclick=" closeDiv_3()"><img src="../../../util/img/chacha010101.png" style="width: 0.75rem;position: absolute;right: 1rem;" /></span>
+				</li>
+				<li class="mui-table-view-cell" style="position:relative;width: 100vw;background: #FFFFFF; padding-bottom: 5rem;">
+					<div id="guige3">
+						<!--<span class="color666 color_01" style="" id="">  金色  </span> 
+							<span class="color666" style="" id="">  金色  </span>-->
+					</div>
+					
+				</li>
+				<li class="mui-table-view-cell" style="width:100vw;text-align: center;border-radius: 0px;position: fixed;bottom: 0;" onclick="openUser_group()">
+					<a href="" style="background-color: #F62525;color: #FFFFFF;border-radius: 0px;"><b>确定</b></a>
+				</li>
+			</ul>
+		</div>
+		<!--参数-->
+		<div id="canshu" class="mui-popover mui-popover-action mui-popover-bottom" style="height: 28.78rem;">
+			<ul class="mui-table-view" style="margin: 0;overflow: visible;text-align: left; margin-bottom: 50vm;">
+				<li class="mui-table-view-cell" style="width:100vw;height: 5.68rem;margin: 0;padding-left: 1rem;padding-top: 1.43rem;position: relative;z-index: 666;">
+					<div style="width: 100vw;text-align: center;">
+						<span class="canshu">产品参数</span>
+					</div>
+					<div style="margin-top: 1.1rem;">
+						<span class="name">品牌</span>
+						<span class="name name_01" id="brand_name">a</span><br>
+						<span class="name">品牌</span>
+						<span class="name name_01" id="brand_name">a</span>
+					</div>
+				</li>
+				<span id="shopPro_sku_name">
+					<div class="color" style="margin-left: 4rem;">2<span class="color_01" style="margin-left: 5rem;" id="">1</span></div>
+		</span>
+		<li class="mui-table-view-cell" style="position: relative;width: 100vw;height: 2.81rem;"></li>
+		</ul>
+		<div class="mui-table-view-cell" style="width:100vw;text-align: center;border-radius: 0px;position: fixed;bottom: 0;z-index: 999;">
+			<a href="#canshu" style="background-color: #F62525;color: #FFFFFF;border-radius: 0px;"><b>完成</b></a>
+		</div>
+		</div>
+		<!--查看图片-->
+		<div id="img" class="mui-popover mui-popover-action mui-popover-bottom" style="overflow: visible;">
+			<div class="mui-slider" style="background: #FFFFFF ;height: 100vh;overflow: visible;">
+				<div class="mui-slider-group mui-slider-loop" id="CKTP" style="width: 100vw; height: 70vh;z-index: 666;overflow: visible;">
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<div class="mui-grid-view">
+							<div class="mui-media">
+								<a href="#img">
+									<img class="mui-media-object" src="" style="z-index: 999;">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mui-slider-indicator" style="position: static;background-color: #fff;margin-top: 1rem;z-index: 999; position: fixed; bottom: 1.2rem;">
+					<div class="mui-number">
+						<span style="font-size: 1.3rem;color: #333333;">1</span> /<span id="maxNum"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dv_dialog_box1" id="phoneTanKuang" style="display: none;">
+			<div class="dv_dialog">
+				<div class="dv_title" id="play_phone"></div>
+				<div class="dividerccc" style="background:#CCCCCC; height: 1px ; border:none"></div>
+				<div class="close horizontal">
+					<div class="dialog_cancel" onclick="changname_cancel()">取消</div>
+					<a id="playFactoryPhone" class="dialog_ok" style="background: #F62525;color: #ffffff;border-radius: 0 0 10px 0">呼叫</a>
+				</div>
+			</div>
+		</div>
+		<script src="../../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../../../util/swiper/js/swiper.min.js"></script>
+		<script src="../../../../form_util/mui/js/mui.poppicker.js"></script>
+		<script src="../../../util/base.js"></script>
+		<script src="../../../util/push.js"></script>
+		<script src="js/shop.js"></script>
+	</body>
+
+</html>

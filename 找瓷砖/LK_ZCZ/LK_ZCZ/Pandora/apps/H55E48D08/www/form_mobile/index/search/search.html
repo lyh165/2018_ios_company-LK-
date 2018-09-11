@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>搜索页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../util/base.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../form_util/mui/css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../../../form_util/mui/css/mui.picker.css" />
+		<link href="css/search.css" rel="stylesheet" />
+
+		<style type="text/css">
+			a {
+				vertical-align: middle;
+			}
+			
+			.mui-search .mui-placeholder {
+				font-size: 0.81rem;
+				text-align: left;
+				left: 0.2rem;
+			}
+			.mui-popup-button.mui-popup-button-bold {
+			    color: white !important;
+			    background-color: #F62525;
+			}
+			.mui-popup-button {
+			    color: #333 !important;
+			}
+			.mui-popup-title {
+				display: none !important;
+			}
+			.mui-popup-title+.mui-popup-text{
+				font-size: 1.2rem;
+				padding: 1rem 0;
+			}
+		</style>
+		<style type="text/css">
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body style="height: 0;">
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<input type="text" id="searchText" value="" style="display: none;" />
+		<div class="actionbar">
+			<div class="mui-input-row mui-search" style="width: 80vw; left: 1rem; top: 0.4rem;">
+				<input type="search" value="" id="sousuo" onsearch="getBlurSearch()"  placeholder="" class="mui-input-clear" style="border-radius: 40px;">
+			</div>
+
+			<div class="right" style="color: #333333; position: absolute;  right: 0rem; margin-right: 0rem; width: 60px; height: 60px; line-height: 60px;">
+				<span onclick="getindex()">取消</span>
+			</div>
+		</div>
+		<div style="height: 3.75rem;"></div>
+		<div class="hot">
+			<div class="hot_one">热门搜索</div>
+			<div class="history-search" id="searchHot">
+
+			</div>
+		</div>
+		<div style="height: 10px; background: #E5E5E5;"></div>
+		<ul id="searchHistory">
+
+		</ul>
+		<div class="empty">
+			<span><img src="../../util/img/del.png" style="width: 0.87rem; vertical-align: middle;"/></span>
+			<span onclick="clearHistorySearch()">清空历史搜索</span>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../../../form_util/mui/js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/search.js"></script>
+
+	</body>
+
+</html>

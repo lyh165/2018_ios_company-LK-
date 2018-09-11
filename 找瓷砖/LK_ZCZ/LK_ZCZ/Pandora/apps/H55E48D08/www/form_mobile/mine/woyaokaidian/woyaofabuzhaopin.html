@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>我要发布招聘</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css"/>
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../../form_mobile/util/base.css" rel="stylesheet" />
+		<link href="css/woyaofabuzhaopin.css" rel="stylesheet" />
+		<style>
+			input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{
+				width: 70vw;
+				border: none;
+				position: absolute;
+				right: 1rem;
+				top: 0.1rem;
+				font-size: 0.93rem;
+				padding: 0;
+				padding-left: 0.5rem;
+				background: none;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">我要发布招聘</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="gekai" style="height: 3.75rem;"></div>
+		
+		<ul class="content">
+			<li class="item" id="recruit_name">
+				<span>招聘岗位</span>
+				<div class="gangwei">
+					<div class="button">大区经理</div>
+					<div class="button">销售</div>
+					<div class="button">设计</div>
+					<div class="button">行政</div>
+				</div>
+				<div class="gangwei">
+					<div class="button">销售</div>
+					<div class="button">策划</div>
+					<div class="button">产品开发</div>
+					<div class="button">市场总监</div>
+				</div>
+				<div class="gangwei">
+					<div class="button">跟单</div>
+					<div class="button">培训</div>
+					<div class="button">会计</div>
+					<div class="button">文案</div>
+				</div>
+			</li>
+			<li class="item item_01">
+				<input type="text" id='other_recruit_name' style="width: 94vw;" placeholder="其他岗位" />
+			</li>
+			<li class="item item_02" id="recruit_treatment">
+				<span>岗位待遇</span>
+				<div class="gangwei">
+					<div class="button">3000</div>
+					<div class="button">4000</div>
+					<div class="button">5000</div>
+				</div>
+			</li>
+			<li class="item item_01">
+				<input type="text" id='other_recruit_treatment' style="width: 94vw;" placeholder="其他薪酬" />
+			</li>
+			<li class="item item_03" >
+				<span>职位描述</span>
+				<textarea class="yaoqiu" rows="" cols="" placeholder="请填写对岗位的要求以及企业福利" id="recruit_requirement"></textarea>
+			</li>
+			<li class="item item_04">
+				<span>简历邮箱</span>
+				<input class="input" type="text" placeholder="请填写邮箱地址" id="recruit_mailbox"/>
+			</li>
+			<li class="item item_04">
+				<span style="margin-right: 1rem;">联系人</span>
+				<input class="input" type="text" placeholder="请填写联系人" id="recruit_person"/>
+			</li>
+			<li class="item item_04">
+				<span>联系电话</span>
+				<input class="input" type="text" placeholder="请填写联系电话" id="recruit_phone"/>
+			</li>
+			<li class="item item_04">
+				<span>工作地址</span>
+				<input class="input" type="text" placeholder="请填写工作地址" id="recruit_phone"/>
+			</li>
+			<li class="" style="border: none;">
+				<div class="Reason">
+					<span>招聘环境</span>
+					<span>[最多5张]</span>
+					<span class="floatRight" onclick="zhutu()">再增加一张</span>
+				</div>
+				<div class="recruit" id="imgUl">
+					<div class="recruitImg" onclick="imgInit('recruitImg1')">
+						<img class="" src="../../util/img/sctuZp.png" id="recruitImg1">
+					</div>
+					<div class="recruitImg" onclick="imgInit('recruitImg2')">
+						<img class="" src="../../util/img/sctuZp.png" id="recruitImg2">
+					</div>
+					<div class="recruitImg" onclick="imgInit('recruitImg3')">
+						<img class="" src="../../util/img/sctuZp.png" id="recruitImg3">
+					</div>
+					<div class="recruitImg" onclick="imgInit('recruitImg4')">
+						<img class="" src="../../util/img/sctuZp.png" id="recruitImg4">
+					</div>
+					<div class="recruitImg uploadImg" onclick="imgInit('recruitImg5')" style="display: none;">
+						<img class="" src="../../util/img/sctuZp.png" id="recruitImg5">
+					</div>
+				</div>
+			</li>
+			<li class="item_logo" >
+				<span class="logo_text logoImg">公司logo</span>
+				<div class="logo_img" onclick="imgInit('setImg')">
+					<img src="../../util/img/logozp.png" id="recruit_logo">
+				</div>
+			</li>
+		</ul>
+		<button type="button" class="mui-btn blue saveBtn">确认发布</button>
+
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/recruit.js"></script>
+
+		<script type="text/javascript">
+			mui.init({
+				
+			});
+		</script>
+		<script>
+			$(function() {
+				$("#recruit_name .button").click(function() {
+//				    $("#recruit_name .button").removeClass("button_01");
+				    $(this).toggleClass("button_01");
+				});
+				$("#recruit_treatment .button").click(function() {
+				   $("#recruit_treatment .button").removeClass("button_01");
+				    $(this).addClass("button_01");
+				});
+			})
+			function zhutu() {
+				$('.uploadImg').css('display', 'inline-block')
+			}
+		</script>
+
+	</body>
+
+</html>

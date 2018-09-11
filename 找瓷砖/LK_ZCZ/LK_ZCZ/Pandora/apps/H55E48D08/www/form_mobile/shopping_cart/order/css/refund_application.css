@@ -1,0 +1,37 @@
+body{
+	background: #F0F0F0;
+}
+.content_completion{
+	background: white;
+	width: 100%;
+	text-align: center;
+	height: 6.75rem;
+	
+}
+.content_completion span{
+	display: inline-block;	
+	
+}
+.evaluate img{
+	margin-top: 1.2rem;
+	width: 2.25rem;
+	height: 2.62rem;
+}
+.little_hint{
+	font-size: 0.625rem;
+	color: #999999;
+	margin:0.5rem 0 1.75rem 0.62rem;
+}
+.gordon1{
+	text-align: center;
+	
+}
+.gordon{
+	width: 22.187rem;
+	background: #f62525;
+	height: 2.75rem;
+	border-radius: 10px;
+	text-align: center;
+	color: white;
+	font-size: 1.12rem;
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑资料</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/bianjiziliao.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			img {
+				vertical-align: middle;
+			}
+			
+			.mui-navigate-right {
+				position: relative;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left" onclick="back()">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">编辑资料</span>
+			<div class="right" style="color: #f62525; font-size: 0.93rem;">
+
+			</div>
+		</div>
+
+		<div class="actionbar_white" style="height: 3.5rem; background: #f0f0f0;"></div>
+
+		<div class="content_01 mui-clearfix line-hei mar-top-1 mui-navigate-right" onclick="imgInit('setUserImg',this)">
+			<span>头像</span>
+			<span class="user-img"><img id="userImg" src="../../../form_mobile/util/img/fabuzhaoping.png" /></span>
+
+		</div>
+		<div class="content_01 content_03 line-hei mui-navigate-right" onclick="openName()">
+			<span>昵称</span>
+
+			<span class="user" id="userName"></span>
+
+		</div>
+		<div class="content_01 content_02 line-hei mui-navigate-right">
+			<span>性别</span>
+
+			<a href="#gender"><span class="user" id="userSex"></span></a>
+
+		</div>
+		<div class="content_01 content_03 mar-top-1" onclick="openComp()">
+			<div class="mui-navigate-right">现工作企业</div>
+
+			<div id="userComp"></div>
+		</div>
+		<div class="content_01 content_03 mar-top-1" onclick="openPastComp()">
+			<div class="mui-navigate-right">过往工作企业</div>
+			<div id="pastComp">
+			</div>
+		</div>
+		<div class="content_01 content_03 mar-top-1" onclick="openPosition()">
+			<div class="mui-navigate-right">目前职业</div>
+			<div id="userPosition">
+			</div>
+		</div>
+		<div class="content_01 content_03 mar-top-1" onclick="openFuturePosition()">
+			<div class="mui-navigate-right">职业愿景</div>
+			<div id="future">
+			</div>
+		</div>
+		<div id="gender" class="mui-popover mui-popover-action mui-popover-bottom" style="padding: 0;">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#gender" id="changWomen" style="color: #333;">女</a>
+				</li>
+				<li class="mui-table-view-cell" style="border: none;">
+					<a href="#gender" id="changMen" style="color: #333;">男</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#gender" style="color: #F62525;">取消</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/bianjizhiliao.js"></script>
+		<script>
+			/*返回键的设置*/
+			mui.init({
+				keyEventBind: {
+					backbutton: true //打开back按键监听
+				}
+			});
+
+			/*返回键调用的函数*/
+			mui.back = function() {
+				back();
+			}
+
+			function back() {
+				var page = plus.webview.getWebviewById("mine");
+				if(page) {
+					page.evalJS("initData()");
+				}
+				mui.openWindow({
+					url: "mine.html",
+					id: "mine"
+				});
+			}
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,45 @@
+.text{
+	color: #333333 !important; 
+}
+ul li{
+	list-style-type: none;
+	padding: 10px !important;
+	margin: 0 !important;
+	background: white;
+	-webkit-padding-start: 0 !important;
+}
+.name img{
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	border-radius: 100%;
+	margin-right: 0.2rem;
+}
+.name span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.8rem;
+}
+.time{
+	font-size: 0.7rem;
+	color: #999;
+	margin-top: 0.3rem;
+	margin-right: 0.5rem;
+}
+.mui-content {
+    background-color: white;
+}
+ul, menu, dir {
+    -webkit-padding-start: 10px;
+}
+.context{
+	margin-top: 0.5rem;
+	font-size: 0.9rem;
+	margin-bottom: 0.5rem;
+}
+.img img{
+	width: 5.3rem;
+	height: 5.3rem;
+	margin-top: 0.5rem;
+	
+}

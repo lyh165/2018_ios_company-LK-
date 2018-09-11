@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>修改登录密码</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/xiugaidenglumima.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			img {
+				vertical-align: middle;
+			}
+			.mt{
+				margin-top: 42vh !important;
+			}
+			.dv_dialog_box1{
+				z-index: 889;
+			}
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">修改登录密码</span>
+			<div class="right" style="color: #f62525; font-size: 0.93rem;">
+
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 3.5rem; background: #f0f0f0;"></div>
+		<div class="dv_dialog_box1" id="update_paw_successful" style="display: none;">
+			<div class="dv_dialog mt">
+				<div class="dv_title">修改登陆密码成功</div>
+				<div class="dividerccc" style="background:#CCCCCC; height: 1px ; border:none"></div>
+				<div class="close horizontal">
+					<div class="dialog_ok" onclick="update_paw_successful_sure()" style="border-radius: 0 0 10px 10px">确定</div>
+				</div>
+			</div>
+		</div>
+		<ul class="content">
+			<li class="horizontal">
+				<span>旧密码</span>
+				<input class="input" id="oldPaw" type="text" placeholder="请输入旧密码" style="font-size: 0.93rem; border: none;position: absolute;top: 1rem;left: 5.1rem; width: initial;" />
+			</li>
+			<li class="horizontal ">
+				<span>新密码</span>
+				<input class="input" id="newPaw" type="password" placeholder="请输入新密码" style="font-size: 0.93rem; border: none;position: absolute;top: 1rem;left: 5.1rem; width: initial;" />
+			</li>
+			<li class="horizontal">
+				<span>确认密码</span>
+				<input class="input" id="newPaw2" type="password" placeholder="请输入确认密码" style="font-size: 0.93rem; border: none;position: absolute;top: 1rem;left: 5.1rem; width: initial;" />
+			</li>
+		</ul>
+
+		<div class="dibu">
+			<button class="button" onclick="changeUpdate()">确认修改</button>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/updatePaw.js"></script>
+	</body>
+
+</html>

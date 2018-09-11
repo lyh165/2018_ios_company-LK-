@@ -1,0 +1,43 @@
+body{
+	background: #FFFFFF;
+}
+
+.content{
+	margin-top: 1.25rem;
+	height: 100%;
+	text-align: center;
+	width: 100vw;
+	background: none;
+	margin-bottom: 10px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.top {
+	font-size:1.18rem ;
+	color: #333333;
+}
+.text-01 {
+	font-size: 0.87rem;
+	color: #999999;
+	margin-top: 1rem;
+}
+.content_text {
+	margin-top: 1rem;
+	text-align: left;
+	font-size: 0.81rem;
+	color: #333333;
+}
+.dibu {
+	width: 100vw;
+	height: 3rem;
+	text-align: center;
+	margin-top:1rem ;
+}
+.button {
+	width: 92vw;
+	height: 2.75rem;
+	border: none;
+	background: #f62525;
+	color: #FFFFFF;
+	border-radius: 5px;
+}

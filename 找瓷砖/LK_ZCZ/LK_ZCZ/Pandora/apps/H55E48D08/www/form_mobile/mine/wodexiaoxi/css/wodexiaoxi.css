@@ -1,0 +1,258 @@
+body {
+	background: #f0f0f0;
+}
+
+li {
+	list-style-type: none;
+	background: #FFFFFF;
+}
+ul {
+	padding: 0;
+	background: #F0F0F0;
+}
+
+a {
+	vertical-align: middle;
+}
+.text-01 {
+	line-height: 30px;
+	 background: #F0F0F0;
+	 text-align: center;
+	 vertical-align: middle;
+}
+.activity {
+	width: 22.25rem;
+	height: 13.43rem;
+	background: #FFFFFF;
+	border: 1px solid #F0F0F0;
+	margin: auto;
+	text-align: center;
+	position: relative;
+}
+.text2 {
+	position: absolute;
+	left: 0.5rem;
+	bottom: 2rem;
+	color: #999999;
+}
+.text3 {
+	position: absolute;
+	left: 0.5rem;
+	bottom: 0.6rem;
+	color: #999999;
+}
+.content {
+	
+	
+}
+.wuliu {
+	height: 5.93rem;
+	padding-left: 1rem;
+	position: relative;
+	border-bottom: 1px solid #E5E5E5;
+}
+.shop_kefu {
+	height: 4.06rem;
+	background: #FFFFFF;
+	border-top: 1px solid #E5E5E5;
+	border-bottom: 1px solid #E5E5E5;
+	padding: 0.5rem;
+	position: relative;
+}
+.text_2 {
+	position: absolute;
+	top: 0.5rem;
+	margin-left: 0.3rem;
+	
+}
+.text_3 {
+	padding: 0.1rem 0.2rem;
+	height: 0.81rem;
+	background: #F62525;
+	color: #FFFFFF;
+	position: absolute;
+	top: 0.8rem;
+	margin-left: 5rem;
+	font-size: 0.56rem;
+	border-radius: 2px;
+	line-height: 0.83rem;
+}
+.dianpu {
+	background: #fcbb68;
+	margin-left: 10.2rem;
+}
+.shop_one {
+	margin-left:1rem ;
+}
+
+.xiangqing {
+	width: 16.5rem;
+	height: 4.4rem;
+	position: absolute;
+	top: 0.8rem;
+	left: 6rem;
+}
+.xiangqing_one {
+	width: 15.5rem;
+	margin-left: 1rem;
+}
+.tihuo {
+	width: 3.5rem;
+	height: 0.87rem;
+	border: 1px solid #FF0000;
+	font-size:0.58rem ;
+	line-height: 0.87rem;
+	text-align: center;
+	color: #FF0000;
+	border-radius: 1px;
+}
+.daida {
+	width: 3.5rem;
+	height: 0.87rem;
+	border: 1px solid #4dd2e2;
+	font-size:0.58rem ;
+	line-height: 0.87rem;
+	text-align: center;
+	color: #4dd2e2;
+	border-radius: 1px;
+    position: absolute;
+    left: 4rem;
+    top: 1.4rem;
+}
+.posun {
+	width: 3.5rem;
+	height: 0.87rem;
+	border: 1px solid #5cb3f5;
+	font-size:0.58rem ;
+	line-height: 0.87rem;
+	text-align: center;
+	color: #5cb3f5;
+	border-radius: 1px;
+    position: absolute;
+    left: 8rem;
+    top: 1.4rem;
+}
+.didian {
+	margin-top: 1rem;
+}
+.didian_one {
+	margin-top: 0.6rem;
+}
+.jiage {
+	color: #F62525;
+	font-size: 1rem;
+}
+.danwei {
+	color: #F62525;
+	font-size: 0.75rem;
+	margin-left: -0.2rem;
+}
+.zhuanweifu {
+	margin-left: 7rem;
+}
+.gangzhou {
+	font-size: 0.75rem;
+	color: #666666;
+	margin-left: 1.5rem;
+}
+.jiantou {
+	font-size: 0.75rem;
+	color: #666666;
+	margin-left: 0.3rem;
+	margin-right: 0.3rem;
+}
+.shopping_cart{
+	text-align: center;
+	margin-top: 10.88rem;
+}
+.shopping_cart img{
+	width: 3.5rem;
+}
+.text4{
+	margin-top: 0.87rem;
+	text-align: center;
+}
+.text_4{
+	font-size: 0.81rem;
+	color: #999999;
+	margin-left: 0.3rem;
+}
+.text_5{
+	font-size: 0.87rem;
+	color: #999999;
+	position: absolute;
+	right: 0.8rem;
+}
+.shenhe {
+	position: absolute;
+	right: 0;
+	font-size: 0.75rem;
+	color: #F62525;
+	margin-left: 2rem;
+}
+.dizhi {
+	height: 2.12rem;
+	position: relative;
+	padding-left: 1rem;
+	border-bottom: 1px solid #E5E5E5;
+}
+.dingweidizhi {
+	font-size:0.81rem ;
+	color: #666666;
+	line-height: 2.12rem;
+	margin-left: 1rem;
+
+
+}
+.xiugai {
+	font-size:0.81rem ;
+	color: #666666;
+	margin-left: 2.8rem;
+	position: absolute;
+	right: 0;
+}
+
+.content-select{
+	position: fixed;
+	bottom: 0rem;
+	left: 0;
+	height: 2.81rem;
+	width: 67%;
+	background: white;
+	padding-left: 0.56rem;
+	font-size: 0.75rem;
+	color: #222222;
+	
+}
+.total{
+	position: absolute;
+	top: 0.7rem;
+	left: 2rem;
+	font-size: 0.93rem;
+}
+.settlement{
+	position: fixed;
+	bottom: 0rem;
+	right: 0;
+	height: 2.81rem;
+	width: 33%;
+	background: #f62525;
+	text-align: center;
+	line-height: 2.81rem;
+	color: white;
+}
+/*快报详情*/
+.detailtext{
+	background: #FFF;
+	padding: 4.75rem 1rem 1rem;
+	color: #333333;
+}
+.mui-scroll-wrapper {
+    overflow-y: scroll;
+}
+.mui-slider-indicator.mui-segmented-control {
+    position: fixed;
+    top: 3.75rem;
+    width: 100%;
+    left: 0;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>我要发布服务</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link href="../../../form_util/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../../form_mobile/util/base.css" rel="stylesheet" />
+		<link href="css/woyaofabufuwu.css" rel="stylesheet" />
+		<style>
+		input[type=color],
+			input[type=date],
+			input[type=datetime-local],
+			input[type=datetime],
+			input[type=email],
+			input[type=month],
+			input[type=number],
+			input[type=password],
+			input[type=search],
+			input[type=tel],
+			input[type=text],
+			input[type=time],
+			input[type=url],
+			input[type=week],
+			select,
+			textarea {
+				width: 70vw;
+				border: none;
+				position: absolute;
+				right: 1rem;
+				top: 0.26rem;
+				font-size: 0.93rem;
+				padding: 0;
+				padding-left: 0.5rem;
+				background: none;
+			}
+		
+		.fb {
+			line-height: 3rem;
+			width: 50%;
+			margin: 0 auto;
+			background-color: red;
+			color: #fff;
+			text-align: center;
+			border-radius: 1.5rem;
+		}
+		html,
+		body {
+			height: 100%;
+		}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="actionbar">
+			<div class="left mui-action-back" onclick="back()">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">我要发布服务</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="gekai" style="height: 3.75rem;"></div>
+		<ul class="content">
+			<li class="item">
+				<span class="item_01">服务名称</span>
+				<input class="fuwumingcheng" type="text" id="service_name" placeholder="填写服务名称" />
+			</li>
+			<li class="item">
+				<span class="item_01" style="margin-right: 2.4rem;">价格</span>
+				<input class="fuwumingcheng" type="text" id="service_money" placeholder="填写多少元/吨" />
+			</li>
+			<li class="item">
+				<span class="item_01">计价单位</span>
+				<input class="fuwumingcheng" type="text" id="service_unit" placeholder="填写计价单位" />
+			</li>
+			<li class="item">
+				<span class="item_01">联系电话</span>
+				<input class="fuwumingcheng" type="text" id="service_phone" placeholder="填写联系电话" />
+			</li>
+			<!--<li class="horizontal item">
+				<span class="item_01">服务描述</span>
+				<div class="zhanweifu" onclick="goBtn()"></div>
+				<input style="display: none;" id="service_img" />
+				<a href="fuwumiaoshu.html">
+					<div class="item_right youjiantou"></div>
+				</a>
+			</li>-->
+			<div class="item_logo">
+				<span class="logo_text fwms wlms">服务描述</span>
+				<textarea class="yaoqiu" rows="" cols="" placeholder="服务描述" id="service_describe"></textarea>
+				<div class="mt10" id="imgList">
+					<span onclick="imgInit('setImg1')"><img src="../../util/img/tjmstp.png" id="setImg1"/></span>
+					<span onclick="imgInit('setImg2')"><img src="../../util/img/tjmstp.png" id="setImg2"/></span>
+					<span onclick="imgInit('setImg3')"><img src="../../util/img/tjmstp.png" id="setImg3"/></span>
+
+				</div>
+			</div>
+			<div class="item_logo mt1">
+				<span class="logo_text">公司logo</span>
+				<div class="logo_img img-img" onclick="imgInit('setImg')">
+					<img src="../../util/img/logozp.png" id="service_logo">
+				</div>
+			</div>
+			<!--<div type="submit" class="mui-btn mui-btn-blue saveBtn">确认发布</div>-->
+		</ul>
+		<div class="fb">确认发布</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/service.js"></script>
+		<script type="text/javascript">
+			mui.init({
+
+			});
+		</script>
+
+	</body>
+
+</html>

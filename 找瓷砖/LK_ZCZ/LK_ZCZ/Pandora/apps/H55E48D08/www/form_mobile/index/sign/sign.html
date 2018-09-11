@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>签到</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link href="../../../form_mobile/util/mui.min.css" rel="stylesheet" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../util/base.css" rel="stylesheet" />
+		<link href="css/sign.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<div class="actionbar">
+			<a href="../../home page/page.html"><div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div></a>
+			<span class="text" style="color: #333333;">签到</span>
+			<div class="right">
+			</div>
+		</div>
+		<!--
+        	作者：571171552@qq.com
+        	时间：2018-04-14
+        	描述：签到2天提示框
+        -->
+		<div class="gekai" style="height: 3.5rem;"></div>
+		<div class="dv_dialog_box1" id="bg1" style="display:none">
+			<div class="dv_dialog">
+				<div class="qiandao_tu"><img src="../../util/img/qiandaochengong.png"style="width:16.21rem" /> </div>
+				<div class="dv_title" id="qiandaDay"></div>
+				<div class="dividerccc" style="background:#CCCCCC; height: 1px ; border:none;display: none;"></div>
+				<div class="close horizontal"style="margin-bottom: 1rem;">
+					<div class="dialog_ok" id="sure">已连续签到<span id="dayNum"></span>天</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="background_map">
+			<ul> 
+				<li class="rules">签到规则:</li>
+				<li class="rules_content">
+					参与签到活动可获得随机数量(3-5个）的积分奖励；如连续签到满7天，第7天还将额外获赠10积分。连续签到的日期不可中断，如日期中断，连续签到的天数会从1天开始重新计算；用户获得连续签到奖励后，连续签到天数会重新计算，并在下一次连续签到满7天时再次获得连签奖励。
+				</li>
+				<li class="rules">签到奖励:</li>
+				<span id="prize_name">
+					
+				</span>
+			</ul>
+		</div>
+		<div class="selfie_stick" id="prize_img">
+			
+		</div>		
+		<div class="button">
+			<button id="qiandao" style="color: #f62525;" onclick="sign()">签到</button>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/sign.js"></script>
+		</body>
+
+</html>

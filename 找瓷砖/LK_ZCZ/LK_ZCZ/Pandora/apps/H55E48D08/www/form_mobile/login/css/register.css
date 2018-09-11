@@ -1,0 +1,72 @@
+body{
+	background: #ffffff;
+}
+.segmenting_line{
+	height: 1px;
+	background: #e5e5e5;
+	width: 100%;
+}
+.item_register{
+	margin-top: 2rem;
+	margin-left: 0.94rem;
+	padding-bottom: 0px;
+	border-bottom: 1px solid #e9e9e9;
+	line-height: 1.1rem;
+	margin-right: 0.94rem;
+}
+.edt_gg{
+	border: none;
+	background-color: #ffffff;
+	width: 50vw;
+	font-size: 0.93rem;
+}
+.item_register1{
+	margin-top: 1.8rem;
+	margin-left: 0.94rem;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e9e9e9;
+	line-height: 1.1rem;
+	margin-right: 0.94rem;
+}
+.account_number{
+	color: #232323;
+	font-size: 0.93rem;
+	margin-right: 1rem;
+}
+.register1{
+	text-align: center;
+	margin-top: 1rem;
+}
+.register{
+	width: 22.187rem;
+	height: 2.75rem;
+	border-radius: 10px;
+	text-align: center;
+	color: white;
+	font-size: 1.12rem;
+}
+.register-color1{
+	background:#d0d3dd;
+	pointer-events: none;
+}
+.register-color2{
+	background:red;
+}
+.picture img{
+	width: 0.8rem;
+}
+.picture-goods img{
+	width: 0.8rem;
+}
+.agreement1{
+	font-size: 1rem;
+	color: black;
+}
+.agreement{
+	margin-top: 1rem;
+	line-height: 0.8rem;
+	margin-left: 0.9rem;
+}
+.get_code{
+	border-radius: 10px; font-size: 0.75rem; background: #d0d3dd; color: white; left: 1.2rem;
+}

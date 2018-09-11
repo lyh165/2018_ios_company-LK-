@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>加工厂</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../util/base.css" rel="stylesheet" />
+		<link href="css/factory.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<style type="text/css">
+			.didian{
+			    margin-top: -1.2rem;
+			    margin-left: 5rem;
+			    top: 4rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left" onclick="back()">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">加工厂</span>
+			<div class="right">
+			</div>
+		</div>
+		<div id="shuaxin">
+			<div class="dv_dialog_box1" id="phoneTanKuang" style="display: none;">
+				<div class="dv_dialog">
+					<div class="dv_title" id="user_phone"></div>
+					<div class="dividerccc" style="background:#CCCCCC; height: 1px ; border:none"></div>
+					<div class="close horizontal">
+						<div class="dialog_cancel" onclick="changname_cancel()">取消</div>
+						<a id="playFactoryPhone" class="dialog_ok" style="background: #F62525;color: #ffffff;border-radius: 0 0 10px 0">呼叫</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="mui-content">
+				<div class="gekai" style="height: 2.7rem;"></div>
+				<ul id="sliderSegmentedControl" style="background: #FFFFFF; border-bottom: 1px solid #e5e5e5; z-index:2; position: fixed; height: 2.53rem; width: 100vw;line-height: 2.53rem;">
+					<li style="padding-left: 1rem;position: relative; color: #F62525;" class="mui-control-item" id="address">工厂所在地
+						<img src="../../util/img/jiantouxia1253.png" style="width: 0.65rem;position: absolute;top: 1rem;margin-left: 0.5rem;" />
+					</li>
+					<ul id="addressUl" style="width: 100vw; height: 100vh;background-color: rgba(0,0,0,0.5);border-top: 1px solid #e5e5e5; display: none;">
+
+					</ul>
+					<ul id="ul_10" class="li_ul" style="display: none;">
+
+					</ul>
+				</ul>
+				<div id="slider" class="mui-slider mui-fullscreen" style="margin-top: 2.8rem;">
+					<div style="height: 3.5rem;background: #F0F0F0;"></div>
+					<div class="mui-slider-group">
+						<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+							<div id="scroll1" class="">
+								<div class="mui-scroll" id="xunhuan">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--暂无工厂内容-->
+
+			<div class="shopping_cart mui-hidden"><img src="../../util/img/jiagongchang.png" style="width: 2.81rem;" /></div>
+			<div class="text1">
+				<span class="text_1">暂无厂内容哦，换个地址试试！</span>
+			</div>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/factory.js"></script>
+		<script type="text/javascript">
+			mui('.mui-slider').slider().stopped = true;
+			mui.init()
+			mui('.collect-control').on('tap', '.jiantou123', function() {
+				$('.jiantou123').css('display', 'none')
+				$('.gongsi_01').css('display', 'inline-block');
+				$('.jiantou125').css('display', 'inline-block')
+			})
+
+			mui('#sliderSegmentedControl').on('click', '#li', function() {
+				$('#ul').css('display', 'inline-block')
+				$('#ul_1').css('display', 'inline-block')
+			})
+			mui('#ul').on('click', 'li_1', function() {
+				$('#ul_10').css('display', 'inline-block')
+			})
+		</script>
+	</body>
+
+</html>

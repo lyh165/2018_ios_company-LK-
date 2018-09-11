@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>投诉与建议</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/tousujianyi.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			img {
+				vertical-align: middle;
+			}
+			.mt{
+				margin-top: 42vh !important;
+			}
+			.dv_dialog_box1{
+				z-index: 889;
+			}
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">投诉与建议</span>
+			<div class="right mui-action-back" style="color: #333333; font-size: 0.93rem;">
+				取消
+			</div>
+		</div>
+
+		<div class="actionbar_white" style="height: 56px; background: #f0f0f0;"></div>
+		<div class="dv_dialog_box1" id="add_opinion_successful" style="display: none;">
+			<div class="dv_dialog mt">
+				<div class="dv_title">反馈成功</div>
+				<div class="dividerccc" style="background:#CCCCCC; height: 1px ; border:none"></div>
+				<div class="close horizontal">
+					<div class="dialog_ok" onclick="sure()">确定</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<textarea class="neirong"  maxlength="200" id="opinionText" placeholder="请将你的遇到的问题/产品建议反馈给我们，让我们更快的帮助解决。"></textarea>
+			<span class="number">200字以内</span>
+		</div>
+		<div class="dibu">
+			<button class="button" onclick="addOpinion()">提交</button>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/shezhi.js"></script>
+		<script>
+			function sure() {
+				mui.toast('提交成功！');
+				$("#add_opinion_successful").css("display", "none");
+				$("#opinionText").val('');
+				mui.openWindow({
+					url: '../mine.html',
+					id: 'mine',
+				});
+			}
+		</script>
+	</body>
+
+</html>

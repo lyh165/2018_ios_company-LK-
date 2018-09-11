@@ -1,0 +1,112 @@
+ <!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>职业愿景</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../util/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/zhiyeyuanjing.css" />
+		<style type="text/css">
+			img{
+				vertical-align: middle;
+			}
+			input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
+			    width: 80%;
+			    margin-bottom: 0;
+			}
+			.btn-button{
+				margin-top: 0.6rem;
+				border: 1px solid #F62525;
+				border-radius: 0.5rem;
+				background: #F62525;
+				color: #fff;
+				height: 1.8rem;
+				line-height: 1.8rem;
+				padding: 0 0.8rem;
+				margin: 0;
+				vertical-align: baseline;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">职业愿景</span>
+			<div id="sure" class="right" style="color: #F62525; font-size: 0.93rem;">
+				保存
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 3.5rem; background: #f0f0f0;"></div>
+		<ul class="content">
+			<li class="">
+				<input id="other_future" type="text" placeholder="其他【填写】" style="background: none; border: none;margin-top: 0.2rem;"/>
+				<button  class="btn-button">提交</button>
+			</li>	
+			<li class="qita futuretext">
+				<!--<div id="future_1" class="normal_button1 del" style=""></div>-->
+				<!--<span id="del_1" class="del"><img src="../../../form_mobile/util/img/chacha.png"/></span>-->
+				<!--<div id="future_2" class="normal_button1"></div>
+				<span id="del_2"><img src="../../../form_mobile/util/img/chacha.png"/></span>
+				<div id="future_3" class="normal_button1"></div>
+				<span id="del_3"><img src="../../../form_mobile/util/img/chacha.png"/></span>
+				<div class="zhanweifu"></div>
+				<div id="future_4" class="normal_button1"></div>
+				<span id="del_4"><img src="../../../form_mobile/util/img/chacha.png"/></span>
+				<div class="zhanweifu"></div>-->
+			</li>	
+		</ul>
+		<div class="normal_button" style="background: none;">
+			<div class="normal_button_1">
+				<button class="normal normal_button1" id="xiaoshou">销售</button>
+				<button class="normal normal_button2" id="gendan">跟单</button>
+				<button class="normal normal_button1" id="zhanshi">展示</button>
+				<button class="normal normal_button3" id="wenan">文案</button>
+				<button class="normal normal_button3" id="cehua">策划</button>
+			</div>
+			<div class="normal_button_2">
+				<button class="normal normal_button6" id="peixun">培训</button>
+				<button class="normal normal_button4" id="pingmian">平面</button>
+				<button class="normal normal_button6" id="xingzheng">行政</button>
+				<button class="normal normal_button9" id="kuaiji">会计</button>
+				<button class="normal normal_button9" id="chanpinkaifa">产品开发</button>
+			</div>
+			<div class="normal_button_3"> 
+				<button class="normal normal_button7" id="daqujinli">大区经理</button>
+				<button class="normal normal_button8" id="shejizongjian">设计总监</button>
+				<button class="normal normal_button7" id="shichangzongjian">市场总监</button>
+				
+			</div>
+			<button class="normal normal_button7" id="xiaoshouzongjian">销售总监</button>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/zhiyeyuanjing.js"></script>
+		<script type="text/javascript">
+			jQuery(".btn-button").click(function() {
+				if(jQuery('#other_future').val()){
+					jQuery('.futuretext').append('<div id="future_1" class="normal_button1 del" style="">' + jQuery('#other_future').val() + '</div>');
+					jQuery('#other_future').val('');
+				}else{
+					mui.toast('请填写职业愿景！')
+				}
+				
+			})
+			jQuery('body').on('tap', '.del' , function() {
+					jQuery(this).remove();
+				})
+		</script>
+	</body>
+
+</html>

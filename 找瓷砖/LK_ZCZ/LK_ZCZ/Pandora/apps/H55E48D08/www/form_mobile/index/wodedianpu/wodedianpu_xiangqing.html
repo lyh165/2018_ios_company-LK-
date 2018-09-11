@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的店铺</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../util/base.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../form_util/mui/css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../../../form_util/mui/css/mui.picker.css" />
+		<link rel="stylesheet" type="text/css" href="css/wodedianpu.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+	</head>
+
+	<body>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">商家店铺</span>
+			<div class="right" style="color: #f62525; font-size: 0.93rem;">
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 60px; background: #f0f0f0;"></div>
+
+		<div class="content_product">
+			<span class="product"><img id="shop_logo" src=" wodedianpu666.png" style="width: 4.37rem;"/></span>
+			<div class="content1-text">
+				<input type="text" value="" id="shop_id" style="display: none;" />
+				<span class="content-text1" id="shop_name">12121</span>
+				<span id="shop_subject"><span class="content-text2" >代付干 </span></span>
+				<p class="content-text3 mui-ellipsis-2">经营范围：<span id="shop_range"></span></p>
+				<div id="shop_service">
+					<span class="content-text4"></span>
+					<span class="content-text5"></span>
+					<span class="content-text6"></span>
+				</div>
+			</div>
+		</div>
+		<div class="content-text7">公司简历:<span id="shop_profile"></span></div>
+		<div class="content-text8 mui-navigate-right" onclick="openBusinessShopProAll()">查看店铺所有商品
+		</div>
+		<div class="zhanting">
+			<span class="content-text9">展厅照片</span>
+			<div id="shop_show_img" class="mui-content-padded">
+				<div class="zhanting_1"><img src="001.png" style="" data-preview-src="" data-preview-group="1" /></div>
+				<div class="zhanting_2"><img src=" 002.png" style="width: 16vw; height: 16vw;" /></div>
+				<div class="zhanting_3"><img src=" 003.png" style="width: 16vw; height: 16vw;" /></div>
+				<div class="zhanting_4"><img src=" 004.png" style="width: 16vw; height: 16vw;" /></div>
+				<div class="zhanting_5"><img src=" 005.png" style="width: 16vw; height: 16vw;" /></div>
+			</div>
+			<div class="content-text10 mui-navigate-right"><span id="shop_show_add" onclick="openAddress()">展厅地址</span>
+			</div>
+			<div class="zhuanweifu"></div>
+		</div>
+		<div class="zhanting">
+			<span class="content-text9">仓库地址</span>
+			<div id="shop_warehouse_img" class="mui-content-padded">
+				<div class="zhanting_1"><img src="001.png" style="width: 16vw; height: 16vw;" /></div>
+				<div class="zhanting_2"><img src=" 002.png" style="width: 16vw; height: 16vw;" /></div>
+				<div class="zhanting_3"><img src=" 003.png" style="width: 16vw; height: 16vw;" /></div>
+				<div class="zhanting_4"><img src=" 004.png" style="width: 16vw; height: 16vw;" /></div>
+				<div class="zhanting_5"><img src=" 005.png" style="width: 16vw; height: 16vw;" /></div>
+			</div>
+			
+			<div class="ckAddress">
+				<!--<div class="content-text10 mui-navigate-right"><span id="shop_warehouse_add" onclick="openAddress($('#shop_warehouse_add').text())">仓库地址</span></div>-->
+			</div>
+			<div class="zhuanweifu"></div>
+		</div>
+		<div class="zhanting">
+			<span class="content-text9">工厂地址</span>
+			<div id="shop_factory_img" class="mui-content-padded">
+				<div class="zhanting_1"><img src=" 001.png" style="width: 16vw; height: 16vw;" /></div>
+				<div class="zhanting_2"><img src=" 002.png" style="width: 16vw; height: 16vw;" /></div>
+				<div class="zhanting_3"><img src=" 003.png" style="width: 16vw; height: 16vw;" /></div>
+				<div class="zhanting_4"><img src=" 004.png" style="width: 16vw; height: 16vw;" /></div>
+				<div class="zhanting_5"><img src=" 005.png" style="width: 16vw; height: 16vw;" /></div>
+			</div>
+			<div class="content-text10 mui-navigate-right"><span id="shop_factory_add" onclick="openAddress($('#shop_factory_add').text())"> 工厂地址</span>
+			</div>
+			<div class="zhuanweifu"></div>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../../../form_util/mui/js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.zoom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.previewimage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/wodedianpu.js"></script>
+		<script>
+			mui.previewImage();
+		</script>
+	</body>
+
+</html>

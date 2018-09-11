@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../../shopping_cart/order/css/shopping_edit.css" />
+		<link rel="stylesheet" type="text/css" href="../../../shopping_cart/order/css/shopping_cart.css" />
+		<link href="../../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			a {
+				text-decoration: none;
+				color: #666;
+			}
+			
+			.actionbar_white {
+				background: none;
+			}
+			
+			.content-select-2 {
+				bottom: 0.06rem;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">标题</h1>
+		</header>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar collect-control">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">购物车</span>
+			<span class="mui-text-right">编辑</span>
+			<span class="mui-text-right-two" style="display: none;">完成</span>
+		</div>
+		<div id="kong" class="mui-hidden">
+			<div class="actionbar_white" style="height: 3.75rem;"></div>
+			<div class="shopping_cart"><img src="../../form_mobile/util/img/u6.png" /></div>
+			<div class="text1">
+				<span class="text_1">偶遇总会有惊喜哦</span>
+			</div>
+			<div class="get-code1" onclick="openIndex()"><button class="get-code">去逛逛</button></div>
+		</div>
+		<div id="zuida">
+			<div class="actionbar_white" style="height: 3.75rem;"></div>
+			<div class="mui-content" id="choose_pro">
+			</div>
+			<div>
+				<div class="content-select content-select-2">
+					<div class="choice_all choice headC" id="chooseCarProAll" onclick="quandian()"></div>
+					<span class="content-select_1">全选</span>
+					<span class="total"><b>合计</b><span >￥</span><span id="zong"></span></span>
+					<button class="remove1" style="padding: 0;display: none;" onclick="addListCarPros()">移入收藏</button>
+					<button class="remove2" style="display: none;" onclick="deleteCarPros()">删除</button>
+				</div>
+				<button class="settlement content-select-2" onclick="vailStock()">结算<span id="put_order"></span></button>
+			</div>
+		</div>
+		<script src="../../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../../form_mobile/util/base.js"></script>
+		<script src="js/shop_car.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui('.collect-control').on('tap', '.mui-text-right', function() {
+				$('.mui-text-right').css('display', 'none')
+				$('.settlement').css('display', 'none');
+				$('.mui-text-right-two').css('display', 'inline-block')
+				$('.remove1').css('display', 'inline-block')
+				$('.remove2').css('display', 'inline-block')
+				$('.total').css('display', 'none');
+			})
+			mui('.collect-control').on('click', '.mui-text-right-two', function() {
+				$('.mui-text-right-two').css('display', 'none')
+				$('.mui-text-right').css('display', 'inline-block')
+				$('.settlement').css('display', 'inline-block');
+				$('.remove1').css('display', 'none')
+				$('.remove2').css('display', 'none')
+				$('.total').css('display', 'inline-block');
+				$("#choose_pro").find(".choice").removeClass('active');
+				$('#chooseCarProAll').removeClass('active');
+			})
+			function openIndex() {
+				var page = plus.webview.getWebviewById("index");
+				if(page) {
+					page.evalJS("cartNum()");
+				}
+				mui.openWindow({
+					url: '../index/index.html',
+					id: 'index',
+					extras: { //这是要传的数据
+					},
+					waiting: {
+						autoShow: true, //自动显示等待框，默认为true
+					},
+					show: {
+						autoShow: true, //页面loaded事件发生后自动显示，默认为true
+						aniShow: 0, //页面显示动画，默认为”slide-in-right“；
+						duration: 0 //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					}
+				});
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>发起团购</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../util/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="faqituangou.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css"/>
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			img{
+				vertical-align: middle;
+			}
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left mui-action-back" onclick="back()">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">发起团购</span>
+			<div class="right" style="color: #f62525; font-size: 0.93rem;">
+				
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 60px; background: #f0f0f0;"></div>
+		<div class="dv_dialog_box1" id="bg1" >
+			<div class="dv_dialog">
+				<div class="dv_title">
+					<span><img src="../../util/img/tuangouchenggong.png" style="width: 3.4rem;"/></span>
+					<span style="display: block; margin-top: 1rem;">团购成功</span>
+				</div>
+				<button class="button1" type="submit" onclick="changname_cancel()">查看发布团购</button>
+				<!--<div class="close horizontal">
+					<div class="dialog_cancel" onclick="changname_cancel()">取消</div>
+					<div class="dialog_ok" onclick="changename_sure()"style="background: #F62525;color: #ffffff;border-radius: 0 0 10px 0">确定</div>
+				</div>-->
+			</div>
+		</div>
+		<div class="content_product">
+			<span class="product"></span>
+			<div class="content1-text">
+				<span class="content-text1"></span>
+				<p class="content-text2"></p>
+				<span class="content-text3"> <small>￥</small><small></small></span>
+			</div>
+		</div>
+		<div class="picture"></div>
+		<div class="content">
+			<span class="location"><img src="../../util/img/u13.png"></span>
+			<span class="content-text">您还没有设置收货地址，点击去添加</span>
+			<span class="right_arrow"><img src="../../util/img/jiantou.png"/></span>
+		</div>
+		<div class="content-one">
+			<span class="content-text4">团购剩余数量</span>
+			<input class="content-text5 input" placeholder="请填写团购总数量">
+		</div>
+		<div class="content-one">
+			<span class="content-text4">我团购数量</span>
+			<input class="content-text5 input" placeholder="请填写我团购总数量">
+		</div>
+		<div class="content-one">
+			<span class="content-text4">团购价格</span>
+			<input class="content-text5 input" placeholder="请填写与客服确认的价格">
+
+		</div>
+		
+		<div class="content-one">
+			<span class="content-text4">团购开始时间</span>
+			<span class="content-text5">2017-12-05</span>
+			<span class="right_arrow"><img src="../../util/img/jiantou.png"/></span>
+		</div>
+		<div class="content-one" style="margin-bottom: 0.625rem;">
+			<span class="content-text4">团购结束时间</span>
+			<span class="content-text5">2017-12-05</span>
+		</div>
+		<div class="content_two">
+			<textarea name="" rows="" cols="" placeholder="请介绍团购优惠，让更多用户来团购"></textarea>
+		</div>
+		<div style="height: 4rem;"></div>
+		<div class="dibu">
+			<button class="button" onclick="changeDelete()">确认团购</button>
+		</div>
+		
+		<script src="../../form_util/mui/js/mui.min.js"></script>
+		<script src="js/shezhi_one.js"></script>
+	</body>
+
+</html>

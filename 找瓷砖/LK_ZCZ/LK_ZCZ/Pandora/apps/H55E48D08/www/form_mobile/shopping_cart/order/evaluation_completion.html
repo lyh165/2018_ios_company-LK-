@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/me_order.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/evaluation_completion.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		
+		<style type="text/css">
+			img{
+				vertical-align: middle;
+			}
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left" onclick="backToMyOrder()">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">评价</span>
+			<div class="right" style="color: #f62525; font-size: 0.93rem;">
+				
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 60px; background: #f0f0f0;"></div>
+		
+		<div class="content_completion">
+			<span class="evaluate"><img src="../../../form_mobile/util/img/pingjiachenggong.png"/></span>
+			<span class="content-text">
+				<li class="content_completion1">评价成功</li>
+				<li class="content_completion2" onclick="goIndexPage()">去首页></li>
+			</span>
+		</div>
+		<div class="evaluated">
+			<div class="xian"></div>
+			<div class="text1">待评价</div>
+			<div class="xian"></div>
+		</div>
+		<ul id="commentOrderGoods" class="content">
+			<div class="content_product">
+				<img class="product1" src="" />
+				<div class="content-text1">
+					<span class="content-text4"></span>
+					<span class="content-text2"><span class="text-number">x</span></span>
+					
+				</div>
+					<button class="remove" onclick="startComment('+obj.order_id+','+obj.orderdetail_id+')">去评价</button>
+			</div>
+		</ul>
+		
+		<script src="../../../form_util/util/sys_js/jquery.js "></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js "></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js "></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js "></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js "></script>
+		<script src="../../../form_util/util/util_js/strUtil.js "></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js "></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js "></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../util/base.js "></script>
+		<script src="../../../form_util/mui/js/mui.picker.min.js" type="text/javascript"></script>
+		<script src="js/shopping_evakuate.js"></script>
+		<script src="js/evaluation_completion.js"></script>
+	</body>
+
+</html>

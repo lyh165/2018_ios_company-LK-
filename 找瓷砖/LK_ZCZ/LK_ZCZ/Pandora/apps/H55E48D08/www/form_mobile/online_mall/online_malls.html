@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>在线商城</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../util/swiper/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../form_util/mui/css/mui.min.css" />
+		<link href="../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../util/base.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../form_util/mui/css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../../form_util/mui/css/mui.picker.css" />
+		<link rel="stylesheet" type="text/css" href="css/online_mall.css" />
+		<link rel="stylesheet" type="text/css" href="../../form_util/mui/css/mui.indexedlist.css" />
+		<style type="text/css">
+			.mui-indexed-list-search {
+				line-height: 4rem;
+			}
+			
+			input[type=color],
+			input[type=date],
+			input[type=datetime-local],
+			input[type=datetime],
+			input[type=email],
+			input[type=month],
+			input[type=number],
+			input[type=password],
+			input[type=search],
+			input[type=tel],
+			input[type=text],
+			input[type=time],
+			input[type=url],
+			input[type=week],
+			select,
+			textarea {
+				height: 34px;
+				padding-left: 2.1rem;
+				line-height: 34px;
+				font-size: 14px;
+				background-color: rgb(243, 243, 243);
+				border: none;
+			}
+			
+			.mui-icon.mui-icon-search {
+				position: absolute;
+				top: 5px;
+				left: 5px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<!-- 主界面不动、菜单移动 -->
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-slide-in" id="offCanvasWrapper">
+			<!-- 菜单容器 -->
+			<aside class="mui-off-canvas-right" id="offCanvasSide">
+				<div class="">
+					<div class="">
+						<!-- 菜单具体展示内容 -->
+						<div id="box1" style="padding-left: 0.5rem;padding-right: 0.5rem; padding-bottom: 3rem; overflow-y: scroll;">
+							<div class="title dv_title">
+								<div class="title_cizhuan">瓷砖服务</div>
+								<div class="title_img">
+									<img src="../util/img/dingwei hong.png" style="width:0.6rem">
+									<div class="title_text" id="diwei">定位中</div>
+									
+								</div>
+							</div>
+							<!--<div class="shangpinxuanze">
+								品牌
+								<span class="mui-pull-right mui-navigate-right">全部</span>
+								<div class="title_text_12">
+									<div class="title_titel_name">东鹏(GONGP)</div>
+								</div>
+							</div>-->
+						</div>
+						<!--查看全部-->
+						<div id="box2" style="display: none;">
+							<header class="mui-bar mui-bar-nav" style="border-bottom: 1px solid #E5E5E5;height: 3.75rem;">
+								<a class="mui-icon mui-icon-left-nav mui-pull-left" id="back"></a>
+								<h1 class="mui-title">选择属性</h1>
+							</header>
+							<div class="mui-content">
+								<div id='list' class="mui-indexed-list" style="height: 620px !important;">
+									<div class="mui-indexed-list-search mui-input-row">
+										<span id="attribute_name"></span>
+										<input type="hidden" id="attribute_id" value="" />
+									</div>
+									<!--<div class="mui-indexed-list-bar">
+										<a>A</a>
+										<a>B</a>
+										<a>C</a>
+										<a>D</a>
+										<a>E</a>
+										<a>F</a>
+										<a>G</a>
+										<a>H</a>
+										<a>I</a>
+										<a>J</a>
+										<a>K</a>
+										<a>L</a>
+										<a>M</a>
+										<a>N</a>
+										<a>O</a>
+										<a>P</a>
+										<a>Q</a>
+										<a>R</a>
+										<a>S</a>
+										<a>T</a>
+										<a>U</a>
+										<a>V</a>
+										<a>W</a>
+										<a>X</a>
+										<a>Y</a>
+										<a>Z</a>
+									</div>-->
+									<div class="mui-indexed-list-alert"></div>
+									<div class="mui-indexed-list-inner" style="height: 570px">
+										<div class="mui-table-view" id="table_1" style="height: 570px">
+											<div class="mui-scroll-wrapper">
+												<div class="mui-scroll">
+													<!--这里放置真实显示的DOM内容-->
+													<ul class="mui-table-view" style="margin-bottom: 90px;" id="attribute_ia_val">
+														<li data-group="A" class="mui-table-view-divider mui-indexed-list-group">A</li>
+														<li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item">阿克苏机场</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-button" id="box3">
+					<button class="button" onclick="del()">重置</button>
+					<button class="button button-active" id="offCanvasHide" onclick="tijiao()"> 确定</button>
+				</div>
+			</aside>
+
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="actionbar" style="position: fixed;top: 0;">
+					<div class="mui-input-row mui-search" style="width: 80vw; left: 1rem; top: 0.4rem;">
+						<span class="mui-icon mui-icon-search"></span>
+						<input type="text" id="sousuo" class="" oninput="getSearchShopPro()" placeholder="输入瓷砖中文名/石材名" style="border-radius: 40px; z-index: 9999;">
+					</div>
+					<div class="right" style="width: 1.12rem; height: 1.12rem;position: absolute; margin-right: 0.63rem;top:1.25rem;"><img id="wodexiaoxi" src="../../form_mobile/util/img/u5.png" style="width: 1.12rem;vertical-align: middle;" />
+					</div>
+				</header>
+				<div class="footer">
+					<a class="home12 icon" onclick="openIndex()">
+						<span class="home_img12" style="display: block;"><img src="../../form_mobile/util/img/shouye001.png" style=" height: 1.34rem;"/></span>
+						<span class="home_12 icon_01">首页</span>
+					</a>
+					<a class="online12 icon">
+						<span class="online_img12" style="display: block;"><img src="../../form_mobile/util/img/zaixian01.png" style=" height: 1.34rem;"/></span>
+						<span class="online01 icon_01" style="color: #F62525;">在线商城</span>
+					</a>
+					<a class="shopping_12 icon" onclick="openCart()">
+						<span class="shopping_img12 car_num" style="display: block;position: relative;"></span>
+						<span class="shopping_13 icon_01">购物车</span>
+					</a>
+					<a class="gerenzhongxin12 icon" onclick="openMine()">
+						<span class="gerenzhongxin_img12" style="display: block;"><img src="../../form_mobile/util/img/wode.png" style=" height: 1.34rem;"/></span>
+						<span class="gerenzhongxin_12 icon_01">我的</span>
+					</a>
+				</div>
+				<!-- 主界面具体展示内容 -->
+				<div class="mui-content mui-scroll-wrapper" id="offCanvasContent">
+
+					<input type="search" value="1" id="orderby" style="display: none;" />
+
+					<div class="gekai" style="height: 3.75rem;"></div>
+
+					<div id="sliderSegmentedControl" class="mui-scroll white mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" style="background: #FFFFFF; border-bottom: 1px solid #e5e5e5; z-index: 2; position: fixed; height: 2.53rem;">
+						<div class="mui-control-item mui-active" id="xiaoliang">销量 </div>
+						<div class="mui-control-item" id="jiage">价格 <img src="../../form_mobile/util/img/shangxiajiantou.png" style="width: 0.31rem; vertical-align: middle;" /> </div>
+						<a class="mui-control-item screen" href="#offCanvasSide" id="none">筛选 <img src="../../form_mobile/util/img/shaixuan.png" style="width: 0.68rem; vertical-align: middle;" /> </a>
+					</div>
+					<div id="slider" class="mui-slider mui-fullscreen" style="margin-top: 2.8rem;">
+						<div class="mui-slider-group">
+							<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+								<div id="scroll1" class="mui-scroll-wrapper">
+									<div class="mui-scroll" style="padding-bottom: 7rem;">
+										<div style="height: 1.5rem;background: #F0F0F0;"></div>
+										<ul class="ul_1" id="searchData_1">
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div id="item2mobile" class="mui-slider-item mui-control-content">
+								<div class="mui-scroll-wrapper">
+									<div class="mui-scroll">
+										<div style="height: 1.5rem;background: #F0F0F0;"></div>
+									</div>
+								</div>
+							</div>
+							<div id="item3mobile" class="mui-slider-item mui-control-content">
+								<div class="mui-scroll-wrapper">
+									<div class="mui-scroll">
+										<div style="height: 1.5rem;background: #F0F0F0;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="mui-off-canvas-backdrop" id="offCanvasShow"></div>
+			</div>
+
+		</div>
+
+		<script src="../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../util/swiper/js/swiper.min.js"></script>
+		<script src="../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../form_util/mui/js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../form_util/mui/js/mui.indexedlist.js"></script>
+		<script src="../../form_util/mui/js/update.js"></script>
+		<script src="../util/base.js"></script>
+		<script src="js/zaixian.js"></script>
+		<script type="text/javascript">
+			mui('.mui-slider').slider().stopped = true;
+			//禁止滑动主界面的时候出现侧滑菜单
+			document.getElementsByClassName('mui-inner-wrap')[0].addEventListener('drag', function(event) {　　
+				event.stopPropagation();
+			})
+			mui.init()
+				(function($) {
+					$(".mui-scroll-wrapper").scroll({
+						//bounce: false,//滚动条是否有弹力默认是true
+						//indicators: false, //是否显示滚动条,默认是true
+					});
+				})(mui);
+			mui.init({
+				swipeBack: false
+			});
+			mui.ready(function() {
+				//侧滑容器父节点
+				var offCanvasWrapper = mui('#offCanvasWrapper');
+				//显示
+				document.getElementById('offCanvasShow').addEventListener('tap', function() {
+					offCanvasWrapper.offCanvas('show');
+				});
+				//关闭
+				document.getElementById('offCanvasHide').addEventListener('tap', function() {
+					offCanvasWrapper.offCanvas('close');
+				});
+				document.getElementById('offCanvasShow').addEventListener('tap', function() {
+					offCanvasWrapper.offCanvas('close');
+				});
+				//初始化mui区域滚动
+				mui('#offCanvasSide').scroll();
+				mui('#offCanvasSide1').scroll();
+			})
+
+			document.getElementById('back').addEventListener('tap', function() {
+				document.getElementById("box2").style.display = "none";
+				document.getElementById("box3").style.display = "";
+				document.getElementById("box1").style.display = "";
+			});
+
+			mui.init({
+				keyEventBind: {
+					backbutton: true //打开back按键监听
+				}
+			});
+			mui.back = function() {
+				var btn = ["确定", "取消"];
+				mui.confirm(' ', '你确定要退出当前应用？', btn, function(e) {
+					if(e.index == 0) {
+						//执行mui封装好的窗口关闭逻辑；
+						plus.runtime.quit();
+					}
+				});
+			}
+			var height = document.documentElement.clientHeight || document.body.clientHeight;
+			window.onresize = function() {
+				var heightView = document.documentElement.clientHeight || document.body.clientHeight;
+				if(heightView < height) {
+					plus.webview.currentWebview().setStyle({
+						height: height
+					});
+				}
+			}
+		</script>
+	</body>
+
+</html>

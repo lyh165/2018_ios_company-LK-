@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="order/css/shopping_edit.css" />
+		<link rel="stylesheet" type="text/css" href="order/css/shopping_cart.css" />
+		<link href="../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			a {
+				text-decoration: none;
+				color: #666;
+			}
+			.actionbar_white {
+				background: none;
+			}
+			.mui-content{
+				padding-bottom: 6.5rem;
+			}
+		
+		</style>
+
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar collect-control">
+			<div class="left1"></div>
+			<span class="text" style="color: #333333;">购物车</span>
+			<span class="mui-text-right">编辑</span>
+			<span class="mui-text-right-two" style="display: none;">完成</span>
+			<div class="right" style="width: 1.12rem; height: 1.12rem; margin-right: 0.63rem;" onclick="openMessage()">
+				<img src="../../form_mobile/util/img/u5.png" style="width: 1.12rem;" />
+			</div>
+		</div>
+		<div id="kong" class="mui-hidden">
+			<div class="actionbar_white" style="height: 3.75rem;"></div>
+			<div class="shopping_cart"><img src="../../form_mobile/util/img/u6.png" /></div>
+			<div class="text1">
+				<span class="text_1">偶遇总会有惊喜哦</span>
+			</div>
+				<div class="get-code1" onclick="openIndex()"><button class="get-code">去逛逛</button></div>
+		</div>
+		<div id="zuida">
+			<div class="actionbar_white" style="height: 3.75rem;"></div>
+			<div class="mui-content" id="choose_pro">
+				
+			</div>
+			<div>
+				<div class="content-select">
+					<div class="choice_all choice headC" id="chooseCarProAll" onclick="quandian()"></div>
+					<span class="content-select_1">全选</span>
+					<span class="total"><b>合计</b><span >￥</span><span id="zong"></span></span>
+					<button class="remove1" style="padding: 0;display: none;" onclick="addListCarPros()">移入收藏</button>
+					<button class="remove2" style="display: none;" onclick="deleteCarPros()">删除</button>
+				</div>
+				<button class="settlement" onclick="vailStock()">结算<span id="put_order"></span></button>
+			</div>
+		</div>
+		<div class="footer">
+			<a class="home12 icon" onclick="openIndex()">
+				<span class="home_img12" style="display: block;"><img src="../../form_mobile/util/img/shouye001.png" style=" height: 1.34rem;"/></span>
+				<span class="home_12 icon_01">首页</span>
+			</a>
+			<a class="online12 icon" onclick="openMall()">
+				<span class="online_img12" style="display: block;"><img src="../../form_mobile/util/img/shangcheng.png" style=" height: 1.34rem;"/></span>
+				<span class="online01 icon_01">在线商城</span>
+			</a>
+			<a class="shopping_12 icon">
+				<span class="shopping_img12 car_num" style="display: block;position: relative;"></span>
+				<span class="shopping_13 icon_01" style="color: #F62525;">购物车</span>
+			</a>
+			<a class="gerenzhongxin12 icon" onclick="openMine()">
+				<span class="gerenzhongxin_img12" style="display: block;"><img src="../../form_mobile/util/img/wode.png" style=" height: 1.34rem;"/></span>
+				<span class="gerenzhongxin_12 icon_01">我的</span>
+			</a>
+		</div>
+		<script src="../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../form_mobile/util/base.js"></script>
+		<script src="js/shopping_edit.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui('.collect-control').on('tap', '.mui-text-right', function() {
+				$('.mui-text-right').css('display', 'none')
+				$('.settlement').css('display', 'none');
+				$('.mui-text-right-two').css('display', 'inline-block')
+				$('.remove1').css('display', 'inline-block')
+				$('.remove2').css('display', 'inline-block')
+				$('.total').css('display', 'none');
+			})
+			mui('.collect-control').on('click', '.mui-text-right-two', function() {
+				$('.mui-text-right-two').css('display', 'none')
+				$('.mui-text-right').css('display', 'inline-block')
+				$('.settlement').css('display', 'inline-block');
+				$('.remove1').css('display', 'none')
+				$('.remove2').css('display', 'none')
+				$('.total').css('display', 'inline-block');
+				$("#choose_pro").find(".choice").removeClass('active');
+				$('#chooseCarProAll').removeClass('active');
+			})
+			mui.init({
+				keyEventBind: {
+					backbutton: true //打开back按键监听
+				}
+			});
+			mui.back = function() {
+				var btn = ["确定", "取消"];
+				mui.confirm(' ', '你确定要退出当前应用？', btn, function(e) {
+					if(e.index == 0) {
+						//执行mui封装好的窗口关闭逻辑；
+						plus.runtime.quit();
+					}
+				});
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>我要发布瓷砖</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../../form_mobile/util/base.css" rel="stylesheet" />
+		<link href="css/woyaofabucizhuan.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.poppicker.css" />
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">我要发布瓷砖</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="gekai" style="height: 55px;"></div>
+		<ul class="content">
+			<div class="zhanweifu" style="display: none;" id="cscscs"><input id="scscsc" class="fuwumingcheng" type="text" id="" placeholder="请填写产品名称" /></div>
+			<!--<li class="mui-table-view-cell">
+				<a class="">产品品牌</a>
+				<input type="text" placeholder="请输入产品品牌" />
+			</li>-->
+			<li class="mui-table-view-cell">
+				<a class="">产品名称</a>
+				<input type="text" id='product_name' placeholder="请输入产品名称/石材名" />
+			</li>
+			<!--<li class="mui-table-view-cell">
+				<a class="">产品价格</a>
+				<input type="number" id='product_price' placeholder="元/片" />
+			</li>-->
+			<li class="mui-table-view-cell">
+				<a class="">产品库存</a>
+				<input type="number" id='product_inventory' placeholder="请输入库存数量" />
+			</li>
+			<li class="mui-table-view-cell" onclick="openPage('woyaofabucizhuan_2.html','woyaofabucizhuan_2')">
+				<a class="mui-navigate-right">产品属性</a>
+				<input type="text" id='product_attribute_val' placeholder=" " disabled="disabled" />
+			</li>
+			<li class="mui-table-view-cell" onclick="openPage('woyaofabucizhuan_3.html','woyaofabucizhuan_3')">
+				<a class="mui-navigate-right">产品规格</a>
+				<input type="text" id='sku_name' placeholder="" disabled="disabled" />
+			</li>
+			<li>
+				<span class="zwmsLi">产品描述</span>
+				<textarea id='descrip' class="yaoqiu" placeholder="请填写产品描述"></textarea>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="">提货地址</a>
+				<input type="text" id='product_inventory' placeholder="请输入提货地址" />
+			</li>
+			<div id="_attribute">
+			</div>
+			<li class="item_logo">
+				<span class="logo_text">缩略图</span>
+				<div class="logo_img">
+					<img src="../../util/img/tjslt.png" id="product_logo">
+				</div>
+			</li>
+			<li class="horizontal item" style="border: none;">
+				<span class="item_01">图片上传</span>
+				<span class="item_01" style="color: #666666;font-size: 0.8rem;">[最多5张]</span>
+				<div class="zhanweifu"></div>
+				<span class="item_01 jiayizhang" onclick="zhutu()">再增加一张</span>
+			</li>
+			<div class="chuanpingtu_one" style="height: 100%;" id="commodityOb">
+				<div class="chuanpingtu" onclick="imgInit('ob_btn1')">
+					<img class="img1" src="../../util/img/spzmzt.png" id="obbtn1">
+				</div>
+				<div class="chuanpingtu" onclick="imgInit('ob_btn2')">
+					<img class="img1" src="../../util/img/spzmzt.png" id="obbtn2">
+				</div>
+				<div class="chuanpingtu" onclick="imgInit('ob_btn3')">
+					<img class="img1" src="../../util/img/spzmzt.png" id="obbtn3">
+				</div>
+				<div class="chuanpingtu" onclick="imgInit('ob_btn4')">
+					<img class="img1" src="../../util/img/spzmzt.png" id="obbtn4">
+				</div>
+				<div class="chuanpingtu left" onclick="imgInit('ob_btn5')">
+					<img class="img1" src="../../util/img/spzmzt.png" id="obbtn5">
+				</div>
+			</div>
+			<li class="horizontal item" style="border: none;">
+				<span class="item_01">产品详情图</span>
+				<div class="zhanweifu"></div>
+				<span class="item_01 jiayizhang" onclick="cangku()">再增加一张</span>
+			</li>
+			<div class="chuanpingtu_one" id="commodityInfo" style="height: 100%;">
+				<div class="chuanpingtu" onclick="imgInit('info_btn1')">
+					<img class="img1" src="../../util/img/cpxqt.png" id="infobtn1">
+				</div>
+				<div class="chuanpingtu" onclick="imgInit('info_btn2')">
+					<img class="img1" src="../../util/img/cpxqt.png" id="infobtn2">
+				</div>
+				<div class="chuanpingtu" onclick="imgInit('info_btn3')">
+					<img class="img1" src="../../util/img/cpxqt.png" id="infobtn3">
+				</div>
+				<div class="chuanpingtu" onclick="imgInit('info_btn4')">
+					<img class="img1" src="../../util/img/cpxqt.png" id="infobtn4">
+				</div>
+				<div class="chuanpingtu cangku" onclick="imgInit('info_btn5')">
+					<img class="img1" src="../../util/img/cpxqt.png" id="infobtn5">
+				</div>
+			</div>
+		</ul>
+		<div class="BtnClass">
+			<button class="mui-btn saveBtn" onclick="savePro(0)">提交审核</button>
+			<button class="mui-btn saveBtn" onclick="savePro(1)">继续上传</button>
+		</div>
+		
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="js/mui.picker.js"></script>
+		<script src="js/mui.poppicker.js"></script>
+		<script src="js/city.data.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/tile.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			mui('body').on('hidden', '.mui-popover', function(e) {});
+			var info = document.getElementById("info");
+			mui('body').on('tap', '.mui-popover-action li>a', function() {
+				var a = this,
+					parent;
+				//根据点击按钮，反推当前是哪个actionsheet
+				for(parent = a.parentNode; parent != document.body; parent = parent.parentNode) {
+					if(parent.classList.contains('mui-popover-action')) {
+						break;
+					}
+				}
+				//关闭actionsheet
+				mui('#' + parent.id).popover('toggle');
+				info.innerHTML = "你刚点击了\"" + a.innerHTML + "\"按钮";
+			})
+
+			function zhutu() {
+				$('.chuanpingtu_one .left').css('display', 'inline-block')
+			}
+
+			function cangku() {
+				$('.chuanpingtu_one .cangku').css('display', 'inline-block')
+			}
+
+			function galleryImgsMaximum() {
+				// 从相册中选择图片
+				outSet('从相册中选择多张图片(限定最多选择3张)：');
+				plus.gallery.pick(function(e) {
+					for(var i in e.files) {
+
+						outLine(e.files[i]);
+					}
+				}, function(e) {
+					outSet('取消选择图片');
+				}, {
+					filter: 'image',
+					multiple: true,
+					maximum: 3,
+					system: false,
+					onmaxed: function() {
+						plus.nativeUI.alert('最多只能选择3张图片');
+					}
+				}); // 最多选择3张图片
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/shopping_order.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			img {
+				vertical-align: middle;
+			}
+			
+			.lianxikefu {
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+
+		<div class="actionbar">
+			<div class="left mui-action-back" onclick="back()">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">确认订单</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="dv_dialog_box1" id="bg3" style="display: none;">
+			<div class="dv_dialog Payment">
+				<div class="dv_title Payment1">选择支付方式</div>
+				<div class="dividerccc"></div>
+				<div class="close horizontal">
+					<div class="dialog_cancel Payment2" onclick="pay('alipay')">
+						<span style="display: block;"><img src="../../../form_mobile/util/img/zhifubao.png"style="width: 3.625rem;"/></span>
+						<span style="font-size: 0.96rem; color: #999999;">支付宝支付</span>
+					</div>
+					<div class="dialog_ok Payment2" onclick="pay('wxpay')">
+						<span style="display: block;"><img src="../../../form_mobile/util/img/weixin.png"style="width: 3.625rem;"/></span>
+						<span style="font-size: 0.96rem; color: #999999;">微信支付</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="actionbar_white" style="height: 70px; background: #f0f0f0;"></div>
+		<div id="dizhi">
+		</div>
+		<div id="shangp">
+		</div>
+		<div class="content-select">
+			<span class="content-select_1">共<span id="gnum"></span>件</span>
+			<span class="total"><span>合计：</span><span>￥</span><span id="zongM"></span></span>
+		</div>
+		<button class="settlement" onclick="buy()">提交订单</button>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/shopping_order.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var channel = null;
+			var channels = null;
+			var pays = {};
+
+			function plusReady() {
+				// 获取支付通道
+				plus.payment.getChannels(function(cs) {
+					channels = cs;
+				}, function(e) {
+					alert("获取支付通道失败：" + e.message);
+				});
+			}
+			document.addEventListener('plusready', plusReady, false);
+			var w = null;
+			//调用支付
+			function pay(type) {
+				var id = type;
+				var money = $("#zongM").html();
+				if(isUserLogin()) {
+					mui.toast('请重新登录进行充值');
+					return;
+				}
+				var alipayserver = path_url + 'ali_pay.do?money=' + money + '&user_id=' + getUserLocalData().user_id + '&order_ids=' + order_ids + ',&type=0';
+				var wxpayserver = path_url + 'wx_payApp.do?money=' + money + '&user_id=' + getUserLocalData().user_id + '&order_ids=' + order_ids + ',&type=0';
+				if(id == 'wxpay'){
+					getWXPay(wxpayserver);
+					return;
+				}
+				plus.nativeUI.showWaiting();
+				//获取支付通道
+				for(var i in channels) {
+					if(channels[i].id == id) {
+						channel = channels[i];
+					}
+				}
+				if(id == 'alipay') {
+					//获取支付通道
+					var xhr = new XMLHttpRequest();
+					xhr.onreadystatechange = function() {
+						switch(xhr.readyState) {
+							case 4:
+								if(xhr.status == 200) {
+									plus.payment.request(channel, xhr.responseText, function(result) {
+										paySuccess_back();
+									}, function(error) {
+										plus.nativeUI.alert("支付失败");
+									});
+								} else {
+									alert("获取订单信息失败！");
+								}
+								break;
+							default:
+								break;
+						}
+					}
+					xhr.open('GET', alipayserver);
+					xhr.send();
+				} else if(id == 'wxpay') {
+					//获取支付通道
+					mui.get(wxpayserver, {}, function(data) {
+						var varpay = {
+							retcode: 0,
+							retmsg: "ok",
+							appid: data.appid,
+							noncestr: data.noncestr,
+							package: data.package,
+							partnerid: data.partnerid,
+							prepayid: data.prepayid,
+							timestamp: data.timestamp,
+							sign: data.sign
+						};
+						plus.payment.request(channel, varpay, function(result) {
+							paySuccess_back();
+						}, function(e) {
+							plus.nativeUI.alert("支付失败");
+						});
+					}, "json");
+				}
+				plus.nativeUI.closeWaiting();
+
+			}
+		</script>
+	</body>
+
+</html>

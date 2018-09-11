@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/Location.css" />
+		<style type="text/css">
+			body,
+			html,
+			#allmap {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				margin: 0;
+				font-family: "微软雅黑";
+			}
+		</style>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=mnTQoy5alKY5cX37obFXHD15xzlC0FKs"></script>
+		<title>地址解析</title>
+	</head>
+
+	<body>
+		<div class="actionbar">
+			<div class="left" onclick="back()">
+				<span class="left_icon  iconfont zuojiantou mui-action-back"><img src="../../util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">地址</span>
+			<div class="right">
+
+			</div>
+		</div>
+		<div id="allmap"></div>
+		<div class="location" id="container"></div>
+		<div class="button">
+			
+		</div>
+		<div id="map" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell" onclick="gaode()">
+					<a href="#" style="color: #333;">高德地图</a>
+				</li>
+				<li class="mui-table-view-cell" onclick="baidu()">
+					<a href="#" style="color: #333;">百度地图</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#map" style="color: #F62525;"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+	</body>
+        <script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../util/base.js"></script>
+</html>
+<script type="text/javascript">
+	var name;
+	var process_name;
+	mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				process_name = self.process_name;
+				name = self.name;
+				ditua();
+		});
+			function ditua(){
+				// 百度地图API功能
+	var map = new BMap.Map("allmap");          
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+	var local = new BMap.LocalSearch(map, {
+		renderOptions:{map: map}
+	});
+	local.search(name);
+			}
+</script>

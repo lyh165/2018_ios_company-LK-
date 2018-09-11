@@ -1,0 +1,60 @@
+.text {
+	color: #333333;
+}
+.content {
+	margin-top: 2.2rem;
+	margin-left: 0.93rem;
+} 
+.xianze {
+	font-size: 1.2rem;
+}
+.kaidian {
+	display: block;
+	margin: auto;
+	margin-top: 2rem;
+	width: 11.06rem;
+	height: 4.39rem;
+	border-radius: 20px;
+	position: relative;
+}
+.woyaokaidian {
+	border: 1px solid #64b3fd;
+}
+.woshiwuliu {
+	border: 1px solid #f6af25;
+}
+.wuliu {
+	color: #f6af25;
+}
+
+.woyaofabu {
+	border: 1px solid #25c7f6;
+}
+.fabu {
+	color: #25c7f6;
+}
+.img {
+	width: 2.5rem;
+	height: 2.5rem;
+	position: absolute;
+	left: 1.7rem;
+}
+.img01 {
+	margin-top: 1rem;
+
+}
+.wenzi {
+	position: absolute;
+	right: 1.7rem;
+	line-height: 4.39rem;
+	font-size: 1rem;
+}
+.shop {
+	color: #64b3fd;
+}
+.img02 {
+	margin-top: 1rem;
+}
+.img03 {
+	margin-top: 1rem;
+}

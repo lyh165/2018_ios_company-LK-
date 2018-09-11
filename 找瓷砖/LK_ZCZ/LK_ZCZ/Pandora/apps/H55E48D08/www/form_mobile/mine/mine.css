@@ -1,0 +1,157 @@
+body {
+	background: #F0F0F0;
+}
+.wode {
+	font-size:1.12rem;
+	color: #FFFFFF;
+	margin-top: 1.3rem;
+	display: block;
+}
+.name{
+	font-size: 0.93rem;
+	color: #FFFFFF;
+}
+
+.phone{
+	color: #999999;
+}
+.top-img {
+	width: 100vw;
+	height: 11rem;
+	background: #fe4b4b;
+	text-align: center;
+	padding-top:1rem ;
+	position: relative;
+	top: 0;
+	left: 0;
+	padding-top: 2.8rem;
+}
+.yonghuming {
+	margin: auto;
+	margin-top: 1.56rem;
+	display: block;
+	height: 4.37rem;
+	width: 4.37rem;
+	margin-bottom:0.2rem ;
+	margin-top: 0.8rem;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-bottom: 0.8rem;
+}
+.name{
+	display: block;
+	margin-bottom: 0.2rem;
+}
+.content {
+	padding:0;
+}
+.list {
+	width: 5rem;
+	height: 100%;
+	float: left;
+	margin-left: 0.3rem;
+	margin-top: 1rem;
+	text-align: center;
+	position: relative;
+}
+.dingdanqkuang {
+	height: 4.93rem;
+	margin-bottom: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+li {
+	list-style-type: none;
+	height: 3.15rem;
+	background: #FFFFFF;
+	margin-top: 0;
+	padding-left:0.8rem ;
+}
+.img {
+	display: block;
+	width: 1.8rem;
+	height: 1.8rem;
+	margin: auto;
+	margin-bottom: 0.3rem;
+	position: relative;
+}
+.img img{
+	width: 2rem;
+	height: 2rem;
+}
+
+.text {
+	font-size: 0.87rem;
+	display: block;
+}
+
+
+.wanchengdingdan {
+	position: relative;
+}
+.shuliang {
+	width: 0.93rem;
+	height: 0.93rem;
+	position: absolute;
+	right: 1.2rem;
+	top: -0.5rem;
+	border-radius: 0.93rem;
+	border: 1px solid #fe4b4b;
+	color: #fe4b4b;
+	font-size: 12px;
+	line-height: 0.93rem;
+	text-align: center;
+}
+.woyaokaidian {
+	margin-bottom: 1rem;
+}
+.youjiantou {
+	
+}
+.wodedianpu {
+	background: #FFFFFF; 
+	height: 3.06rem;
+}
+.wodefabu {
+	border-bottom: 1px #E5E5E5 solid;
+	background: #FFFFFF; 
+	height: 3.06rem;
+}
+.shoujiadizhi {
+	border-bottom: 1px #E5E5E5 solid;
+	background: #FFFFFF; 
+	height: 3.06rem;
+}
+.wodeshoucang {
+	border-bottom: 1px #E5E5E5 solid;
+	background: #FFFFFF; 
+	height: 3.06rem;
+}
+.wodexiaoxi {
+	border-bottom: 1px #E5E5E5 solid;
+	background: #FFFFFF; 
+	height: 3.06rem;
+}
+.shezhi {
+	border-bottom: 1px #E5E5E5 solid;
+	background: #FFFFFF; 
+	height: 3.06rem;
+}
+.left {
+	margin-left: 0.5rem;
+	line-height: 3.06rem;
+}
+.xingxi{
+	width: 0.8rem;
+	border: 1px solid #fe4b4b;
+	border-radius: 1rem;
+	font-size: 0.65rem;
+	color: #fe4b4b;
+	float: right;
+	top: -0.1rem;
+	right: 1.2rem;
+	
+	z-index: 999;
+	line-height: 0.8rem;
+	position: absolute;
+}

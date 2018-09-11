@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>我要开店</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link href="../../../form_mobile/util/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../../form_mobile/util/base.css" rel="stylesheet" />
+		<link href="css/woyaokaidian_two.css" rel="stylesheet" />
+		<style>
+		.checkbox {
+		    height: 1rem;
+			width: 24%;
+			position: relative;
+			display: inline-block;
+		}
+		.checkbox input[type='checkbox'] {
+		    position: absolute;
+		    
+		    top: 0;
+		    width: 1rem;;
+		    height: 1rem;
+		    opacity: 0;
+		
+		}
+		.cizhuan {
+			position: absolute;
+			left: 0;
+		}
+		.checkbox label {
+		    position: absolute;
+		    left: 1rem;
+		    top: 0;
+		    height: 1rem;
+		    line-height: 1rem;
+		}
+		.checkbox label:before {
+		    content: '';
+		    position: absolute;
+		    left: -1.3rem;
+		    top: 0;
+		    width: 0.86rem;
+		    height: 0.86rem;
+		    background: url(../../../form_mobile/util/img/u11.png);
+		    background-size: 100% 100%;
+		   
+		}
+		
+		.checkbox label:after {
+		     width: 1rem;
+			 height: 1rem;
+			 background: url(../../../form_mobile/util/img/u3.png);
+			 background-size: 100% 100%;
+		}
+		
+		.checkbox input[type='checkbox']:checked + label:before {
+		    background: url(../../../form_mobile/util/img/u3.png);
+			background-size: 100% 100%;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">我要开店</span>
+			<input id="shop_inf" value="" style="display: none;"/>
+			<div class="right">
+			</div>
+		</div>
+		<div class="gekai" style="height: 3.75rem;"></div>
+		<ul class="content">
+			<li class="item">
+				<span class="item_01">店铺名称</span>
+			</li>
+			<li class="item">
+				<input class="fuwumingcheng" type="text"  id="shopName" placeholder="请填写店铺名称" style="font-size: 1rem;"/>
+			</li>
+			<li class="item">
+				<span class="item_01">店铺地址</span>
+			</li>
+			<li class="item">
+				<input class="fuwumingcheng" type="text"  id="shop_add" placeholder="请填写店铺地址" style="font-size: 1rem;"/>
+			</li>
+			<li class="item item_02">
+				<span>经营范围</span>
+				<br />
+				<div class="checkbox">
+					<input type='checkbox' id='checkbox1' value="瓷砖" name="shop_range"> 
+					<label class="cizhuan" for='checkbox1' disabled="disabled">瓷砖</label>
+				</div>
+				<div class="checkbox">
+					<input type='checkbox' id='checkbox2' value="物流" name="shop_range"> 
+					<label class="cizhuan" for='checkbox2'>物流</label>
+				</div>
+				<div class="checkbox">
+					<input type='checkbox' id='checkbox4' value="加工厂" name="shop_range"> 
+					<label class="cizhuan" for='checkbox4' style="width: 4rem;">加工厂</label>
+				</div>
+				<div class="checkbox">
+					<input type='checkbox' id='checkbox3' value="广告公司" name="shop_range"> 
+					<label class="cizhuan" for='checkbox3'>广告公司</label>
+				</div>
+			</li>
+			<li class="item">
+				<input class="fuwumingcheng" type="text"  id="shop_range_other" placeholder="其他【填写】" style="font-size: 1rem;"/>
+			</li>
+			<li class="item item_03">
+				<span>经营主体
+					<span style="color: #999999;font-size: 0.9rem;">【多选】</span>
+				</span>
+				<br />
+				<div class="checkbox" style="margin-top: 1rem;">
+					<input type='checkbox' id='checkbox5' name='shop_subject' value="个人"> 
+					<label class="cizhuan" for='checkbox5'>个人</label>
+				</div>
+				<div class="checkbox">
+					<input type='checkbox' id='checkbox6' name='shop_subject' value="商铺"> 
+					<label class="cizhuan" for='checkbox6'>商铺</label>
+				</div>
+				<div class="checkbox">
+					<input type='checkbox' id='checkbox7' name='shop_subject' value="品牌"> 
+					<label class="cizhuan" for='checkbox7'>品牌</label>
+				</div>
+				<div class="checkbox">
+					<input type='checkbox' id='checkbox8' name='shop_subject' value="企业"> 
+					<label class="cizhuan" for='checkbox8' style="width: 4rem;">企业</label>
+				</div>
+				<div class="checkbox"style="margin-top: 1rem;">
+					<input type='checkbox' id='checkbox9' name='shop_subject' value="展厅"> 
+					<label class="cizhuan" for='checkbox9'>展厅</label>
+				</div>
+				<div class="checkbox">
+					<input type='checkbox' id='checkbox10' name='shop_subject' value="工厂"> 
+					<label class="cizhuan" for='checkbox10'>工厂</label>
+				</div>
+				<div class="checkbox">
+					<input type='checkbox' id='checkbox11' name='shop_subject' value="仓库"> 
+					<label class="cizhuan" for='checkbox11'>仓库</label>
+				</div>
+			</li>
+			<li class="item">
+				<input class="fuwumingcheng" type="text"  id="shop_subject_other" placeholder="其他【填写】" style="font-size: 1rem;"/>
+			</li>
+			<li class="item item_04" style="margin-bottom: 1rem;font-size:0.93rem;">
+				<span>店铺简介</span>
+				<textarea class="yaoqiu" rows="" cols="" placeholder="请填写公司简介"></textarea>
+			</li>
+			<li class="item_logo" >
+				<span class="logo_text logoImg">店铺logo</span>
+				<div class="logo_img" onclick="imgInit('setLogo')">
+					<img src="../../util/img/logozp.png" id="shop_logo">
+				</div>
+			</li>
+			<div style="margin-left: 1rem;font-size:0.93rem;">上传资质</div>
+			<li class="item item_04 lione-li" >
+				<div class="zhengjia">
+					<div class="img img01">
+						<img class="ID_card obverse" src="../../util/img/scsfzzm.png" onclick="imgInit('setImgOb')" style="width: 10.2rem; height: 6.56rem;"/>
+					</div>
+					
+				</div>
+				<div class="zhengjia01">
+					<div class="img img01">
+						<img class="ID_card reserver" src="../../util/img/scsfzbm.png" onclick="imgInit('setImgRe')" style="width: 10.2rem; height: 6.56rem;"/>
+					</div>
+					
+				</div>
+				<div class="yingyezhizhao" onclick="imgInit('setLicense')">
+					<img class="ID_card" id="shop_img3" src="../../util/img/scyyzz.png" style="position: absolute;left: 0; width: 70vw;height: 18rem;z-index: 666;"/>
+				</div>
+			</li>
+			<li class="horizontal item" style="border: none;">
+				<span class="item_05">展厅照片</span>
+				<span class="item_05" style="color: #666666;font-size: 0.8rem;">[最多5张]</span>
+				<div class="zhanweifu"></div>
+				<span class="item_05 jiayizhang" id="zhanting">再增加一张</span>
+			</li>
+			<div class="chuanpingtu_one" style="height: 100%;" id="show_img">
+				<div class="chuanpingtu">
+					<img class="img1" src="../../util/img/tjztzp.png" id="showImg1" onclick="imgInit('showImg1')">
+				</div>
+				<div class="chuanpingtu">
+					<img class="img1" src="../../util/img/tjztzp.png" id="showImg2" onclick="imgInit('showImg2')">
+				</div>
+				<div class="chuanpingtu">
+					<img class="img1" src="../../util/img/tjztzp.png" id="showImg3" onclick="imgInit('showImg3')">
+				</div>
+				<div class="chuanpingtu">
+					<img class="img1" src="../../util/img/tjztzp.png" id="showImg4" onclick="imgInit('showImg4')">
+				</div>
+				<div class="chuanpingtu left">
+					<img class="img1" src="../../util/img/tjztzp.png" id="showImg5" onclick="imgInit('showImg5')">
+				</div> 	
+			</div>
+			<div style="height: 1rem;"></div>
+			<li class="horizontal item "style="border-bottom: 1px solid #e5e5e5;border-top: 1px solid #e5e5e5;">
+				<input class="fuwumingcheng width70" type="text"  id="shop_show_add" placeholder="填写展厅详细地址" style="font-size: 1rem;"/>
+				<!--<div  class="iayizhang add">再增加一个</div>-->
+			</li>
+			<li class="horizontal item" style="border: none;">
+				<span class="item_05">仓库地址</span>
+				<span class="item_05" style="color: #666666;font-size: 0.8rem;">[最多5张]</span>
+				<div class="zhanweifu"></div>
+				<span class="item_05 jiayizhang" id="cangku" >再增加一张</span>
+			</li>
+			<li style="clear: left;">
+				<div class="chuanpingtu_one" style="height: 100%;clear: left;" id="warehouse_img">
+					<div class="chuanpingtu">
+						<img class="img1" src="../../util/img/tjckzp.png" id="warehouseImg1" onclick="imgInit('warehouseImg1')">
+					</div>
+					<div class="chuanpingtu">
+						<img class="img1" src="../../util/img/tjckzp.png" id="warehouseImg2" onclick="imgInit('warehouseImg2')">
+					</div>
+					<div class="chuanpingtu">
+						<img class="img1" src="../../util/img/tjckzp.png" id="warehouseImg3" onclick="imgInit('warehouseImg3')">
+					</div>
+					<div class="chuanpingtu">
+						<img class="img1" src="../../util/img/tjckzp.png" id="warehouseImg4" onclick="imgInit('warehouseImg4')">
+					</div>
+					<div class="chuanpingtu cangku">
+						<img class="img1" src="../../util/img/tjckzp.png" id="warehouseImg5" onclick="imgInit('warehouseImg5')">
+					</div>
+				</div>
+			</li>
+			
+			<div style="height: 1rem;"></div>
+			<li class="posir ckAddress"style="border-bottom: 1px solid #e5e5e5;border-top: 1px solid #e5e5e5;">
+				<!--<input class="fuwumingcheng width90" type="text"  id="warehouse_add" placeholder="填写仓库详细地址" style="font-size: 1rem;"/>-->
+				<div  class="iayizhang addAddress">再增加一个</div>
+			</li>
+			<li class="horizontal item" style="border: none;">
+				<span class="item_05">工厂地址</span>
+				<span class="item_05" style="color: #666666;font-size: 0.8rem;">[最多5张]</span>
+				<div class="zhanweifu"></div>
+				<span class="item_05 jiayizhang"id="gongchang" >再增加一张</span>
+			</li>
+			<div class="chuanpingtu_one" style="height: 100%;" id="factory_img">
+				<div class="chuanpingtu">
+					<img class="img1" src="../../util/img/tjgczp.png" id="factoryImg1" onclick="imgInit('factoryImg1')">
+				</div>
+				<div class="chuanpingtu">
+					<img class="img1" src="../../util/img/tjgczp.png" id="factoryImg2" onclick="imgInit('factoryImg2')">
+				</div>
+				<div class="chuanpingtu">
+					<img class="img1" src="../../util/img/tjgczp.png" id="factoryImg3" onclick="imgInit('factoryImg3')">
+				</div>
+				<div class="chuanpingtu">
+					<img class="img1" src="../../util/img/tjgczp.png" id="factoryImg4" onclick="imgInit('factoryImg4')">
+				</div>
+				<div class="chuanpingtu gongchang">
+					<img class="img1" src="../../util/img/tjgczp.png" id="factoryImg5" onclick="imgInit('factoryImg5')">
+				</div>
+			</div>
+			
+			<li class="horizontal item"style="border-bottom: 1px solid #e5e5e5;border-top: 1px solid #e5e5e5;">
+				<input class="fuwumingcheng width70" type="text" id="factory_add" placeholder="填写工厂详细地址" style="font-size: 1rem;"/>
+				<!--<div  class="iayizhang add">再增加一个</div>-->
+			</li>
+			<li class="item">
+				<span class="item_01">提供服务</span>
+			</li>
+			<li class="item item_06" >
+				<div class="gangwei" id="">
+					<div class="service_button" id="shop_service_1" onclick="checkBoxBtn('shop_service_1','shop_service1','service_button_bkg')">代加工</div>
+					<input type="checkbox" value="代加工" style="display:none" id="shop_service1" name="shop_service"/>
+					
+					<div class="service_button" id="shop_service_2" onclick="checkBoxBtn('shop_service_2','shop_service2','service_button_bkg')">代设计</div>
+					<input type="checkbox" value="代设计" style="display:none" id="shop_service2" name="shop_service"/>
+					
+					<div class="service_button" id="shop_service_3" onclick="checkBoxBtn('shop_service_3','shop_service3','service_button_bkg')">免费打版</div>
+					<input type="checkbox" value="免费打版" style="display:none" id="shop_service3" name="shop_service"/>
+				</div>
+			</li>
+			<li class="item">
+				<input class="fuwumingcheng" type="text"  id="service_other" placeholder="其他【填写】" style="font-size: 1rem;"/>
+			</li>
+		</ul>
+		<button type="button" class="mui-btn mui-btn-blue" onclick="submitBtn()">提交审核</button>
+
+		
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/woyaokaidian.js"></script>
+		<script type="text/javascript">
+			mui.init({});
+		</script>
+		<script type="text/javascript">
+		mui.plusReady(function(){
+			var self=plus.webview.currentWebview();
+			$('#shop_inf').val(self.flag);
+		});	
+		$(function(){
+			$(" .xuanze .select").click(function(){
+				$(this).toggle().siblings(" .select-no").toggle()
+			})
+		})
+		$(function(){
+			$(" .xuanze .select-no").click(function(){
+				$(this).toggle().siblings(" .select").toggle()
+			})
+		})
+		mui.init()
+			mui('.horizontal').on('tap', '#zhanting', function() {
+				$('.left').css('display','inline-block')
+			})
+			mui('.horizontal').on('tap', '#cangku', function() {
+				$('.cangku').css('display','inline-block')
+			})
+			mui('.horizontal').on('tap', '#gongchang', function() {
+				$('.gongchang').css('display','inline-block')
+			})
+			
+			jQuery('.addAddress').on('tap',function(){
+				jQuery(this).before('<input class="fuwumingcheng width90" type="text"  id="warehouse_add" placeholder="填写仓库详细地址" style="font-size: 1rem;"/>');
+			})
+			
+			
+		</script>
+		
+	</body>
+
+</html>

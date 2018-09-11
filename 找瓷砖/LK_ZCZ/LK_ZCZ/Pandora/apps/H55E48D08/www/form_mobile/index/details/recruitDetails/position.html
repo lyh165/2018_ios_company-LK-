@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>职位详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../../util/base.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../../form_util/mui/css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../../../../form_util/mui/css/mui.picker.css" />
+		<link href="css/position.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../mine/gerenxinxi/css/dialog.css" />
+	</head>
+
+	<body>
+		<input type="text" value="" id="recruit_phone" style="display:none;" />
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">职位详情</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="gekai" style="height: 3.75rem;"></div>
+		<div class="content">
+			<div class="top">
+				<span class="text_01" id="recruit_name"></span>
+				<span class="text_02"><span id="recruit_treatment"></span>元/月</span>
+				<div class="text_03 " id="shop_name"></div>
+			</div>
+			<div class="top_01">
+				<span class="text_01">工作地址</span>
+			</div>
+			<div class="top_01" style="border-bottom: 0.75rem solid #F0F0F0;">
+				<span><img src="../../../util/img/u13.png" style="width: 0.7rem; margin-bottom: 1rem;"/></span>
+				<span class="text_04" id="shop_add" onclick="openAddress()"></span>
+				<span><img src="../../../util/img/jiantou.png" style="width: 0.43rem;position: absolute;right: 1rem;top: 1rem;"/></span>
+			</div>
+			<!--<div class="top_01">
+				<span class="text_01">职位描述</span>
+			</div>
+			<div class="top_01 zhiwei">
+				<span class="text_01">岗位职责：</span>
+			</div>
+			<div class="zhiwei">
+				<span class="text_06">1、进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；进行全面需求分析，输出产品规划参考报告；</span>
+				<div class="text_05">2、深度理解产品阶段目标，进行产品实现过程迭代管理，确保产品需求、原型、文档达到预期标准；</div>
+				<div class="text_05">3、根据产品建设要求，运用互联网产品设计理念和专业工具，进行产品需求理解、策划构思、原型绘制、清晰详细的说明文档撰写</div>
+				<div class="text_05">4、基于产品需求，输出关联性文档，桥接内部沟通，促进产品实现过程顺畅有序</div>
+			</div>-->
+			<div class="top_01 zhiwei">
+				<span class="text_01">职位描述</span>
+			</div>
+			<div class="zhiwei" id="recruit_requirement">
+				<!--<span class="text_06">1、大专以上学历，计算机，师范，教育等相关专业；</span>
+				<div class="text_05">2、一年以上教育产品设计经验，熟悉互联网教育产品、运营模式、各级用户；</div>
+				<div class="text_05">3、熟悉产品实现过程各个环节要点、难点，能独立完成B端/C端教育项目或产品模块的全程跟进；</div>
+				<div class="text_05">4、了解互联网产品设计的基本方法和交互规则，熟练使用Axure制作中度保真的网站或移动端原型；</div>
+				<div class="text_05">5、了解教育信息化，熟悉国内外线上教育行业现状及发展趋势、代表性产品及其商业模式；</div>
+				<div class="text_05">6、良好的学习、思考、总结、创新、沟通能力，较强的逻辑思维、文字表现力、内驱力，目标导向、严谨高效。</div>-->
+			</div>
+			<!--<div class="top_01 zhiwei">
+				<span class="text_01">员工福利：</span>
+			</div>
+			<div class="zhiwei">
+				<span class="text_06">1、工作时间9:30-18:00，工作环境舒适、同事间氛围轻松和谐，上下班有班车接送往返市区主干道；</span>
+				<div class="text_05">2、试用期内购买社会保险和住房公积金</div>
+				<div class="text_05">3、完善的期权制度；</div>
+				<div class="text_05">4、根据部门的绩效制度，每月绩效考评结果及综合工作表现累计，每年调薪；</div>
+				<div class="text_05">5、月度生日寿星聚会，生日红包礼金、生日礼物、节日慰问品等等；</div>
+				<div style="height: 10rem;"></div>
+			</div>-->
+		</div>
+		<div class="dibu">
+			<div class="xiaoxi">
+				<span><img src="../../../util/img/xiaox01.png" style="width: 1.38rem;margin-bottom: 0.8rem;margin-right: 0.5rem;"/>在线咨询</span>
+			</div>
+			<div class="dianhua" onclick="changeDelete()">
+				<span><img src="../../../util/img/dianhua01.png" style="width: 1.38rem;margin-bottom: 0.8rem;margin-right: 0.5rem;"/>打电话</span>
+			</div>
+		</div>
+		<div class="dv_dialog_box1" id="phoneTanKuang" style="display: none;">
+			<div class="dv_dialog">
+				<div class="dv_title" id="user_phone"></div>
+				<div class="dividerccc" style="background:#CCCCCC; height: 1px ; border:none"></div>
+				<div class="close horizontal">
+					<div class="dialog_cancel" onclick="changname_cancel()">取消</div>
+					<a id="playFactoryPhone" class="dialog_ok" style="background: #F62525;color: #ffffff;border-radius: 0 0 10px 0">呼叫</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../../../../form_util/mui/js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../util/base.js"></script>
+		<script src="js/recruitDetails.js"></script>
+
+	</body>
+
+</html>

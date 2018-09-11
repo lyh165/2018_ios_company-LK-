@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>创建物流</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link href="../../../form_util/mui/css/mui.min.css" rel="stylesheet" type="text/css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../util/base.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.poppicker.css" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link href="css/chuangjianwulu.css" rel="stylesheet" />
+		<style>
+			input[type=color],
+			input[type=date],
+			input[type=datetime-local],
+			input[type=datetime],
+			input[type=email],
+			input[type=month],
+			input[type=number],
+			input[type=password],
+			input[type=search],
+			input[type=tel],
+			input[type=text],
+			input[type=time],
+			input[type=url],
+			input[type=week],
+			select,
+			textarea {
+				width: 70vw;
+				height: 1rem;
+				line-height: 1rem;
+				border: none;
+				position: absolute;
+				right: 1rem;
+				top: 1.1rem;
+				font-size: 0.93rem;
+				padding: 0;
+				padding-left: 0.5rem;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">创建物流</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="gekai" style="height: 60px;"></div>
+		<ul class="content">
+			<!--<li class="item">
+				<span class="item_01">项目名称</span>
+				<input class="fuwumingcheng" type="text" name="mingcheng" id="logistics_name" placeholder="填写项目名称" />
+			</li>-->
+			<li class="item">
+				<span class="item_01">专线名称</span>
+				<input class="fuwumingcheng" type="text" name="mingcheng" id="logistics_line" placeholder="填写专线名称" />
+			</li>
+			<li class="item">
+				<span class="item_01" style="margin-right: 2.45rem;">价格</span>
+				<input class="fuwumingcheng" type="text" name="mingcheng" id="logistics_price" placeholder="填写多少元/吨" />
+			</li>
+			<li class="item">
+				<span class="item_01">联系电话</span>
+				<input class="fuwumingcheng" type="text" name="mingcheng" id="logistics_phone" placeholder="电话号码" />
+			</li>
+
+			<li class="item item_02">
+				<div class="departure" id='showCityPicker3'>
+					<div id='logistics_city_start'>出发城市</div>
+				</div>
+				<div class="wangfan" style="width: 93vw"><img src="../../../form_mobile/util/img/wangfan.png" alt="" /></div>
+				<div class="Arrivals" id='showCityPicker4'>
+					<div id='logistics_city_stop'>到达城市</div>
+				</div>
+			</li>
+			<li class="item item_03 wlms">
+				<span>物流描述</span>
+
+				<textarea class="yaoqiu" rows="" cols="" placeholder="物流描述" id="logistics_describe"></textarea>
+
+			</li>
+			<li class="horizontal item" style="border: none;">
+				<span class="item_01">照片</span>
+				<div class="zhanweifu"></div>
+			</li>
+			<div id="logistics_img">
+				<div class="chuanpingtu" onclick="imgInit('setImg1')">
+					<img class="img1" src="../../util/img/tjtp.png" id="setImg1">
+				</div>
+				<div class="chuanpingtu" onclick="imgInit('setImg2')">
+					<img class="img1" src="../../util/img/tjtp.png" id="setImg2">
+				</div>
+				<div class="chuanpingtu" onclick="imgInit('setImg3')">
+					<img class="img1" src="../../util/img/tjtp.png" id="setImg3">
+				</div>
+			</div>
+			<li class="horizontal item" style="border-bottom: 1px solid #E5E5E5;border-top: 1px solid #E5E5E5;">
+				<span class="item_01">提供服务</span>
+				<div class="zhanweifu"></div>
+			</li>
+			<li class="item item_03">
+				<div class="gangwei" id="">
+					<div class="service_button" id="shop_service_1" onclick="checkBoxBtn('shop_service_1','shop_service1')">上门提货</div>
+					<input type="checkbox" value="上门提货" style="display:none" id="shop_service1" name="logistics_service" />
+					<div class="service_button" id="shop_service_2" onclick="checkBoxBtn('shop_service_2','shop_service2')">代打木架</div>
+					<input type="checkbox" value="代打木架" style="display:none" id="shop_service2" name="logistics_service" />
+					<div class="service_button" id="shop_service_3" onclick="checkBoxBtn('shop_service_3','shop_service3')">破损包赔</div>
+					<input type="checkbox" value="破损包赔" style="display:none" id="shop_service3" name="logistics_service" />
+				</div>
+			</li>
+			<li class="horizontal item" style="border-bottom: 1px solid #E5E5E5;border-top: 1px solid #E5E5E5;">
+				<input class="item_01" placeholder="其他【填写】" style="border: none;width: 90vw;line-height: 1rem;" id="ls_other" />
+			</li>
+			<!--<li class="item_logo">
+				<span class="logo_text">logo</span>
+				<div class="logo_img" onclick="imgInit('lLogo')">
+					<img src="../../util/img/logozp.png" id="logistics_logo">
+				</div>
+			</li>-->
+		</ul>
+		<button type="button" class="mui-btn blue" id="sure_logistics">确认发布</button>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/mui/js/city.data.js"></script>
+		<script src="../../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../../../form_util/mui/js/mui.poppicker.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/logistics.js"></script>
+		<script>
+			function checkBoxBtn(elementId, inpId) {
+				var obj = $("#" + elementId);
+				var inpObj = $("#" + inpId);
+				if(obj.hasClass("service_button_bkg")) {
+					obj.removeClass("service_button_bkg")
+					inpObj.prop("checked", false);
+				} else {
+					obj.addClass("service_button_bkg");
+					inpObj.prop("checked", true);
+				}
+			}
+			(function($, doc) {
+				$.init();
+				$.ready(function() {})
+
+			})(mui, document);
+		</script>
+
+	</body>
+
+</html>

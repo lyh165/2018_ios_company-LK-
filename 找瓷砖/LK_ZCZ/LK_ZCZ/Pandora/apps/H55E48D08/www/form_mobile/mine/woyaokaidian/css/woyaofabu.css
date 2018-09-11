@@ -1,0 +1,42 @@
+.text {
+	color: #333333;
+}
+.content {
+	margin-top: 2.2rem;
+	margin-left: 0.93rem;
+} 
+.xianze {
+	font-size: 1.2rem;
+}
+.fabu {
+	margin-top: 2rem;
+	width: 7rem;
+	height: 5.06rem;
+	border-radius: 20px;
+	float: left;
+	margin-left: 15vw;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+.img {
+	width: 3.12rem;
+	height: 3.12rem;
+	display: block;
+	margin: auto;
+	margin-bottom: 0.4rem;		
+}
+.wuliu {
+	color: #70d427;
+}
+.cizhuan {
+	color: #f75779;
+}
+.zhaopin {
+	color: #5564f5;
+}
+.fuwu {
+	color: #f0a422;
+}
+.zhaoping1 {
+	color: #23d6f1;
+}

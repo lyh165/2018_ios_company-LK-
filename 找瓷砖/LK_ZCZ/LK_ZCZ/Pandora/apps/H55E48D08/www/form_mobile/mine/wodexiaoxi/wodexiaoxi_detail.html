@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>我的消息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../util/base.css" rel="stylesheet" />
+		<link href="css/wodexiaoxi.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../shopping_cart/order/css/dialog.css" />
+		<style type="text/css">
+			.top {
+				height: 3rem;
+				background: #FFFFFF;
+				border-bottom: 1px solid #e5e5e5;
+				z-index: 999;
+				position: relative;
+				padding-left: 3.43rem;
+				padding-right: 3.43rem;
+			}
+			
+			.mui-content {
+				padding-top: 3.75rem;
+			}
+			
+			.dibu {
+				width: 100vw;
+				height: 4rem;
+				text-align: center;
+				position: fixed;
+				bottom: 0rem;
+				background: white;
+			}
+			
+			.button {
+				width: 92vw;
+				height: 2.75rem;
+				border: none;
+				background: #f62525;
+				color: #FFFFFF;
+				border-radius: 5px;
+				z-index: -1;
+				margin:0.5rem auto;
+			}
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+			.mui-content{
+				padding-bottom: 3.5rem;
+			}
+			p>img{
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left" id="back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span id="activity_title" class="text" style="color: #333333;text-align: center;"></span>
+			<span class="mui-text-right" style="margin-right: 2.5rem;font-size: 0.93rem;color: #333;">  </span>
+		</div>
+		<div class="mui-content" id="activity_content">
+
+		</div>
+		<div class="dv_dialog_box1 mui-hidden" id="bg3">
+			<div class="dv_dialog Payment">
+				<div class="dv_title Payment1">选择支付方式</div>
+				<div class="dividerccc"></div>
+				<div class="close horizontal">
+					<div class="dialog_cancel Payment2" onclick="pay('alipay')">
+						<span style="display: block;"><img src="../../../form_mobile/util/img/zhifubao.png"style="width: 3.625rem;"/></span>
+						<span style="font-size: 0.96rem; color: #999999;">支付宝支付</span>
+					</div>
+					<div class="dialog_ok Payment2" onclick="pay('wxpay')">
+						<span style="display: block;"><img src="../../../form_mobile/util/img/weixin.png"style="width: 3.625rem;"/></span>
+						<span style="font-size: 0.96rem; color: #999999;">微信支付</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dibu">
+			<button class="button" id="zhifu_but" onclick="addGroup()">支付￥:<span id="activity_money"></span></button>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var activity_id ='';
+			mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				activity_id = self.activity_id;
+				getActivity(activity_id);
+			});
+
+			function getActivity(activity_id) {
+				var json = {
+					"activity_id": activity_id,
+				}
+				var jsonAjax = {
+					"url": "app_getActivityById.do",
+					"jsonData": json,
+					"methodName": "getActivity_back",
+				}
+				getAjaxData(jsonAjax);
+			}
+
+			function getActivity_back(jsonObj) {
+				var jsonData = strToJson(jsonObj.data);
+				var data = strToJson(jsonData.data);
+				$("#activity_title").html(data.activity_title);
+				$("#activity_content").html(data.activity_content);
+				if(isUndefinedAndEmpty(data.activity_money)||data.activity_money==0){
+					$("#zhifu_but").css("display","none");
+				}else{
+					$("#zhifu_but").css("display","block");
+					$("#activity_money").html(data.activity_money);
+				}
+			}
+			function addGroup(){
+				$("#bg3").removeClass("mui-hidden");
+			}
+			/*返回键调用的函数*/
+			mui.back = function() {
+				back();
+			}
+			document.getElementById('back').addEventListener('tap', function() {
+				back();
+			})
+			function back(){
+				closePage('wodexiaoxi_detail');
+			}
+			var channel = null;
+			var channels = null;
+			var pays = {};
+
+			function plusReady() {
+				// 获取支付通道
+				plus.payment.getChannels(function(cs) {
+					channels = cs;
+				}, function(e) {
+					alert("获取支付通道失败：" + e.message);
+				});
+			}
+			document.addEventListener('plusready', plusReady, false);
+			var w = null;
+			//调用支付
+			function pay(type) {
+				var id = type;
+				var money = $("#activity_content").html();
+				if(isUndefinedAndEmpty(getUserLocalData().user_id)) {
+					mui.toast('请重新登录进行充值');
+					return;
+				}
+				var alipayserver = path_url + 'ali_pay.do?money=' + money + '&user_id=' + getUserLocalData().user_id+ '&order_ids=' + activity_id+'&type=2';
+				var wxpayserver = path_url + 'wx_payApp.do?money=' + money + '&user_id=' + getUserLocalData().user_id+ '&order_ids=' + activity_id+'&type=2';
+				plus.nativeUI.showWaiting();
+				//获取支付通道
+				for(var i in channels) {
+					if(channels[i].id == id) {
+						channel = channels[i];
+					}
+				}
+				if(id == 'alipay') {
+					//获取支付通道
+					var xhr = new XMLHttpRequest();
+					xhr.onreadystatechange = function() {
+						switch(xhr.readyState) {
+							case 4:
+								if(xhr.status == 200) {
+									plus.payment.request(channel, xhr.responseText, function(result) {
+										$("#bg3").addClass("mui-hidden");
+										mui.toast("支付成功！");
+									}, function(error) {
+										plus.nativeUI.alert("支付失败");
+									});
+								} else {
+									alert("获取订单信息失败！");
+								}
+								break;
+							default:
+								break;
+						}
+					}
+					xhr.open('GET', alipayserver);
+					xhr.send();
+				} else if(id == 'wxpay') {
+					//获取支付通道
+					mui.get(wxpayserver, {}, function(data) {
+						var varpay = {
+							retcode: 0,
+							retmsg: "ok",
+							appid: data.appid,
+							noncestr: data.noncestr,
+							package: data.package,
+							partnerid: data.partnerid,
+							prepayid: data.prepayid,
+							timestamp: data.timestamp,
+							sign: data.sign
+						};
+						plus.payment.request(channel, varpay, function(result) {
+							$("#bg3").addClass("mui-hidden");
+							mui.toast("支付成功！");
+						}, function(e) {
+							plus.nativeUI.alert("支付失败");
+						});
+					}, "json");
+				}
+				plus.nativeUI.closeWaiting();
+
+			}
+		</script>
+	</body>
+
+</html>

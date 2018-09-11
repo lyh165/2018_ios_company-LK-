@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/shopping_evaluate.css" />
+		<style type="text/css">
+			img{
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="actionbar">
+			<input type="hidden" readonly="readonly" id="orderId" value=""/>
+			<input type="hidden" readonly="readonly" id="orderDetailId" value=""/>
+			<div class="left mui-action-back" >
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">评价晒单</span>
+			<div onclick="addOrderComment()" class="right" style="color: #f62525; font-size: 0.93rem;">
+				提交
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 3.75rem; background: #f0f0f0;"></div>
+		<div class="content_product">
+			<span class="product"><img id="productImg" src="" style="width: 4.31rem;"/></span>
+			<div class="content1-text">
+				<span id="productName" class="content-text1"></span>
+				<span id="skuName" class="content-text2"></span>
+			</div>
+		</div>
+		<div class="upload">
+			<textarea id="commentContext" class="textarea" type="text" placeholder="分享下你的购物体验吧（200字以内）" style="height: 6rem; border: none;"></textarea>
+			
+			<ul class="content_picture1" id="comPicList">
+				
+				<li class="ruzhibiao-qinxuanz" id="justList">	
+					<div class="my-head-img">
+					<img id="user_img" onclick="imgInit('setImg')" src="../../../form_mobile/util/img/xiangji.png"/>
+					</div>
+				</li>
+				
+			</ul>
+			
+			<div class="content">
+				<div class="mui-input-row mui-checkbox mui-left">
+					<label class="name">匿名评价</label>
+					<input class="li_colorer"  name="checkbox1" type="checkbox" id="is_xuan">
+				</div>
+			</div>
+		</div>
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#" style="color: #333;">拍照</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#" style="color: #333;">从相册选择</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#picture" style="color: #F62525;"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js "></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js "></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js "></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js "></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js "></script>
+		<script src="../../../form_util/util/util_js/strUtil.js "></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js "></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js "></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../util/base.js "></script>
+		<script src="../../../form_util/mui/js/mui.picker.min.js" type="text/javascript"></script>
+		<script src="js/shopping_evaluate.js"></script>
+	</body>
+
+</html>

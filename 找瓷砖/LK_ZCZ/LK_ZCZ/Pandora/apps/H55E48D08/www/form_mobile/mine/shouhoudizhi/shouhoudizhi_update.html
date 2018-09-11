@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>收件地址</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../form_util/mui/css/mui.poppicker.css">
+		<link href="../../../form_util/mui/css/mui.picker.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/shouhoudizhi_one.css" />
+		<style>
+			input{
+				border: none !important;
+			}
+			.mui-poppicker-header .mui-btn {
+				border: none;
+				background: none;
+				color: #F62525;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">收件地址</span>
+			<div class="right" style="width: 1.12rem; height: 1.12rem; margin-right: 0.63rem;">	
+				
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 3.75rem;"></div>
+		<div class="content" id='showCityPicker3'>
+			<span class="content-text">地区</span>
+			<input class="content-text1 input" id="addressArea" readonly="readonly" placeholder="">
+			<span class="right_arrow" ><img src="../../../form_mobile/util/img/jiantou.png"/></span>
+		</div>
+		<div class="content1">
+			<span class="content-text">详细地址</span>
+			<input class="content-text1 input" id="addressDetail" placeholder="" type="text">
+		</div>
+		<div class="content1">
+			<span class="content-text">收货人</span>
+			<input class="content-text1 input" id="addressPerson" placeholder="" type="text">
+		</div>
+		<div class="content1">
+			<span class="content-text">收货电话</span>
+			<input class="content-text1 input" id="addressPhone" type="tel" placeholder="">
+		</div>
+		<div class="dibu">
+			<button class="button" onclick="addAddress()">保存</button>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../../../form_util/mui/js/mui.poppicker.js"></script>
+		<script src="../../../form_util/mui/js/city.data.js"></script>
+		<script src="../../../form_util/mui/js/city.data-3.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		
+		<script src="js/shouhoudizhi_update.js"></script>
+		
+		<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+									//级联示例
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					});
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton = doc.getElementById('showCityPicker3');
+					var cityResult3 = doc.getElementById('addressArea');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							cityResult3.value = (items[0] || {}).text+(items[1] || {}).text+(items[2] || {}).text+' ';
+						});
+					}, false);
+				});
+			})(mui, document);
+		</script>
+	</body>
+
+</html>

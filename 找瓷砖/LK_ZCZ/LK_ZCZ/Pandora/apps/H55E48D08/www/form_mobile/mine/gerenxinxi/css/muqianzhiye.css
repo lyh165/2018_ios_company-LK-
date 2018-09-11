@@ -1,0 +1,213 @@
+body {
+	background: #F0F0F0;
+}
+
+ul {
+	height: 100%;
+	padding: 0;
+}
+
+li {
+	background: #FFFFFF;
+	padding-left: 0rem;
+	list-style-type: none;
+	height: auto;
+	font-size: 0.93rem;
+	border-top: 1px solid #E5E5E5;
+	border-bottom: 1px solid #E5E5E5;
+	margin-bottom: 1rem;
+}
+
+.qita {
+	margin-top: 1rem;
+}
+
+.normal_button {
+	width: 100%;
+	text-align: center;
+}
+
+.normal_button_1 {
+	margin-top: 0rem;
+	text-align: center;
+}
+
+.normal_button_2 {
+	width: 100%;
+	margin-top: 1.12rem;
+	text-align: center;
+}
+
+.normal_button_3 {
+	margin-top: 0rem;
+	text-align: center;
+}
+
+.normal_button1 {
+	width: 5rem;
+	height: 1.75rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #ff0000;
+	color: #ff0000;
+}
+.dsa{
+	margin-top:0.7rem;
+	margin-left: 0.6rem;
+	line-height: 1.75rem;
+    text-align: center;
+}
+	
+.normal_button2 {
+	width: 5rem;
+	height: 1.75rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #fb524a;
+	color: #fb524a;
+	margin-left: 1.12rem;
+	margin-right: 1.12rem;
+}
+.del{
+	display: none;
+}
+
+.normal_button3 {
+	width: 5rem;
+	height: 1.75rem;
+	margin-top: 1.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #f67925;
+	color: #f67925;
+	margin-left: 1.12rem;
+}
+
+.normal_button4 {
+	width: 5rem;
+	height: 1.75rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #fb524a;
+	color: #fb524a;
+	margin-left: 1.12rem;
+	margin-right: 1.12rem;
+}
+
+.normal_button5 {
+	width: 5rem;
+	height: 1.75rem;
+	border-radius: 2rem;
+	background: #dcc41f;
+	border: 1px solid #dcc41f;
+	color: white;
+}
+
+.normal_button6 {
+	width: 5rem;
+	height: 1.75rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #f67925;
+	color: #f67925;
+}
+
+.normal_button7 {
+	width: 5rem;
+	height: 1.75rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #dcc41f;
+	color: #dcc41f;
+	margin-top: 1.12rem;
+}
+
+.normal_button8 {
+	width: 5rem;
+	height: 1.75rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #dcc41f;
+	color: #dcc41f;
+	margin-left: 1.12rem;
+	margin-right: 1.12rem;
+	margin-top: 1.12rem;
+}
+
+.normal_button9 {
+	margin-top: 1.12rem;
+	width: 5rem;
+	height: 1.75rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #dcc41f;
+	color: #dcc41f;
+	margin-left: 1.12rem;
+}
+
+.text_01 {
+	margin-left: 1rem;
+	font-size: 0.81rem;
+	color: #999999;
+}
+
+.content {
+	width: 100vw;
+	background: none;
+	margin-bottom: 0px;
+}
+
+.dibu {
+	width: 100vw;
+	height: 3rem;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+button {
+	line-height: 0.8rem;
+}
+
+.delect img {
+	position: absolute;
+	left: 10.5rem;
+	width: 1.2rem;
+	margin-top: 0.4rem;
+}
+.normal_button1.del{
+	min-width: 5rem;
+	width: auto;
+	margin-top:0.7rem;
+	margin-left: 1.5rem;
+	text-align: center;
+	line-height: 1.75rem;
+	position: relative;
+	 padding: 0 0.2rem;
+
+	margin-bottom: 0.6rem;
+}
+.normal_button1.del::after{
+	background: url(../../../util/img/chacha.png) no-repeat center center;
+	background-size: 1.2rem 1.2rem;
+	position: absolute;
+	content: '';
+	right: -0.60rem;
+	top: -0.4rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	margin-top: 0rem;
+}
+.futuretext div{
+	display: inline-block;
+}
+.qita {
+	margin-top: 1rem;
+}
+.normal_button1 {
+	width: 5rem;
+	height: 1.75rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #ff0000;
+	color: #ff0000;
+}

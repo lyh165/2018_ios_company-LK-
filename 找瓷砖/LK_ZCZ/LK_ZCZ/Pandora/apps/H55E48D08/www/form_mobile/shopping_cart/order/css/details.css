@@ -1,0 +1,88 @@
+body{
+	background: #F0F0F0;
+}
+.content_product{
+	margin: 0.625rem auto;
+	height: 5.5rem;
+	background: white;
+	position: relative;
+}
+.content_product span{
+	display: inline-block;
+}
+.product{
+	background: url(../../../form_mobile/util/img/u14.png);
+	background-size: 100% 100%;
+	width: 3.75rem;
+	height: 3.75rem;
+	position: absolute;
+	margin-top: 0.60rem;
+	left: 0.93rem;
+}
+.content1-text{
+	position: absolute;
+	top: 0.6rem;
+	left: 5.06rem;
+	right: 3rem;
+}
+.content-text1{
+	font-size: 0.75rem;
+	color: #333333;
+	line-height: 1.3rem;
+}
+.content-text2{
+	font-size: 0.62rem;
+	color: #999999;
+	margin-top: 0.2rem;
+}
+
+.number1{
+	position: absolute;
+	font-size: 0.62rem;
+	color: #999999;
+	margin-top: 0.2rem;
+	right: -1.5rem;
+}
+ul{
+	padding: 0 0 0 0;
+	
+}
+li{
+	list-style-type: none;
+	background: white;
+}
+li{
+	padding: 0.81rem 0 1rem 0.93rem;
+	border-bottom: 1px solid #e5e5e5;
+}
+.gordon1{
+	text-align: center;
+	margin-top: 2.5rem;
+}
+.gordon{
+	width: 22.187rem;
+	border: none;
+	background: #f62525;
+	height: 2.75rem;
+	border-radius: 10px;
+	text-align: center;
+	color: white;
+	font-size: 1.12rem;
+}
+.li_text{
+	display: inline-block;
+	width: 24%;
+	font-size: 0.87rem;
+	color: #333333;
+}
+.li_text1{
+	font-size: 0.87rem;
+	color: #999999;
+}
+.li_text2{
+	font-size: 0.87rem;
+	color: #f62525;
+}
+input{
+	border: none;
+}

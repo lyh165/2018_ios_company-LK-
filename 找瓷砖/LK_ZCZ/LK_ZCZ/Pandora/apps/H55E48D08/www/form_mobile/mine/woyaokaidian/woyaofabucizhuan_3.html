@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>产品属性</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../../form_mobile/util/base.css" rel="stylesheet" />
+		<link href="css/woyaofabucizhuan.css" rel="stylesheet" />
+		<style>
+			.guigediv {
+				margin: 10px 10px 10px 10px
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="actionbar">
+			<div class="left" onclick="back()">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">产品规格</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="gekai" style="height: 55px;"></div>
+		<ul class="content" id="ul_list">
+			<li class="mui-table-view-cell">
+				<a>规格</a>
+				<input type="text" id='sku_name' placeholder="填写名称" />
+			</li>
+			<li class="mui-table-view-cell">
+				<a>价格</a>
+				<input type="number" id='sku_money' placeholder="填写价格" />
+			</li>
+			<!--<div class="mui-btn mui-btn-yellow mui-btn-outlined guigediv" onclick="del(this)">添加规格</div>-->
+		</ul>
+
+		<button class="mui-btn saveBtn" onclick="add()">添加规格</button>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+
+			function add() {
+				var name = $("#sku_name").val();
+				var money = $("#sku_money").val();
+				if(isUndefinedAndEmpty(name) || isUndefinedAndEmpty(money)) {
+					mui.toast("请填写规格跟价格！");
+					return;
+				}
+				var content = '<div class="mui-btn mui-btn-yellow mui-btn-outlined guigediv" onclick="del(this)">' + name + ':' + money + '</div>';
+				$("#ul_list").append(content);
+				$("#sku_name").val("");
+				$("#sku_money").val("");
+			}
+
+			function del(obj) {
+				obj.remove();
+			}
+			mui.init({
+				keyEventBind: {
+					backbutton: true //打开back按键监听
+				}
+			});
+			mui.back = function() {
+				back();
+			}
+
+			function back() {
+				var sku_name = '';
+				$(".guigediv").each(function() {
+					var guige = $(this).text();
+					sku_name += guige + ';'
+				});
+				sku_name=sku_name.substring(0, sku_name.length-1);
+				var json = {
+					"sku_name": sku_name,
+				}
+				//将参数传回上一个页面"json"
+				var mainPage = plus.webview.currentWebview().opener(); //拿到父页面对象
+				mui.fire(mainPage, "setSkuVal", json); //fire通讯
+				plus.webview.currentWebview().hide();
+			}
+		</script>
+	</body>
+
+</html>

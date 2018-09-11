@@ -1,0 +1,86 @@
+body{
+	background: #F0F0F0;
+	width: 100vw;
+	height: 100vh;
+}
+.top {
+	height: 4.68rem;
+	background: white;
+	padding: 1rem;
+	margin-bottom: 0.75rem;
+	position: relative;
+}
+.top_01 {
+	line-height: 2.8rem;
+	height: 2.8rem;
+	background: white;
+	padding-left: 1rem;
+	border-bottom: 1px solid #E5E5E5;
+	position: relative;
+}
+.zhiwei {
+	color: #333333;
+	border: none;
+	padding-top: 0.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background: white;
+}
+.text_01{
+	font-size: 1.02rem;
+}
+.text_02{
+	font-size: 1.02rem;
+	color: #F62525;
+	position: absolute;
+	right: 1rem;
+}
+.text_03{
+	margin-top: 0.5rem;
+	font-size: 0.87rem;
+	color: #999999;
+}
+.text_04{
+	margin-top: 0.5rem;
+	font-size: 0.87rem;
+	color: #666666;
+}
+.text_05{
+	margin-top: 0.5rem;
+	font-size: 0.87rem;
+	word-spacing: 0.625rem;
+}
+.text_06{
+	font-size: 0.87rem;
+}
+.dibu {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+}
+.xiaoxi {
+	float: left;
+	text-align: center;
+	height: 3.12rem;
+	width: 50vw;
+	background: #fca11f;
+	color: #FFFFFF;
+	line-height: 3.12rem;
+}
+.dianhua {
+	float: right;
+	text-align: center;
+	height: 3.12rem;
+	width: 50vw;
+	background: #F62525;
+	color: #FFFFFF;
+	line-height: 3.12rem;
+}
+.mleft{
+	padding-left: 1rem;
+}
+
+.div1a{
+	background: white;
+}

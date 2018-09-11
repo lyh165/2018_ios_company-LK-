@@ -1,0 +1,37 @@
+/*
+ 
+                                温馨提示:
+                         该文件是预加载之前就引入的文件
+                         好处是:不需要在每个文件使用到那个库或者框架都需要引入一次
+                         坏处是:也是好处引发出来的问题,系统会在每个文件里面都import一次
+                         根据项目开发的性能决策是否需要使用pch文件。如果导入的文件太多,
+                         会增加项目编译文件的时间。可能会出出现一些性能问题。
+ */
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+// 如果是objc的语言就包含下面所有的框架或者是头文件、并且找到#endif 作为结束符
+#ifdef __OBJC__
+
+// 此处引入的 如果你已经有了一个pch文件,可以把下面的拷贝到你的项目里面去
+
+#pragma mark ------------------------  🔒👇 1、系统框架或者是第三方框架 start 👇🔒 ------------------------
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+// more kit or three kit ....
+#pragma mark ------------------------  🔒👆 1、系统框架或者是第三方框架 end 👆🔒 ------------------------
+#import "LYH_LogConstant.h"             // 控制台  打印信息
+
+
+#pragma mark ------------------------  ✍️✍️ 2、自定义框架或者是宏 start ✍️✍️ ------------------------
+
+#pragma mark ------------------------  ✍️✍️ 2、系统框架或者是第三方框架 end ✍️✍️ ------------------------
+
+// 结束符
+#endif

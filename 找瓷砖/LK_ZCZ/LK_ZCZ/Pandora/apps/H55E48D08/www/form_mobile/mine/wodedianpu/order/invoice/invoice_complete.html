@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/invoice.css" />
+		<style type="text/css">
+			img {
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="hidden" readonly="readonly" id="getOrderId" value="" />
+		<div class="actionbar">
+			<div class="left " onclick="openOrder()">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text">填写发货单</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 2.7rem; background: #f0f0f0;"></div>
+		<div class="mui-content">
+			<div class="img">
+				<img src="../../../../util/img/fahuochenggong.png" />
+				<div>发货成功</div>
+			</div>
+			<div class="button"><button onclick="openOrder()">查看订单详情</button></div>
+		</div>
+		<script src="../../../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../../util/base.js"></script>
+		<script>
+			function openOrder() {
+				var page = plus.webview.getWebviewById("my_order");
+				if(page) {
+					page.evalJS("initData()");
+				}
+				mui.openWindow({
+					url: "../my_order.html",
+					id: 'my_order',
+				});
+			}
+		</script>
+	</body>
+
+</html>

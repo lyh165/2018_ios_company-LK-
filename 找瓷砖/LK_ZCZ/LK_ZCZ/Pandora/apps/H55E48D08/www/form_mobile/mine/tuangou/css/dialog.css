@@ -1,0 +1,73 @@
+/*自定义dialog开始*/
+
+.dv_dialog_box1 {
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	z-index: 999;
+	text-align: center;
+}
+
+.dv_dialog {
+	margin: auto;
+	width: 17.03rem;
+	height: 13.31rem;
+	vertical-align: middle;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.dv_dialog_img {
+	margin: auto;
+}
+
+.dv_dialog_img .img {
+	height: 26vw;
+	margin-top: 10px;
+}
+
+.dv_title {
+	margin-top: 1.87rem;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.12rem;
+	color: #000000;
+}
+
+.dialog_txt {
+	color: #858585;
+	height: 7rem;
+}
+
+.close {
+	font-size: 20px;
+	line-height: 2.5rem;
+	height: 2.5rem;
+}
+
+.dialog_cancel {
+	flex: 1;
+	text-align: center;
+	color: #000000;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	border-radius: 0 0 0 10px;
+}
+
+.dialog_ok {
+	flex: 1;
+	text-align: center;
+	height: 2.5rem;
+	color: #3FCA79;
+	background: #FFFFFF;
+	color: #F62525;
+	border-radius: 0 0 10px 10px;
+}
+
+
+/*自定义dialog结束*/

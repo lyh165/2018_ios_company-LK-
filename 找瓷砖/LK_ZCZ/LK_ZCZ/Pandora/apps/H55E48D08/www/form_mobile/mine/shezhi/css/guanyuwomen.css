@@ -1,0 +1,38 @@
+body{
+	background: #F0F0F0;
+}
+
+.content{
+	height: 10.62rem;
+	text-align: center;
+	width: 100vw;
+	background: none;
+	margin-bottom: 10px;
+}
+.content_01 {
+	height: 3.12rem;
+	background: white;
+	line-height: 3.12rem;
+	padding-left: 1rem;
+	font-size: 0.93rem;
+}
+.text-01 {
+	font-size: 0.87rem;
+	color: #999999;
+	margin-top: 1rem;
+}
+
+.dibu {
+	width: 100vw;
+	height: 3rem;
+	text-align: center;
+	margin-top:1rem ;
+}
+.button {
+	width: 92vw;
+	height: 2.75rem;
+	border: none;
+	background: #f62525;
+	color: #FFFFFF;
+	border-radius: 5px;
+}

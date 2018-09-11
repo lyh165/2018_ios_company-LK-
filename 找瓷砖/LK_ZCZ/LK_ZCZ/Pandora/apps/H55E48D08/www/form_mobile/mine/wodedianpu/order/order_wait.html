@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/order.css" />
+		<style type="text/css">
+			img{
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="hidden" readonly="readonly" id="getOrderId" value=""/>
+		<div class="actionbar">
+			<div class="left mui-action-back" onclick="">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" >订单详情</span>
+			<div class="right">
+			</div>
+		</div>
+		
+		<div class="actionbar_white" style="height: 3.75rem; background: #f0f0f0;"></div>
+		<div class="content_picture">
+			<span class="wait"><img src="../../../util/img/dengdaifukuan.png"/></span>
+			<span class="message1">等待用户付款</span>
+			<span class="mui-pull-right right_text">需付款：￥<span>0</span></span>
+		</div>
+		<div class="content">
+			<span class="location"><img src="../../../../form_mobile/util/img/u13.png"></span>
+			<span id="addressPerson" class="content-text"> </span><span id="addressPhone" class="content-text"></span>
+			<span id="addressDetail" class="content_location"></span>
+			
+		</div>
+		<div class="content_name">
+			<span class="shop"><img src="../../../../form_mobile/util/img/u7.png" /></span>
+			<span id="shopName" class="name"></span>
+		</div>
+		<div id="proList">
+		<div class="content_product">
+			<span class="product"><img src="../../../../form_mobile/util/img/u14.png" style="width: 3.75rem;"/></span>
+			<div class="content1-text">
+				<span class="content-text1"></span>
+				<span class="content-text2"></span>
+				<span class="mui-pull-right number1">x1</span>
+			</div>
+		</div>
+		</div>
+		<div class="content_message2">
+			<div>下单编号：</div>
+			<div>下单时间：</div>
+		</div>
+		<div class="content_message1">
+			<span class="message">备注信息：</span>
+			<span class="message"></span>
+		</div>
+		<div class="content_message1" style="border-bottom: 1px solid #E5E5E5;">
+			<span class="message">支付方式：</span>
+			<span class="message"></span>
+		</div>
+		<div class="content_message">
+			<span class="message">商品总额</span>
+			<span class="explain1"><span>￥</span>0</span>
+		</div>
+		<div class="content_message1">
+			<span class="explain2">已付款:<b><span>￥</span>0</b></span>
+		</div>
+		<script src="../../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../util/base.js"></script>
+		<script src="../../../../form_util/mui/js/mui.picker.min.js" type="text/javascript"></script>
+	</body>
+
+</html>

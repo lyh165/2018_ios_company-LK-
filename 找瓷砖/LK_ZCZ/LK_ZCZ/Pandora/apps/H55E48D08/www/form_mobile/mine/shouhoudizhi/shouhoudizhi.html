@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>收件地址</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/shouhoudizhi_two.css" />
+		<link href="css/dialog.css" rel="stylesheet" />
+		<style type="text/css">
+			input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{
+				margin-top: 6px;
+				width: 50%;
+			}
+			.mt{
+				margin-top: 42vh !important;
+			}
+			.dv_dialog_box1{
+				z-index: 889;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+		<div class="actionbar">
+			<div class="left mui-action-back" >
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">收件地址</span>
+			<div class="right" style="width: 1.12rem; height: 1.12rem; margin-right: 0.63rem;">		
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 3.15rem;"></div>
+		<div id="nullAddress">
+			
+		</div>
+		<div class="dv_dialog_box1" id="delTankuang" style="display: none;">
+			<div class="dv_dialog mt">
+				<div class="dv_title">确定要删除收货地址？</div>
+				<div class="dividerccc" style="background:#CCCCCC; height: 1px ; border:none"></div>
+				<div class="close horizontal">
+					<div class="dialog_cancel" onclick="changname_cancel()">取消</div>
+					<div class="dialog_ok" onclick="changename_sure()">确定</div>
+				</div>
+			</div>
+		</div>
+		<div id="add">
+			
+		</div>
+		
+		<div class="dibu" id="dibuadd">
+			
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/mine_address.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				beforeback: function(){
+        			//获得列表界面的webview
+       			var i = plus.webview.getWebviewById("shouhoudizhi");
+        		if(i){
+            		//触发列表界面的自定义事件（refresh）,从而进行数据刷新
+            		i.evalJS("addGroupDefaultAddress()");
+        			}
+        			return true;
+    		}
+			});
+			$(function(){
+				$(" .content1 .select-no").click(function(){
+					$(this).toggle().siblings(" .select").toggle()
+				})
+			})
+			$(function(){
+				$(" .content1 .select").click(function(){
+					$(this).toggle().siblings(" .select-no").toggle()
+				})
+			})
+		</script>
+		
+	</body>
+	
+	
+
+</html>

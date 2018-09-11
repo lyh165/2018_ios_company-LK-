@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>商家店铺所有商品</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../util/base.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../form_util/mui/css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../../../form_util/mui/css/mui.picker.css" />
+		<link href="css/businessi.css" rel="stylesheet" />
+		<style>
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				color: #F62525;
+				border-bottom: 1px solid #F62525;
+			}
+			
+			.mui-slider {
+				overflow: visible;
+			}
+			
+			.mui-fullscreen {
+				height: inherit;
+			}
+			
+			.mui-scroll {
+				padding-top: 3.5rem;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				line-height: 2.375rem;
+			}
+			
+			.mui-segmented-control {
+				font-size: 0.93rem;
+			}
+		</style>
+		<style type="text/css">
+			.lianxikefu {
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<input type="text" value="" id="shop_id" style="display: none;" />
+		<div class="actionbar">
+			<div class="left   mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">商家店铺所有商品</span>
+			<span class="mui-text-right" style="margin-right: 2rem;font-size: 0.93rem;color: #333;"></span>
+		</div>
+
+		<div class="mui-content">
+			<div class="gekai" style="height: 3.75rem;"></div>
+			<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" style="position: fixed;top: 3.75rem; background: #FFFFFF;border-bottom: 1px solid #e5e5e5;z-index: 333;height: 2.43rem;line-height: 2.43rem;">
+				<a class="mui-control-item mui-active" href="#item1mobile">瓷砖</a>
+				<a class="mui-control-item " href="#item2mobile">物流</a>
+				<a class="mui-control-item" href="#item5mobile">加工厂</a>
+				<a class="mui-control-item" href="#item4mobile">服务</a>
+				<a class="mui-control-item" href="#item3mobile">招聘</a>
+			</div>
+			<div id="slider" class="slider mui-fullscreen" style="margin-top: 2.8rem;">
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="">
+							<div class="mui-scroll">
+								<div id="shop_proData">
+									<div>
+										<ul class="content">
+											<!--<li class="wuliu">
+												<span class="shop shop_one"><img src="../../util/img/kuayue.png"/></span>
+												<div class="xiangqing xiangqing_one">
+													<span>跨越速运京东物流中心店</span>
+													<br />
+													<div class="tihuo">上门提货</div>
+													<div class="daida">代打门架</div>
+													<div class="posun">破损包赔</div>
+													<div class="didian">
+														<span class="jiage">￥130</span>
+														<span class="danwei">/元吨</span>
+														<span class="gangzhou">广州</span>
+														<span class="jiantou1">→</span>
+														<span class="shaoguan">韶关</span>
+													</div>
+												</div>
+											</li>
+											<li class="dizhi">
+												<span class="dingwei"><img src="../../util/img/u13.png" style="width: 0.75rem;"/></span>
+												<span class="dingweidizhi">广州市天河区珠江新城店159号</span>
+												<span class="dianhua" onclick="changeDelete()"><img src="../../util/img/dianhua.png" style="width: 1.31rem; vertical-align: middle; margin-top: 0.3rem;"/></span>
+												<div class="fengexian"></div>
+											</li>-->
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content" style="margin-top: 0.5rem;">
+						<div class="">
+							<div class="mui-scroll">
+
+								<ul class="ul_1">
+									<div id="logisticsdata"></div>
+									<!--<li class="li_1">
+							          	  	<a href="#" style="right: 5px;">
+							                	<div class="mui-media-object_1" ><img src="../../form_mobile/util/img/cizhuan.png"/></div>
+							                </a>
+							               	<div class="mui-media-body_1">
+							               		<span class="ziying_1">自营</span> 
+							               		<span class="mui-media-body-text_1">东鹏瓷砖木纹木地砖砖...</span>
+							               	</div>
+							               	<span class="specifications_1">规格：CZ8898AS</span>
+							            	<div class="price1_1">
+							            		<span class="price_1"><small>￥</small>165.<small>00</small></span>
+							            		<span class="shopping_1">库存300</span>
+							            	</div>
+							       		</li>
+							       		<li class="li1_1">
+							          	  	<a href="#" style="right: 5px;">
+							                	<div class="mui-media-object_1" ><img src="../../form_mobile/util/img/cizhuan.png"/></div>
+							                </a>
+							               	<div class="mui-media-body_1">
+							               		<span class="ziying_1">自营</span> 
+							               		<span class="mui-media-body-text_1">东鹏瓷砖木纹木地砖砖...</span>
+							               	</div>
+							               	<span class="specifications_1">规格：CZ8898AS</span>
+							            	<div class="price1_1">
+							            		<span class="price_1"><small>￥</small>165.<small>00</small></span>
+							            		<span class="shopping_1">库存300</span>
+							            	</div>
+							       		</li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!--招聘-->
+					<div style="display: none;">
+						<input type="text" value="" id="recruit_phone" />
+						<input type="text" value="" id="recruit_id" />
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div class="">
+
+							<div class="mui-scroll">
+								<div id="recruitdata">
+									<!--<ul id="fuwu" class="content">
+										<li class="wuliu">
+											<div>
+												<span class="shop shop_zhaopin"><img src="../../util/img/zhaopin.png"/></span>
+												<div class="xiangqing">
+													<span>星巴克诚聘店员助理</span>
+													<span class="bianju"></span>
+													<p style="font-size: 0.75REM;">广州星巴克有限公司</p>
+													<div class="didian didian_one" style="height: 0rem;">
+														<span class="jiage">3000-5000元/月</span>
+														<span class="zhuanweifu"></span>
+														<span class="shenhe" style="margin-left: 0.9rem;"></span>
+													</div>
+												</div>
+											</div>
+											<div class="phone">
+												<div class="fengexian"></div>
+												<div class="" onclick="changeDelete()"><img src="../../util/img/dianhua.png" style="width: 1.31rem; vertical-align: middle;" /></div>
+											</div>
+
+										</li>
+									</ul>
+									<div class="gongsi">
+										<span><img src="../../util/img/u13.png" style="width: 0.68rem; vertical-align: middle;"/></span>
+										<span class="gongsidizhi">广州市天河区珠江新城店159号</span>
+										<span class="jiantou_012"><img src="../../util/img/jiantou.png"/></span>
+									</div>-->
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<!--服务-->
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div class="">
+							<div class="mui-scroll">
+								<div id="servicedata">
+									<!--<ul id="fuwu" class="content">
+										<li class="wuliu">
+											<div>
+												<span class="shop shop_fuwu"><img src="../../util/img/fuwu.png"/></span>
+												<div class="xiangqing">
+													<span>图册设计</span>
+													<span class="geren">个人</span>
+													<span class="bianju"></span>
+													<span class="xiugai" style="position: absolute;right: 0.5rem;">300元-500元</span>
+													<p style="font-size: 0.75REM;">广州德道机械机械加工</p>
+												</div>
+											</div>
+
+											<div class="didian didian_one map" style="height: 0rem;">
+												<span><img src="../../util/img/u13.png" style="width: 0.68rem; vertical-align: middle;"/></span>
+												<span class="jiage-1">广州市天河区珠江新城店159号</span>
+												<span class="zhuanweifu"></span>
+												<span class="shenhe" style="margin-left: 0.9rem;"></span>
+											</div>
+											<div class="phone">
+												<div class="fengexian"></div>
+												<div class="" onclick="changeDelete()"><img src="../../util/img/dianhua.png" style="width: 1.31rem; vertical-align: middle;" /></div>
+											</div>
+										</li>
+									</ul>
+									<div class="collect-control gongsi">
+										<span class="gongsijianli">公司简历</span>
+										<span class="jiantou_012 jiantou123"><img src="../../util/img/jiantou.png" style="width: 0.37rem;"/></span>
+										<span class="jiantou1_1 jiantou125" style="display: none;"><img src="../../util/img/jiantouxia.png" style="width: 0.68rem;"/></span>
+									</div>
+									<div class="gongsi1 gongsi_01" style="display: none;">
+										<span class="gongsijianli1">公司简历：XX服装厂整合了优质的设计、生产和物流资源,专业从事XX服装的生产营销工作,公司拥有强大的设计团队,和生产队伍,现代化生产设备</span>
+									</div>-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--加工厂-->
+					<div id="item5mobile" class="mui-slider-item mui-control-content">
+						<div class="">
+							<div class="mui-scroll">
+								<div id="processdata">
+									<!--<ul class="content">
+										<li class="wuliu">
+											<div>
+												<span class="shop shop_gongchang1"><img src="../../util/img/qiege.png"/></span>
+												<div class="xiangqing">
+													<span>切割</span>
+													<span class="geren">个人</span>
+													<span class="bianju"></span>
+													<span class="xiugai" style="position: absolute;right: 0.5rem;">300元-500元</span>
+													<p style="font-size: 0.75REM;">广州昱达广告有限公司</p>
+												</div>
+											</div>
+											<div class="didian didian_one map" style="height: 0rem;">
+												<span><img src="../../util/img/u13.png" style="width: 0.68rem; vertical-align: middle;"/></span>
+												<span class="jiage-1">广州市天河区珠江新城店159号</span>
+												<span class="zhuanweifu"></span>
+												<span class="shenhe" style="margin-left: 0.9rem;"></span>
+											</div>
+
+											<div class="phone">
+												<div class="fengexian"></div>
+												<div class="" onclick="changeDelete()"><img src="../../util/img/dianhua.png" style="width: 1.31rem; vertical-align: middle;" /></div>
+											</div>
+
+										</li>
+									</ul>-->
+									<div class="collect-control gongsi">
+										<span class="gongsijianli">公司简历</span>
+										<span class="jiantou_012 jiantou123"><img src="../../util/img/jiantou.png" style="width: 0.37rem;"/></span>
+										<span class="jiantou1_1 jiantou125" style="display: none;"><img src="../../util/img/jiantouxia.png" style="width: 0.68rem;"/></span>
+									</div>
+									<div class="gongsi1 gongsi_01" style="display: none;">
+										<span class="gongsijianli1">公司简历：浙江百慕生物科技有限公司隶属浙江丽珀集团，成立于2011年3月，注册资本1000万元，是一家从事海洋生物开发销售的公司，主要从事保健品（海参）产品的销售。</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../../../form_util/mui/js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/business_logistics.js"></script>
+		<script src="js/business_shop_pro.js"></script>
+		<script src="js/business_recruit.js"></script>
+		<script src="js/bussiness_service.js"></script>
+		<script src="js/business_process.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(" .wuliu .choice1").click(function() {
+					$(this).toggle().siblings(" .choice2").toggle()
+				})
+			})
+			$(function() {
+				$(" .wuliu .choice2").click(function() {
+					$(this).toggle().siblings(" .choice1").toggle()
+				})
+			})
+			$(function() {
+				$(" .content-select_2").click(function() {
+					$(this).toggle().siblings(" .content-select_1").toggle()
+				})
+			})
+			$(function() {
+				$(" .content-select_1").click(function() {
+					$(this).toggle().siblings(" .content-select_2").toggle()
+				})
+			})
+			$(document).ready(function() {
+				$('.collect-control').click(function() {
+					$(this).find('.jiantou123').toggle();
+					$(this).next('.gongsi_01').toggle();
+					$(this).find('.jiantou125').toggle();
+				})
+			})
+			
+		</script>
+
+	</body>
+
+</html>

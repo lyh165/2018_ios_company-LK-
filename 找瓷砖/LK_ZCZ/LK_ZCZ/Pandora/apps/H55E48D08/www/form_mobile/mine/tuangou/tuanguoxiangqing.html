@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>团购详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link href="../../../form_util/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../util/base.css" rel="stylesheet" />
+		<link href="tuangouxiangqing.css" rel="stylesheet" />
+		<style type="text/css">
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<input type="hidden" readonly="readonly" id="skuId" value=""/>
+			<input type="hidden" readonly="readonly" id="groupId" value=""/>
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">团购详情</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="gekai" style="height: 60px;"></div>
+		<div class="content_product">
+			<span id="groupHead" class="content-text1"></span>
+			<span id="groupBrowse" class="content-text2">0人浏览</span>
+			<!--<div class="content-img"></div>-->
+		</div>
+		<div class="chanping">
+			<div class="shop"><img id="productImg" src="" style="width: 5.62rem;height: 5.62rem;"/></div>
+			<span id="productName" class="content-text3"></span>
+			<span id="skuName" class="content-text4"></span>
+			<span id="skuMoney" class="content-text5"> <small>￥</small>0<small>.00</small></span>
+		</div>
+		<div id="groupNum" class="content-text6">团购总数量：。</div>
+		<div id="lessNum" class="content-text6">剩余团购数量：</div>
+		<div id="groupPrice" class="content-text6">团购价格：</div>
+		<div id="groupStartTime" class="content-text6">团购开始时间：</div>
+		<div id="groupEndTime" class="content-text6">团购结束时间：</div>
+		<div id="groupBz" class="content-text6"></div>
+		
+		<div class="dibu">
+			<button class="button" onclick="openAddGroupLogPage()">一起去团购</button>
+		</div>
+		<div class="actionbar_white" style="height: 0.625rem; background: #ffffff;"></div>
+
+		<script src="../../../form_util/util/sys_js/jquery.js "></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js "></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js "></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js "></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js "></script>
+		<script src="../../../form_util/util/util_js/strUtil.js "></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js "></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js "></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../util/base.js "></script>
+		<script src="../../../form_util/mui/js/mui.picker.min.js" type="text/javascript"></script>
+		<script src="js/groupDetail.js"></script>
+		<script type="text/javascript">
+			mui.init({
+
+			});
+		</script>
+
+	</body>
+
+</html>

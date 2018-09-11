@@ -1,0 +1,255 @@
+.skip{
+	position: fixed;
+	top: 2.25rem;
+	right: 1.25rem;
+	color: #999999;
+	font-size: 1.06rem;
+}
+.occupation{
+	color: #333333;
+	font-size: 1.5rem;
+	margin-top: 6rem;
+	margin-left: 1.44rem;
+}
+.occupation1{
+	color: #666666;
+	font-size: 1rem;
+	margin-top: 1.12rem;
+	margin-left: 1.44rem;
+}
+.normal_button{
+	width: 100%;
+	text-align: center;
+}
+.normal_button1{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #ff0000;
+	color: #ff0000;
+}
+.normal_button1_1{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: #ff0000;
+	border: 1px solid #ff0000;
+	color: white;
+}
+.normal_button2{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #fb524a;
+	color: #fb524a;
+	margin-left: 1.12rem;
+	margin-right: 1.12rem;
+}
+.normal_button2_2{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: #fb524a;
+	border: 1px solid #fb524a;
+	color: white;
+	margin-left: 1.12rem;
+	margin-right: 1.12rem;
+}
+.normal_button3{
+	margin-top: 1.12rem;
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #f67925;
+	color: #f67925;
+	margin-left: 1.12rem;
+}
+.normal_button03{
+	margin-top: 1.12rem;
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #f67925;
+	color: #f67925;
+	margin-left: 1.12rem;
+}
+.normal_button3_1{
+	margin-top: 1.12rem;
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: #f67925;
+	border: 1px solid #f67925;
+	color: white;
+	margin-left: 1.12rem;
+}
+.normal_button3_2{
+	margin-top: 1.12rem;
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: #f67925;
+	border: 1px solid #f67925;
+	color: white;
+	margin-left: 1.12rem;
+}
+.normal_button4{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #fb524a;
+	color: #fb524a;
+	margin-left: 1.12rem;
+	margin-right: 1.12rem;
+}
+.normal_button4_1{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: #fb524a;
+	border: 1px solid #fb524a;
+	color: white;
+	margin-left: 1.12rem;
+	margin-right: 1.12rem;
+}
+.normal_button5{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #ff9c00;
+	color: #ff9c00;
+}
+.normal_button5_1{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: #ff9c00;
+	border: 1px solid #ff9c00;
+	color: white;
+}
+.normal_button6{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #f67925;
+	color: #f67925;
+}
+.normal_button6_1{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: #f67925;
+	border: 1px solid #f67925;
+	color: white;
+}
+.normal_button7{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #dcc41f;
+	color: #dcc41f;
+	margin-top: 1.12rem;
+}
+.normal_button7_1{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: #dcc41f;
+	border: 1px solid #dcc41f;
+	color: white;
+	margin-top: 1.12rem;
+}
+.normal_button8{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #dcc41f;
+	color: #dcc41f;
+	margin-left: 1.12rem;
+	margin-right: 1.12rem;
+	margin-top: 1.12rem;
+}
+.normal_button8_1{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: #dcc41f;
+	border: 1px solid #dcc41f;
+	color: white;
+	margin-left: 1.12rem;
+	margin-right: 1.12rem;
+	margin-top: 1.12rem;
+}
+.normal_button9{
+	margin-top: 1.12rem;
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #dcc41f;
+	color: #dcc41f;
+	margin-left: 1.12rem;
+}
+.normal_button9_01{
+	margin-top: 1.12rem;
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: #dcc41f;
+	border: 1px solid #dcc41f;
+	color: white;
+	margin-left: 1.12rem;
+}
+.normal_button10{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: none;
+	border: 1px solid #ff0000;
+	color: #ff0000;
+}
+.normal_button10_1{
+	width: 6rem;
+	height: 2.12rem;
+	border-radius: 2rem;
+	background: #ff0000;
+	border: 1px solid #ff0000;
+	color: white;
+}
+.normal_button_1{
+	margin-top: 3.75rem;
+	text-align: center;
+}
+.normal_button_2{
+	margin-top: 1.12rem;
+	text-align: center;
+}
+.submit{
+	margin: 3.62rem auto 0;
+	text-align: center;
+}
+.submit_1{
+	width: 12.68rem;
+	height: 2.56rem;
+	border-radius: 2rem;
+	background: #ff0000;
+	border: 1px solid #ff0000;
+	color: white;
+}
+.submit_2{
+	width: 12.68rem;
+	height: 2.56rem;
+	border-radius: 2rem;
+	background: #cbcbcb;
+	border: 1px solid #cbcbcb;
+	color: white;
+}

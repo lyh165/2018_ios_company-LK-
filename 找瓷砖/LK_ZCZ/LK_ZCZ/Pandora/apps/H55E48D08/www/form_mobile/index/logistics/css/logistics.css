@@ -1,0 +1,167 @@
+.logistics{
+	padding-top: 2.06rem;
+}
+.img{
+	padding: 0 1rem;
+	
+}
+.place{
+	display: inline-block;
+	padding: 0 4rem 1.06rem 0;
+    border-bottom: 1px solid #E5E5E5;
+}
+.place1{
+	display: inline-block;
+	padding: 0 0 1.06rem 4rem;
+    border-bottom: 1px solid #E5E5E5;
+}
+.gordon1{
+	text-align: center;
+	margin-top: 1.37rem;
+	
+}
+.gordon{
+	width: 22.187rem;
+	background: #f62525;
+	height: 2.75rem;
+	border-radius: 10px;
+	text-align: center;
+	color: white;
+	font-size: 1.12rem;
+}
+.shopping_cart{
+	text-align: center;
+	margin-top: 4.81rem;
+}
+.text1{
+	margin-top: 0.87rem;
+	text-align: center;
+}
+.text_1{
+	font-size: 0.87rem;
+	color: #999999;
+}
+li {
+	list-style-type: none;
+	background: #FFFFFF;
+}
+ul {
+	padding: 0;
+	background: #F0F0F0;
+}
+.wuliu {
+	height: 6.8rem;
+	padding-left: 1rem;
+	position: relative;
+	border-bottom: 1px solid #E5E5E5;
+}
+.shop {
+	width: 4.4rem;
+	height: 4.4rem;
+	position: absolute;
+	top: 0.8rem;
+}
+.xiangqing_one {
+	width: 15.5rem;
+	margin-left: 5rem;
+	padding-top: 0.68rem;
+	position: relative;
+}
+.tihuo {
+	width: 3.5rem;
+	height: 0.87rem;
+	border: 1px solid #FF0000;
+	font-size:0.58rem ;
+	line-height: 0.87rem;
+	text-align: center;
+	color: #FF0000;
+	position:absolute
+	border-radius: 1px;
+}
+.daida {
+	width: 3.5rem;
+	height: 0.87rem;
+	border: 1px solid #4dd2e2;
+	font-size:0.58rem ;
+	line-height: 0.87rem;
+	text-align: center;
+	color: #4dd2e2;
+	border-radius: 1px;
+    position: absolute;
+    left: 4rem;
+    top: 2rem;
+}
+.posun {
+	width: 3.5rem;
+	height: 0.87rem;
+	border: 1px solid #5cb3f5;
+	font-size:0.58rem ;
+	line-height: 0.87rem;
+	text-align: center;
+	color: #5cb3f5;
+	border-radius: 1px;
+    position: absolute;
+    left: 8rem;
+    top: 2rem;
+}
+.didian {
+	margin-top: 1rem;
+}
+.jiage {
+	color: #F62525;
+	font-size: 1rem;
+}
+.danwei {
+	color: #F62525;
+	font-size: 0.75rem;
+	margin-left: -0.2rem;
+}
+.zhuanweifu {
+	margin-left: 7rem;
+}
+.gangzhou {
+	font-size: 0.75rem;
+	color: #666666;
+	margin-left: 1.5rem;
+}
+.jiantou {
+	font-size: 0.75rem;
+	color: #666666;
+	margin-left: 0.3rem;
+	margin-right: 0.3rem;
+}
+.shaoguan {
+	font-size: 0.75rem;
+	color: #666666;
+}
+.dizhi {
+	height: 2.12rem;
+	position: relative;
+	padding-left: 1rem;
+	border-bottom: 1px solid #E5E5E5;
+}
+.dingwei {
+	width: 0.75rem;
+	height: 0.87rem;
+	position: absolute;
+	top: 0.3rem;
+}
+.dingweidizhi {
+	font-size:0.81rem ;
+	color: #666666;
+	line-height: 2.12rem;
+	margin-left: 1rem;
+}
+.fengexian{
+	height: 0.87rem;
+	width: 1px;
+	background: #E5E5E5;
+	position: absolute;
+	right: 3rem;
+	top: 0.5rem;
+}
+.dianhua {
+	position: absolute;
+	right: 0.5rem;
+	top: 0.24rem;
+}

@@ -1,0 +1,179 @@
+{
+	"form_mobile/login/login_land.html": {
+		"refer": [
+			"form_mobile/login/register.html",
+			"form_mobile/login/forget.html",
+			"form_mobile/index/index.html",
+			"form_mobile/login/now_occupation.html",
+			"form_mobile/login/future_occupation.html"
+		],
+		"resources": []
+	},
+	"form_mobile/index/index.html": {
+		"refer": [
+			"form_mobile/index/search/search1.html",
+			"form_mobile/index/sign/sign.html",
+			"form_mobile/shopping_cart/shopping_edit.html",
+			"form_mobile/online_mall/online_malls.html",
+			"form_mobile/index/choose-the-city.html",
+			"form_mobile/mine/mine.html",
+			"form_mobile/index/factory/factory.html",
+			"form_mobile/index/search/search.html",
+			"form_mobile/index/logistics/logistics.html",
+			"form_mobile/mine/tuangou/cizhuankuaibao.html",
+			"form_mobile/login/login_land.html",
+			"form_mobile/index/JobHunting/Job-hunting.html",
+			"form_mobile/index/wodedianpu/wodedianpu_xiangqing.html",
+			"form_mobile/index/details/shopProDetails/shop.html",
+			"form_mobile/index/details/logisticsDetails/LogisticsDetails.html"
+		],
+		"resources": []
+	},
+	"form_mobile/index/search/search1.html": {
+		"refer": [
+			"form_mobile/index/index.html"
+		],
+		"resources": []
+	},
+	"form_mobile/shopping_cart/shopping_edit.html": {
+		"refer": [
+			"form_mobile/mine/mine.html",
+			"form_mobile/online_mall/online_malls.html"
+		],
+		"resources": []
+	},
+	"form_mobile/online_mall/online_malls.html": {
+		"refer": [
+			"form_mobile/mine/wodexiaoxi/wodexiaoxi.html",
+			"form_mobile/index/index.html",
+			"form_mobile/shopping_cart/shopping_edit.html",
+			"form_mobile/mine/mine.html",
+			"form_mobile/index/details/shopProDetails/shop.html",
+			"form_mobile/login/login_land.html"
+		],
+		"resources": []
+	},
+	"form_mobile/mine/mine.html": {
+		"refer": [
+			"form_mobile/mine/shezhi/shezhi.html",
+			"form_mobile/shopping_cart/shopping_edit.html",
+			"form_mobile/mine/wodedianpu/wodedianpu.html",
+			"form_mobile/mine/wodefabu/wodefabu_wuliu.html",
+			"form_mobile/index/index.html",
+			"form_mobile/mine/woyaokaidian/woyaokaidian.html",
+			"form_mobile/mine/wodexiaoxi/wodexiaoxi.html",
+			"form_mobile/mine/gerenxinxi/bianjiziliao.html",
+			"form_mobile/shopping_cart/order/me_order.html",
+			"form_mobile/online_mall/online_malls.html",
+			"form_mobile/mine/shouhoudizhi/shouhoudizhi.html"
+		],
+		"resources": []
+	},
+	"form_mobile/mine/shezhi/shezhi.html": {
+		"refer": [
+			"form_mobile/login/login_land.html",
+			"form_mobile/mine/shezhi/tousujianyi.html",
+			"form_mobile/mine/shezhi/guanyuwomen.html",
+			"form_mobile/mine/shezhi/xiugaidenglumima.html"
+		],
+		"resources": []
+	},
+	"form_mobile/login/register.html": {
+		"refer": [
+			"form_mobile/login/login_land.html"
+		],
+		"resources": []
+	},
+	"form_mobile/login/forget.html": {
+		"refer": [
+			"form_mobile/login/login_land.html"
+		],
+		"resources": []
+	},
+	"form_mobile/index/search/search.html": {
+		"refer": [
+			"form_mobile/online_mall/online_malls.html",
+			"form_mobile/index/index.html"
+		]
+	},
+	"form_mobile/parent/index.html": {
+		"resources": [
+			"form_mobile/index/index.html"
+		],
+		"refer": [
+			"form_mobile/index/index.html",
+			"form_mobile/online_mall/online_malls.html",
+			"form_mobile/mine/mine.html",
+			"form_mobile/shopping_cart/shopping_edit.html"
+		]
+	},
+	"form_mobile/mine/woyaokaidian/woyaokaidian.html": {
+		"refer": [
+			"form_mobile/mine/woyaokaidian/woyaofabu.html",
+			"form_mobile/mine/woyaokaidian/woyaokaidian_two.html"
+		]
+	},
+	"form_mobile/login/now_occupation.html": {
+		"refer": [
+			"form_mobile/login/login_land.html",
+			"form_mobile/login/future_occupation.html"
+		]
+	},
+	"form_mobile/login/future_occupation.html": {
+		"refer": [
+			"form_mobile/mine/mine.html",
+			"form_mobile/index/index.html"
+		]
+	},
+	"form_mobile/mine/gerenxinxi/bianjiziliao.html": {
+		"refer": [
+			"form_mobile/mine/gerenxinxi/xiugaincheng.html",
+			"form_mobile/mine/gerenxinxi/gongzuoqiye.html",
+			"form_mobile/mine/gerenxinxi/muqianzhiye.html",
+			"form_mobile/mine/gerenxinxi/zhiyeyuanjing.html"
+		]
+	},
+	"form_mobile/mine/shouhoudizhi/shouhoudizhi.html": {
+		"refer": [
+			"form_mobile/mine/shouhoudizhi/shouhoudizhi_update.html"
+		]
+	},
+	"form_mobile/mine/shezhi/guanyuwomen.html": {
+		"refer": [
+			"form_mobile/mine/shezhi/yonghuxieyi.html"
+		]
+	},
+	"form_mobile/mine/woyaokaidian/woyaofabu.html": {
+		"refer": [
+			"form_mobile/mine/woyaokaidian/woyaofabuzhaopin.html",
+			"form_mobile/mine/woyaokaidian/woyaofabufuwu.html",
+			"form_mobile/mine/woyaokaidian/woyaofabucizhuan.html",
+			"form_mobile/mine/woyaokaidian/userProcess.html"
+		]
+	},
+	"form_mobile/mine/woyaokaidian/userProcess.html": {
+		"refer": [
+			"form_mobile/mine/woyaokaidian/processInf.html"
+		]
+	},
+	"form_mobile/mine/woyaokaidian/woyaofabufuwu.html": {
+		"refer": [
+			"form_mobile/mine/woyaokaidian/fuwumiaoshu.html"
+		]
+	},
+	"form_mobile/index/details/shopProDetails/shop.html": {
+		"refer": [
+			"form_mobile/shopping_cart/order/shopping_order.html"
+		]
+	},
+	"form_mobile/shopping_cart/order/shopping_order.html": {
+		"refer": [
+			"form_mobile/mine/tuangou/groupAddress.html"
+		]
+	},
+	"form_mobile/index/wodedianpu/wodedianpu_xiangqing.html": {
+		"refer": [
+			"form_mobile/index/business-shop/businessi.html"
+		]
+	}
+}

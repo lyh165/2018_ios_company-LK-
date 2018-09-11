@@ -1,0 +1,4 @@
+function back() {
+	mui.back();
+}
+

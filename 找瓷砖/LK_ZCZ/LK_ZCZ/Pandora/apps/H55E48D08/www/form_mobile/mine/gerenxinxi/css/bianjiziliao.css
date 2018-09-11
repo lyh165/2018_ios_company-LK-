@@ -1,0 +1,92 @@
+body{
+	background: #F0F0F0;
+}
+
+.mar-top-1{
+	margin-top: 1rem;
+}
+.content_01 {
+	position: relative;
+	height: auto;
+	background: white;
+	padding-left: 1rem;
+	font-size: 0.93rem;
+	border-bottom: 1px #E5E5E5 solid;
+	padding: 0.5rem;
+}
+
+.content_01.line-hei{
+	line-height: 2rem !important;
+}
+.user {
+	color: #999999;
+	margin-right: 1.3rem;
+    float: right;
+}
+.user-img {
+	margin-right: 1rem;
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 1rem;
+	float: right;
+}
+.content_01.mui-navigate-right:after {
+    right: 0.5rem;
+}
+.content_01.content_03 .mui-navigate-right:after {
+    right: 0;
+}
+.user-img img{
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 50%;
+	
+	
+}
+.xinxi {
+	padding: 0 0.5rem;
+	font-size:0.81rem ;
+	line-height: 1.8rem;
+	border-radius: 0.875rem;
+	margin: 0 0.2rem;
+	border: 1px solid #F62525;
+	color: #F62525;
+}
+.xinxi2 {
+    text-align: center;
+}
+.xinxi3 {
+    text-align: center;
+}
+.xinxi4 {
+	border: 1px solid #e4007f;
+	color: #e4007f;
+}
+.xinxi5 {
+	border: 1px solid #5cb3f5;
+	color: #5cb3f5;
+}
+.xinxi6 {
+	border: 1px solid #4dd2e2;
+	color: #4dd2e2;
+}
+.text-01 {
+	font-size: 0.87rem;
+	color: #999999;
+	margin-top: 1rem;
+}
+
+.dibu {
+	width: 100vw;
+	height: 3rem;
+	text-align: center;
+	margin-top:1rem ;
+}
+.button {
+	width: 92vw;
+	height: 2.75rem;
+	border: none;
+	background: #f62525;
+	color: #FFFFFF;
+	border-radius: 5px;
+}

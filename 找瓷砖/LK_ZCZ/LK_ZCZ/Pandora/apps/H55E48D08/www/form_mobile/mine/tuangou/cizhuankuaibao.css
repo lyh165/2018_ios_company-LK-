@@ -1,0 +1,49 @@
+body{
+	background: #F0F0F0;
+}
+.text_one {
+	font-size: 0.93rem;
+	width: 3.3rem;
+	height: 1.37rem;
+	background: url(../../util/img/kaibao.png);
+	background-size: 100% 100%;
+	color: #FFFFFF;
+	position: absolute;
+	top: 0;
+	margin-left: 2.2rem;
+	padding-left: 0.2rem;
+}
+.content_product{
+	height: 6.18rem;
+	width: 100vw;
+	margin-top: 0.625rem;
+	height: 5rem;
+	background: white;
+	padding: 1rem;
+	position: relative;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+.content-text1{
+	font-size: 1.06rem;
+	color: #333333;
+	    width: 55vw;
+    display: inline-block;
+}
+.content-img {
+	width: 7.75rem;
+	height: 5.3rem;
+	background: url(../../util/img/tuanguo.png);
+	background-size:100% 100% ;
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+}
+.content-text2{
+	font-size: 0.93rem;
+	color: #999999;
+	position: absolute;
+	left: 1rem;
+	bottom: 0.6rem;
+}
+

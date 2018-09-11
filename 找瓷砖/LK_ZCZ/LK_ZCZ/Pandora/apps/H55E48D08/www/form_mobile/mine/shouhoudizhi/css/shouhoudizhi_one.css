@@ -1,0 +1,92 @@
+
+body{
+	background: #f0f0f0;
+	position: relative !important;
+	height: 100vh !important;
+}
+input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{
+	margin-top: 6px !important;
+	width: 50% !important;
+}
+
+.left1{
+	width: 48px;
+}
+.right{
+
+	background-size: 100% 100%;
+	padding: 0;
+	font-size: 0.5rem;
+	color: white;
+	text-align: center;
+}
+.content {
+	font-size: 3.7vw;
+	width: 100vw;
+	height: 13.33vw;
+	margin-top: 0.625rem;
+	background: #FFFFFF;
+	line-height: 13.33vw;
+	padding-left: 4.26vw;
+	position: relative;
+	border-bottom:1px solid #F0F0F0 ;	
+}
+.content1 {
+	font-size: 3.7vw;
+	width: 100vw;
+	height: 14.5vw;
+	background: #FFFFFF;
+	line-height: 13.45vw;
+	padding-left: 4.26vw;
+	position: relative;
+	border-bottom:1px solid #F0F0F0 ;
+	
+}
+.right_arrow{
+	position: absolute;
+	right: 1rem;
+	top: -5vw;
+}
+.right_arrow img{
+	width: 7px;
+}
+
+.content-text {
+	color: #999999;
+}
+.content-text1 {
+	color: #333333;
+	position: absolute;
+	left: 29.86vw;
+}
+.input {
+	border: none;
+	line-height: 13.33vw;
+}
+.dibu {
+	width: 100vw;
+	height: 13.33vw;
+	background: #FFFFFF;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+.button {
+	height: 9.3vw;
+	width: 55.2vw;
+	border-radius:2px ;
+	background: #F62525;
+	color: #FFFFFF;
+	margin-top: 0.5rem;
+}
+.input{
+	height: 12.33vw;
+}
+input[type=text],input[type=tel] {
+	padding-left: 0;
+}
+.mui-poppicker-header .mui-btn {
+    font-size: 16px;
+    padding: 5px 10px;
+}

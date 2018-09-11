@@ -1,0 +1,316 @@
+.text_h1{
+	color: #333333 !important; 
+}
+.actionbar .text_h1 {
+    margin: auto;
+    color: #FFFFFF;
+}
+body {
+	background: #F0F0F0;
+	font-family: 'Helvetica Neue',Helvetica,sans-serif;
+    font-size: 1.062rem;
+    line-height: 21px;
+    color: #000;
+}
+
+.bill-title{
+	text-align: center;
+	margin-top: 1.87rem;
+	color: #666;
+}
+.balance{
+    text-align: center;
+    font-size: 1.87rem;
+    margin-top: 0.6rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    color: #ffa482;
+    margin-bottom: 1.2rem;
+}
+.mui-ellipsis {
+    font-size: 0.75rem;
+}
+.mui-slider-indicator.mui-segmented-control{
+	position: fixed !important;
+	top: 3.75rem;
+	left: 0;
+	z-index: 333;
+}
+.badge-operation{
+	background-color: transparent;
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+.subtract{
+	color: #26b5a1;
+}
+.add{
+	color: #ff8866;
+}
+#sliderSegmentedControl{
+	background-color: #fff;
+}
+.machine-mes li{
+	background-color: #fff;
+}
+
+.exchange-coin{
+    background: linear-gradient(to right,#ffa781,#ff9d86,#faa893);
+    width: 5rem;
+    height: 1.87rem;
+    border-radius: 1.87rem;
+    overflow: hidden;
+    position: absolute;
+    border: none;
+    display: block;
+    margin: auto;
+    color: #fff;
+    top: 5.62rem;
+    font-size: 0.75rem;
+    right:0.94rem;
+}
+.mui-control-item div{
+	margin: auto;
+	width: 60%;
+	height: 2.94rem;
+	line-height: 2.94rem;
+/*	border: none;*/
+}
+.mui-slider-indicator.mui-segmented-control.mui-segmented-control-inverted {
+	background: white;
+	
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	color: #ff4141;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	background: #ffffff;
+	border: none;
+}
+.mui-table-view {
+	background: #F0F0F0;
+	margin-bottom: 10px;
+}
+.li_1 {
+	background: #FFFFFF;
+	margin-bottom: 0.6rem;
+}
+.text_1 {
+	font-size: 0.93rem;
+}
+.text_2 {
+	font-size: 0.875rem;
+	color: #999999;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {
+	    border-top: 0;
+    border-bottom: 0;
+}
+.mui-slider-group{
+	margin-top: 42px;
+}
+/**/
+.huijuzhihui{
+	display: inline-block;
+	width: 3.8rem;
+	height: 3.8rem;
+	margin-right: 0.31rem;
+	margin: 10px 0 0 10px;
+}
+.huijuzhihui img{
+	vertical-align: middle;
+	width: 3.8rem;
+	height: 3.8rem;
+}
+.pingjia{
+	vertical-align: top;
+	width: 5.8rem;
+	height: 5.8rem;
+}
+.pingjia img{
+	vertical-align: middle;
+	width: 5.8rem;
+	height: 5.8rem;
+}
+.pingjia_text{
+	width: 70% !important;
+}
+.pingjia_button{
+	position: absolute;
+	bottom: 0;
+	right: 0.6rem;
+}
+.li_12{
+	background: #FFFFFF;
+	margin-bottom: 10px;
+	position: relative;
+	
+}
+.mui-control-content{
+    margin-top: 75px;
+}
+.li_12 p{
+	display: inline-block;
+}
+.name{
+	color: #333333;
+	width: 80%;
+	font-size: 0.81rem;
+	font-weight: bold;
+	display: inline-block;
+}
+.text_text{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2; //需要控制的文本行数
+	overflow: hidden;
+	color: #333333;
+	width: 90%;
+	line-height: 16px;
+	font-size: 0.81rem;
+	vertical-align: middle;
+}
+
+.text_contant{
+	display: inline-block;
+	width: 80%;
+	vertical-align: middle;
+	padding: 10px;
+	
+}
+.text{
+	font-size: 0.75rem;
+	color: #999999;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-top: 0.2rem;
+}
+
+.store_name{
+	font-size: 0.75rem;
+	color: #222222;
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	padding-right: 15px;
+}
+.backgroundfafafa{
+	background: white;
+	height: 2.75rem;
+	line-height: 2.75rem;
+	
+}
+.mui-navigate-right:after, .mui-push-right:after {
+   	right: 0rem;
+   	color: #333333;
+}
+.dianpu{
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 0.6rem;
+}
+.dianpu img{
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.mui-icon-right-nav{
+	color: #333333 !important;
+}
+.ziti{
+	color: #FF4141;
+	font-size: 0.75rem;
+	margin-right: 0.6rem;
+}
+.ziti img{
+	width: 0.93rem !important;
+	vertical-align: middle;
+	margin-left: 0.31rem;
+}
+.xufukuan{
+	background: white;
+	height: 2.18rem;
+	line-height: 2.18rem;
+	padding-right: 0.6rem;
+	color: #333333;
+	font-size: 0.75rem;
+	border-bottom: 1px solid #E5E5E5;
+}
+.colorred{
+	background: white;
+	height: 2rem;
+	padding-right: 0.6rem;
+
+}
+.colorred button{
+	border: 1px solid #FF4141;
+	color: #FF4141;
+	width: 4.06rem;
+	height: 1.43rem;
+	padding: 0;
+	margin-top: 0.28rem;
+	border-radius: 2px;
+	font-size: 0.75rem;
+}
+.color666 button{
+	border: 1px solid #666;
+	color: #666;
+
+}
+.quxiao{
+	color: #999999;
+	vertical-align: middle;
+	
+}
+.yiwancheng{
+	position: absolute;
+	right: 20%;
+	top: 8%;
+}
+.yiwancheng img{
+	width: 3.43rem !important;
+}
+.bt{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #F0F0F0;
+	margin-bottom: 0;
+}
+/*订单——空*/
+.wudingdan{
+	text-align: center;
+	margin-top: 14.81rem;
+	color: #999999;
+	font-size: 0.75rem;
+}
+.wudingdan img{
+	width: 4rem;
+	height: 4rem;
+}
+.wudingdan_text{
+	width: 35vw;
+	margin: auto;
+}
+.colorred button{
+	position: absolute;
+	right: 0.6rem;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	border-bottom: none !important;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active .a {
+    background: #ffffff;
+    border-bottom: 2px solid #ff4141;
+}
+.colorff4141{
+	color: #ff4141;
+	margin-left: 10px;
+}
+.mb{
+	margin-bottom: 5px;
+	background: #f8f8f8;
+}

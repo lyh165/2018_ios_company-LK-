@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>我的消息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../util/base.css" rel="stylesheet" />
+		<link href="css/wodexiaoxi.css" rel="stylesheet" />
+		<style type="text/css">
+			.top {
+				height: 3rem;
+				background: #FFFFFF;
+				border-bottom: 1px solid #e5e5e5;
+				z-index: 999;
+				position: relative;
+				padding-left: 3.43rem;
+				padding-right: 3.43rem;
+			}
+			
+			.mui-slider {
+				overflow-y: inherit;
+			}
+			
+			.lianxikefu {
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar" style="z-index: 9999;">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;text-align: center;">我的消息</span>
+			<span class="mui-text-right" style="margin-right: 2.5rem;font-size: 0.93rem;color: #333;">  </span>
+		</div>
+		<div class="mui-content">
+			<div class="gekai" style="height: 3.8rem;"></div>
+			<div id="sliderSegmentedControl" class="mui-scroll white mui-slider-indicator mui-segmented-control mui-segmented-control-inverted top">
+				<a href="#item1mobile" class="mui-control-item huodong mui-active">活动</a>
+				<a href="#item2mobile" class="mui-control-item huodong" id="getNotice2">聊天</a>
+			</div>
+			<div id="slider" class="mui-slider mui-fullscreen" style="margin-top: 2.8rem;">
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll" id="notice">
+								<!--<div style="height: 56px;background: #F0F0F0;"></div>
+								<div class="text-01">
+									<span>09:30</span>
+								</div>
+								<div class="activity">
+									<span class="img"><img src="../../../form_mobile/util/img/hdongtu.png" style="width: 21.18rem;margin-top: 0.625rem;"/></span>
+									<span class="text2">特权订金马可波罗瓷砖地砖全抛釉地板砖特...</span>
+									<span class="text3">查看详情</span>
+									<span class="right"><img src="../../../form_mobile/util/img/jiantou.png" style="width: 0.53rem;position: absolute;bottom: 1.8rem;right: 0.5rem;"/> </span>
+								</div>-->
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div style="height: 3.5rem;background: #F0F0F0;margin-bottom: 1rem;"></div>
+								<span id="notice2">
+									
+									
+								</span>
+								<!--<div class="shop_kefu">
+									<img src="../../../form_mobile/util/img/dianpu01.png" style="width: 3rem;" />
+									<span class="text_2">马可波罗华耐力家专卖店</span>
+									<span class="text_3 dianpu">店铺</span>
+									<span class="text_4">很好，拍了这个特权订金到实体店里，居然优惠...</span>
+									<span class="text_5">11月13日</span>
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="../../util/push.js"></script>
+		<script src="js/wodexiaoxi.js"></script>
+	</body>
+
+</html>

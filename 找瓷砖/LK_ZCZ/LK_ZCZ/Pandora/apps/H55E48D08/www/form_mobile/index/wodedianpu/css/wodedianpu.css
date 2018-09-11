@@ -1,0 +1,295 @@
+body {
+	background: #F0F0F0;
+}
+
+.content_product {
+	width: 100vw;
+	margin-top: 0.625rem;
+	height: 5.75rem;
+	background: white;
+	position: relative;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+.content_product span {
+	line-height: 1.2rem;
+}
+
+.product {
+	width: 4.37rem;
+	height: 4.37rem;
+	position: absolute;
+	margin-top: 0.60rem;
+	left: 0.93rem;
+}
+
+.content1-text {
+	height: 4.55rem;
+	position: absolute;
+	top: 0.5rem;
+	left: 5.7rem;
+	right: 3rem;
+}
+
+.content-text1 {
+	font-size: 0.93rem;
+	color: #333333;
+}
+
+.content-text2 {
+	line-height: initial;
+	padding: 0 2px;
+	background: #2f96ee;
+	font-size: 0.62rem;
+	color: #fff;
+	text-align: center;
+	margin-left: 0.3rem;
+	border-radius: 2px;
+	/*margin-bottom: 0.1rem;*/
+}
+
+.content-text3 {
+	color: #999999;
+	font-size: 0.75rem;
+	height: 2.1rem;
+	line-height: 1rem;
+}
+
+.xinxi {
+	position: absolute;
+	bottom: 0;
+}
+
+.content-text4 {
+	padding: 0rem 0.4rem;
+	background: none;
+	font-size: 0.62rem;
+	color: #F62525;
+	text-align: center;
+	line-height: 0.87rem;
+	border-radius: 2px;
+	border: 1px solid #F62525;
+	margin: 0 0.1rem;
+}
+
+.content-text5 {
+	padding: 0rem 0.4rem;
+	background: none;
+	font-size: 0.62rem;
+	color: #4dd2e2;
+	text-align: center;
+	line-height: 0.87rem;
+	border-radius: 2px;
+	border: 1px solid #4dd2e2;
+	margin: 0 0.1rem;
+}
+
+.content-text6 {
+	padding: 0rem 0.1rem;
+	background: none;
+	font-size: 0.62rem;
+	color: #5cb3f5;
+	text-align: center;
+	line-height: 0.87rem;
+	border-radius: 2px;
+	border: 1px solid #5cb3f5;
+	margin: 0 0.1rem;
+}
+
+.content-text7 {
+	margin-bottom: 0.625rem;
+	padding-bottom: 0.2rem;
+	padding-top: 0.2rem;
+	background: #FFFFFF;
+	font-size: 0.78rem;
+	color: #333333;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.content-text8 {
+	margin-bottom: 0.625rem;
+	width: 100vw;
+	padding-left: 1rem;
+	background: #FFFFFF;
+	line-height: 3rem;
+	position: relative;
+}
+
+.content-text9 {
+	margin-bottom: 1rem;
+}
+
+.content-text10 {
+	position: relative;
+	font-size: 0.93rem;
+	color: #999999;
+	margin-top: 1rem;
+	padding-right: 1rem;
+}
+
+.shangchuan {
+	background: #FFFFFF;
+	padding-left: 1rem;
+	padding-top: 1.2rem;
+	padding-right: 1rem;
+	position: relative;
+	margin-bottom: 0.625rem;
+}
+
+.zhanting {
+	background: #FFFFFF;
+	padding-left: 1rem;
+	padding-top: 1.2rem;
+	padding-right: 1rem;
+	position: relative;
+	margin-bottom: 0.625rem;
+}
+
+.zhanting img {
+	margin: 1vw 1vw !important;
+	border-radius: 6px !important;
+}
+
+.right_arrow {
+	width: 0.53rem;
+	height: 0.93rem;
+	position: absolute;
+	right: 1rem;
+	top: 2rem;
+}
+
+.zhenjian-1 {
+	margin-top: 0.5rem;
+	width: 9.15rem;
+	height: 5.37rem;
+}
+
+.zhenjian-2 {
+	margin-top: 0.5rem;
+	width: 9.15rem;
+	height: 5.37rem;
+	position: absolute;
+	right: 1rem;
+	top: 2.5rem;
+}
+
+.zhenjian-3 {
+	margin-top: 1rem;
+	width: 9.15rem;
+	height: 5.37rem;
+}
+
+.zhanting_1 {
+	margin-top: 0.5rem;
+	width: 16vw;
+	height: 16vw;
+}
+
+.zhanting_2 {
+	margin-top: 0.5rem;
+	width: 16vw;
+	height: 16vw;
+	position: absolute;
+	top: 2.6rem;
+	left: 23vw;
+}
+
+.zhanting_3 {
+	margin-top: 0.5rem;
+	width: 16vw;
+	height: 16vw;
+	position: absolute;
+	top: 2.6rem;
+	left: 42vw;
+}
+
+.zhanting_4 {
+	margin-top: 0.5rem;
+	width: 16vw;
+	height: 16vw;
+	position: absolute;
+	top: 2.6rem;
+	left: 61vw;
+}
+
+.zhanting_5 {
+	margin-top: 0.5rem;
+	width: 16vw;
+	height: 16vw;
+	position: absolute;
+	top: 2.6rem;
+	left: 80vw;
+}
+
+.zhuanweifu {
+	height: 1rem;
+}
+
+ul {
+	padding: 0 0 0 0;
+}
+
+li {
+	list-style-type: none;
+	background: white;
+}
+
+li {
+	padding: 0.81rem 0 1rem 0.93rem;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.gordon {
+	width: 22.187rem;
+	background: #f62525;
+	height: 2.75rem;
+	border-radius: 10px;
+	text-align: center;
+	color: white;
+	line-height: 2.75rem;
+	font-size: 1.12rem;
+	margin: 2rem auto 0;
+}
+
+.li_text {
+	display: inline-block;
+	width: 26%;
+	font-size: 0.87rem;
+	color: #333333;
+}
+
+.li_text1 {
+	font-size: 0.87rem;
+	color: #999999;
+}
+
+.li_text2 {
+	font-size: 0.87rem;
+	color: #f62525;
+}
+
+.content-text10.mui-navigate-right:after {
+	right: 0;
+}
+
+img {
+	vertical-align: middle;
+	border-radius: 10px !important;
+}
+
+p {
+	margin-bottom: 0;
+}
+
+#shop_service {
+	margin-bottom: 2px;
+}
+
+.content img {
+	border-radius: 6px;
+}
+
+.zhanting div {
+	border-radius: 6px;
+}

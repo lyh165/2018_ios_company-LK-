@@ -1,0 +1,115 @@
+
+html{
+	background: #F0F0F0;
+	
+}
+.actionbar{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.right{
+	padding: 0;
+	font-size: 0.5rem;
+	color: white;
+	text-align: center;
+	position: absolute;
+	right: 0.5rem;
+
+}
+.right img{
+	position: relative;
+}
+.information{
+	width: 0.62rem;
+	height: 0.62rem;
+	border-radius: 0.32rem;
+	background: #FF0000;
+	position: absolute;
+	top:-0.3rem;
+	right: -0.3rem;
+	
+}
+.ul_1{
+	padding: 0; 
+	margin: 0;
+	padding-top: 10%;
+}
+.li_1{
+ 	padding: 0 0 6px 0;
+ 	margin: 0;
+	list-style-type: none;
+	width: 11.56rem;
+	background: white;
+}
+.li1_1{
+	float: left;
+ 	padding: 0 0 6px 0;
+ 	margin: 2%;
+	list-style-type: none;
+	width: 46%;
+	background: white;
+}
+.mui-media-object_1{
+	height: 10.18rem;
+	width: 100% !important;
+	margin-top: -0.22rem;
+}
+.mui-media-object_1 img{
+	height: 10.18rem;
+	width: 100% !important;
+	margin-top: -0.22rem;
+}
+.mui-media-body_1{
+	font-size: 0.87rem;
+	text-align: left;
+	padding-left: 0.3rem;
+	color: #333333;
+	padding-top: 1.25rem;
+}
+.shopping_1{
+	float: right;
+	margin-right: 0.5rem;
+	color: #999999;
+}
+.price1_1{
+	padding-top: 1rem;
+}
+.price_1{
+	font-size: 1.12rem;
+	color: #f62525;
+	padding-left: 0.3rem;
+}
+small{
+	font-size: 0.75rem;
+}
+.stock_1{
+	font-size: 0.75rem;
+	color: #999999;
+	vertical-align: top;
+	float: right;
+	margin-right: 0.5rem;
+}
+.ziying_1{
+	width: 1.34rem;
+	height: 0.71rem;
+	border: 1px solid #ff0000;
+	font-size: 0.5rem;
+	color: #FF0000;
+}
+.mui-media-body-text_1{
+	overflow: hidden;
+	font-size: 0.81rem;
+	color: #333333;
+	width: 76%;
+	display: inline-block;
+	vertical-align: text-top;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.specifications_1{
+	margin-left: 0.5rem;
+	font-size: 0.68rem;
+	color: #999999;
+}
+

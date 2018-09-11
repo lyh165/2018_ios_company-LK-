@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../../form_mobile/util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/shopping_order1.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css"/>
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			img{
+				vertical-align: middle;
+			}
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left mui-action-back" onclick="back()">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">确认订单</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="dv_dialog_box1" id="bg3" style="display: none;">
+			<div class="dv_dialog Payment">
+				<div class="dv_title Payment1">选择支付方式</div>
+				<div class="dividerccc"></div>
+				<div class="close horizontal">
+					<div class="dialog_cancel Payment2" onclick="changname_cancel_2()">
+						<span style="display: block;"><img src="../../../form_mobile/util/img/zhifubao.png"style="width: 3.625rem;"/></span>
+						<span style="font-size: 0.96rem; color: #999999;">支付宝支付</span>
+					</div>
+					<div class="dialog_ok Payment2" onclick="changename_sure_2()">
+						<span style="display: block;"><img src="../../../form_mobile/util/img/weixin.png"style="width: 3.625rem;"/></span>
+						<span style="font-size: 0.96rem; color: #999999;">微信支付</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 4.37rem; background: #f0f0f0;"></div>
+		<div id="dizhi">
+		<div class="content_picture"></div>
+		<div class="content">
+			<span class="location"><img src="../../../form_mobile/util/img/u13.png"></span>
+			<span class="content-text">廖志善 &nbsp;&nbsp;138****4820</span>
+			<span class="content_location">湖南省长沙市岳麓区麓谷街道685号保利麓谷大新长海麓谷息港13栋1楼105室</span>
+			<span class="right_arrow"><img src="../../../form_mobile/util/img/jiantou.png"/></span>
+		</div>
+		</div>
+		<div class="content_name">
+			<span class="shop"><img src="../../../form_mobile/util/img/u7.png" alt="" /></span>
+			<span class="name">瓷砖旗舰店</span>
+		</div>
+		<div class="content_product">
+			<span class="product"></span>
+			<div class="content1-text">
+				<span class="content-text1">卢斯尔 微晶石电视背景墙瓷砖3d欧式简约仿大理石纹客厅影视</span>
+				<span class="content-text2">颜色：高温3D微晶/0.1㎡</span>
+				<span class="number1">x1</span>
+			</div>
+		</div>
+		<div class="content_message">
+			<span class="message">给卖家留言</span>
+			<span class="explain">填写本次交易说明</span>
+		</div>
+		<div class="content_message">
+			<span class="message">商品总额</span>
+			<span class="explain1">￥98.20</span>
+		</div>
+		<div class="content_message1">
+			<span class="explain2">需付款:<b>￥98.20</b></span>
+		</div>
+		<div class="content-select">
+			<span class="content-select_1">共1件</span>
+			<span class="total"><b>合计</b>￥98.00</span>
+		</div>
+		<button class="settlement" onclick="changSubmit()">提交订单</button>
+		<script src="js/mui.min.js"></script>
+		<script src="js/shezhi_one.js"></script>
+	</body>
+
+</html>

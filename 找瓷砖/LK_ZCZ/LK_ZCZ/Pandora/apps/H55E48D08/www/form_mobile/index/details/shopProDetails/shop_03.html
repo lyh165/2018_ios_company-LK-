@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>商品详情页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link href="../../form_mobile/util/mui.min.css" rel="stylesheet" />
+		<link href="../../form_mobile/util/iconfont.css" rel="stylesheet" />
+		<link href="../../form_mobile/util/base.css" rel="stylesheet" />
+		<link href="css/shop_03.css" rel="stylesheet" />
+		<style>
+			.mui-popover.mui-popover-action .mui-table-view small {
+				display: initial;
+			}
+			
+			.mui-table-view.mui-grid-view .mui-table-view-cell>a:not(.mui-btn) {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.mui-table-view.mui-grid-view .mui-table-view-cell {
+				padding: 0;
+				margin-top: 15vh;
+			}
+			
+			.mui-table-view.mui-grid-view {
+				padding: 0;
+			}
+			
+			img {
+				width: 100vw;
+			}
+			
+			.mui-slider-indicator .mui-number {
+				margin-top: 1rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content" style="">
+			<div class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一个图文表格) -->
+
+					<div class="mui-slider-item  mui-slider-item-duplicate">
+						<div class="mui-grid-view">
+							<div class="mui-media">
+								<img class="mui-media-object" src="http://192.168.31.206:8080/Tile_Web/file/2018-05/201805101032298911525919549891.jpg" style="width: 400px; height: 400px;" />
+							</div>
+						</div>
+					</div>
+					<div class="mui-slider-item ">
+						<div class="mui-grid-view">
+							<div class="mui-media">
+								<img class="mui-media-object" src="http://192.168.31.206:8080/Tile_Web/file/2018-05/201805101032298911525919549891.jpg" style="width: 400px; height: 400px;" />
+							</div>
+						</div>
+					</div>
+					<div class="mui-slider-item ">
+						<div class="mui-grid-view">
+							<div class="mui-media">
+								<img class="mui-media-object" src="http://192.168.31.206:8080/Tile_Web/file/2018-05/20180510103231525919545203.jpg" style="width: 400px; height: 400px;" />
+							</div>
+						</div>
+					</div>
+					<div class="mui-slider-item  mui-slider-item-duplicate">
+						<div class="mui-grid-view">
+							<div class="mui-media">
+								<img class="mui-media-object" src="http://192.168.31.206:8080/Tile_Web/file/2018-05/20180510103231525919545203.jpg" style="width: 400px; height: 400px;" />
+							</div>
+						</div>
+					</div>
+
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="#">
+									<img class="mui-media-object" src="../../form_mobile/util/img/shop3666.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="#">
+									<img class="mui-media-object" src="../../form_mobile/util/img/shop3666.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="#">
+									<img class="mui-media-object" src="../../form_mobile/util/img/shop3666.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="#">
+									<img class="mui-media-object" src="../../form_mobile/util/img/shop3666.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="#">
+									<img class="mui-media-object" src="../../form_mobile/util/img/shop3666.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="#">
+									<img class="mui-media-object" src="../../form_mobile/util/img/shop3666.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一个图文表格) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="#">
+									<img class="mui-media-object" src="../../form_mobile/util/img/shop3666.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mui-slider-indicator" style="position: static;background-color: #fff;">
+					<!--<span class="mui-action mui-action-previous mui-icon mui-icon-back"></span>-->
+					<div class="mui-number">
+						<span style="font-size: 1.3rem;color: #333333;">1</span> / 5
+					</div>
+					<!--<span class="mui-action mui-action-next mui-icon mui-icon-forward"></span>-->
+				</div>
+			</div>
+		</div>
+		<script src="../../form_util/mui/js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+
+			});
+		</script>
+
+	</body>
+
+</html>

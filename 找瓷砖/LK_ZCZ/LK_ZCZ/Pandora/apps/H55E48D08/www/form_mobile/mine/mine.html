@@ -1,0 +1,142 @@
+<!doctype html>
+<html style="padding: 0;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../form_util/mui/css/mui.min.css" />
+		<link href="../util/base.css" rel="stylesheet" />
+		<link href="../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="mine.css" rel="stylesheet" />
+		<style type="text/css">
+			.icon_01 {
+				color: #666666;
+			}
+		
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="header">
+			<div class="top-img">
+				<!--<span class="wode">我的</span>-->
+				<span class="yonghuming" onclick="openGerenxinxi()"><img id="user_img" src="../../form_mobile/util/img/touxiang.png" alt="" style="width: 4.37rem;border-radius: 50%;"/></span>
+				<span class="name" id="user_name"></span>
+			</div>
+		</div>
+		<ul class="content">
+			<li class="dingdanqkuang">
+				<div class="list daifukuan" onclick="my_order('1')">
+					<span class="img img01" id="notPaying"><img src="../util/img/daifukuan.png" style=""/></span>
+					<span class="text" style="color: #333333;">待付款</span>
+				</div>
+				<div class="list daipingjia" onclick="my_order('2')">
+					<span class="img img02" id="notEvaluate"><img src="../util/img/daipingjia_one.png" style=""/></span>
+					<span class="text" style="color: #333333;">待评价</span>
+				</div>
+				<div class="list wanchengdingdan" onclick="my_order('3')">
+					<span class="img img03" id="complete"><img src="../util/img/yiwanchengdingdan.png" style=""/></span>
+					<span class="text" style="color: #333333;">已完成订单</span>
+				</div>
+				<div class="list wodedingdan" onclick="my_order('4')">
+					<span class="img img04"><img src="../util/img/wodedingdan.png" style=""/></span>
+					<span class="text" style="color: #333333;">我的订单</span>
+				</div>
+				<div class="zhanweifu"></div>
+				<!--<span class="item_right youjiantou iconfont icon-youjiantou"></span>-->
+			</li>
+			<li class="horizontal woyaokaidian" id="kaidian" onclick="openWoyaokaidian()">
+				<span class="left">我要开店</span>
+				<div class="zhanweifu"></div>
+				<div class="item_right youjiantou"></div>
+			</li>
+			<li class="horizontal woyaokaidian" id="fabu" onclick="openWoyaofabu()">
+				<span class="left">我要发布</span>
+				<div class="zhanweifu"></div>
+				<div class="item_right youjiantou"></div>
+			</li>
+			<li class="horizontal wodedianpu" onclick="openWodedianpu()">
+				<span class="left">我的店铺</span>
+				<div class="zhanweifu"></div>
+				<div class="item_right youjiantou"></div>
+			</li>
+			<li class="horizontal wodefabu" onclick="openWodefabu()" style="border-bottom: 1px #EEEEEE solid;border-top: 1px #EEEEEE solid;background: #FFFFFF; height: 3.06rem;margin-top: 0;">
+				<span class="left">我的发布</span>
+				<div class="zhanweifu"></div>
+				<div class="item_right youjiantou"></div>
+			</li>
+			<li class="horizontal shoujiadizhi" onclick="openShoujiadizhi()">
+				<span class="left">收件地址</span>
+				<div class="zhanweifu"></div>
+				<div class="item_right youjiantou"></div>
+			</li>
+			<li class="horizontal wodeshoucang" onclick="openwodeshoucang()">
+				<span class="left">我的收藏</span>
+				<div class="zhanweifu"></div>
+				<div class="item_right youjiantou"></div>
+			</li>
+			<li class="horizontal wodexiaoxi" onclick="openWodexiaoxi()">
+				<span class="left">我的消息</span>
+				<div class="zhanweifu"></div>
+				<div class="item_right youjiantou"></div>
+			</li>
+			<li class="horizontal shezhi" onclick="openShezhi()">
+
+				<span class="left">设置</span>
+				<div class="zhanweifu"></div>
+				<div class="item_right youjiantou"></div>
+			</li>
+
+		</ul>
+		<div style="height: 50px;"></div>
+		<div class="footer">
+			<div class="home12 icon" onclick="openIndex()">
+				<span class="home_img12" style="display: block;"><img src="../../form_mobile/util/img/shouye001.png" style=" height: 1.34rem;"/></span>
+				<span class="home_12 icon_01">首页</span>
+			</div>
+			<div class="online12 icon" onclick="openMall()">
+				<span class="online_img12" style="display: block;"><img src="../../form_mobile/util/img/shangcheng.png" style=" height: 1.34rem;"/></span>
+				<span class="online01 icon_01">在线商城</span>
+			</div>
+			<div class="shopping_12 icon" onclick="openCart()">
+				<span class="shopping_img12 car_num" style="display: block;position: relative;"></span>
+				<span class="shopping_13 icon_01">购物车</span>
+			</div>
+			<div class="gerenzhongxin12 icon">
+				<span class="gerenzhongxin_img12" style="display: block;"><img src="../util/img/wode01.png" style=" height: 1.34rem;"/></span>
+				<span class="gerenzhongxin_12 icon_01" style="color: #F62525;">我的</span>
+			</div>
+		</div>
+
+		<script src="../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../util/base.js"></script>
+		<script src="mine.js"></script>
+		<script>
+			mui.init({
+				keyEventBind: {
+					backbutton: true //打开back按键监听
+				}
+			});
+			mui.back = function() {
+				var btn = ["确定", "取消"];
+				mui.confirm(' ', '你确定要退出当前应用？', btn, function(e) {
+					if(e.index == 0) {
+						//执行mui封装好的窗口关闭逻辑；
+						plus.runtime.quit();
+					}
+				});
+			}
+		</script>
+	</body>
+
+</html>

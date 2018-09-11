@@ -1,0 +1,138 @@
+
+body{
+	background: #f0f0f0;
+}
+.left1{
+	width: 48px;
+}
+.right{
+
+	background-size: 100% 100%;
+	padding: 0;
+	font-size: 0.5rem;
+	color: white;
+	text-align: center;
+}
+.content {
+	padding-top: 0.62rem;
+	font-size: 4vw;
+	width: 100vw;
+	height: 20.53vw;
+	margin-top: 0.625rem;
+	background: #FFFFFF;
+	padding-left: 4.26vw;
+	position: relative;
+	border-bottom:1px solid #F0F0F0 ;	
+}
+.content1 {
+	font-size: 3.7vw;
+	width: 100vw;
+	height: 10.26vw;
+	background: #FFFFFF;
+	line-height: 10.26vw;
+	padding-left: 4.26vw;
+	position: relative;
+	border-bottom:1px solid #F0F0F0 ;
+}
+.del img{
+	width: 0.9rem;
+	height: 0.95rem;
+	position: absolute;
+	left: 65vw;
+	top: 3vw;
+}
+.del2 img{
+	width: 0.9rem;
+	height: 0.95rem;
+	position: absolute;
+	left: 83vw;
+	top: 3vw;
+}
+.moren {
+	margin-left: 6vw;
+	color: #666666;
+}
+.text-del {
+	position: absolute;
+	left: 65vw;
+}
+.text-del2 {
+	position: absolute;
+	left: 83vw;
+}
+.right_arrow{
+	position: absolute;
+	right: 1rem;
+	top: -3.8vw;
+}
+.content-text {
+	color: #333333;
+}
+.content-text1 {
+	color: #333333;
+	left: 20vw;
+}
+.content-text2 {
+	width: 78vw;
+	height: 9.33vw;
+	color: #666666;
+	font-size: 3.2vw;
+
+	top: 8.53vw;
+	left: 20vw;
+}
+.select img{
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	position: absolute;
+	top: 0;
+	left: 1rem;
+	margin-top: 0.62rem;
+}
+.select-no {
+	width: 1rem;
+	height: 1rem;
+	position: absolute;
+	top: 0;
+	left: 0rem;
+	display: none;
+	margin-top: 0.62rem;
+}
+.select-no img{
+	position: absolute;
+	top: 0;
+	left: 1rem;	
+}
+.input {
+	border: none;
+	line-height: 13.33vw;
+}
+.dibu {
+	width: 100vw;
+	height: 13.33vw;
+	background: #FFFFFF;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+}
+.button {
+	height: 9.3vw;
+	width: 55.2vw;
+	border-radius:2px ;
+	background: #F62525;
+	color: #FFFFFF;
+	margin-top: 0.5rem;
+	border: none;
+}
+.button1 {
+	height: 9.3vw;
+	width: 73.33vw;
+	border-radius:2px ;
+	background: #F62525;
+	color: #FFFFFF;
+	margin-top: 0.5rem;
+}
+.button1 b {
+	margin-right: 0.5rem;
+}

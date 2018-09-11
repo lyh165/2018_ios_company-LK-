@@ -1,0 +1,51 @@
+
+body{
+	background: #f0f0f0;
+}
+.left1{
+	width: 48px;
+}
+.right{
+
+	background-size: 100% 100%;
+	padding: 0;
+	font-size: 0.5rem;
+	color: white;
+	text-align: center;
+}
+.information{
+	width: 0.62rem;
+	height: 0.62rem;
+	border-radius: 0.32rem;
+	background: #FF0000;
+	margin-top: -1rem;
+	margin-right: -1.16rem;
+}
+.shopping_cart{
+	text-align: center;
+	margin-top: 10.88rem;
+}
+.shopping_cart img{
+	width: 3.5rem;
+}
+.text1{
+	margin-top: 0.87rem;
+	text-align: center;
+}
+.text_1{
+	font-size: 0.87rem;
+	color: #999999;
+}
+.get-code{
+	font-size: 0.93rem;
+	width: 6.37rem;
+	height: 2.18rem;
+	border-radius: 2px;
+	background: none;
+	border: 1px solid #ff0000;
+	color: #ff0000;
+}
+.get-code1{
+	text-align: center;
+	margin-top: 1.44rem;
+}

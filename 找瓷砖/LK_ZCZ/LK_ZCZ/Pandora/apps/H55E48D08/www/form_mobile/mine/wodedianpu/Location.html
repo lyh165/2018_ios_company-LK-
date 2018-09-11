@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../index/css/Location.css" />
+	</head>
+
+	<body>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">地址</span>
+			<div class="right">
+
+			</div>
+		</div>
+		<div class="location" id="container"></div>
+		<div class="button">
+			<button onclick="navigateWithMap()">到这里去</button>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=grWnKS9c1KPQ6NF22GRyUoOxbcAUyTHL"></script>
+		<script src="../../util/base.js"></script>
+		<script>
+			var dst;
+			var src;
+			mui.plusReady(function() {
+				mui.init();
+				var self = plus.webview.currentWebview();
+				var shop_id = self.shop_id;
+				shop_name = self.shop_name;
+				shop_add = self.shop_add;
+				getShopDetail(shop_id);
+				plus.geolocation.getCurrentPosition(geoInf, function(e) {}, {
+					geocode: true,
+					enableHighAccuracy: true,
+					provider: 'baidu' //provider: (String 类型 )优先使用的定位模块。可取以下供应者： "system"：表示系统定位模块，支持wgs84坐标系； "baidu"：表示百度定位模块，支持gcj02/bd09/bd09ll坐标系； "amap"：表示高德定位模板，支持gcj02坐标系。 默认值按以下优先顺序获取（amap>baidu>system），若指定的provider不存在或无效则返回错误回调。 注意：百度/高德定位模块需要配置百度/高德地图相关参数才能正常使用
+				});
+			});
+
+			function getShopDetail(shop_id) {
+				var json = {
+					"shop_id": shop_id
+				}
+				var jsonAjax = {
+					"url": "app_business_logistics_by_shop_id_index.do",
+					"jsonData": json,
+					"methodName": "updateOver_back",
+					"overMethodName": "getShopDetail_back",
+				}
+				getAjaxData(jsonAjax);
+			}
+			
+			function getShopDetail_back(jsonObj){
+				var jsonInfo = strToJson(jsonObj.data);
+				var data = strToJson(jsonInfo.data);
+				var shop_profile=data.shop_profile;
+				var html='<h4>'+shop_name+'</h4><br/><span style="color: #555555;">'+shop_profile+'</span>';
+				getBusinessAddress(html);
+			}
+			
+			function getBusinessAddress(html) {
+				var map = new BMap.Map("container");
+				var point = new BMap.Point(0, 0);
+				map.centerAndZoom(point, 12);
+				// 创建地址解析器实例
+				var myGeo = new BMap.Geocoder();
+				// 将地址解析结果显示在地图上,并调整地图视野
+				myGeo.getPoint(shop_add, function(point) {
+					if(point) {
+						map.centerAndZoom(point, 16);
+						map.addOverlay(new BMap.Marker(point));
+						var infoWindow = new BMap.InfoWindow(html, {
+							offset: new BMap.Size(-10, -20)
+						}); // 创建信息窗口对象
+						map.openInfoWindow(infoWindow, point); //开启信息窗口
+						//document.getElementById("r-result").innerHTML = "信息窗口的内容是：<br />" + infoWindow.getContent();
+					} else {
+						alert("抱歉!查询不到该店铺的地址!");
+					}
+				}, "");
+			}
+
+			function geoInf(position) {
+				var codns = position.coords; //获取地理坐标信息；
+				var lng_val = codns.longitude; //获取到当前位置的经度
+				var lat_val = codns.latitude; //获取到当前位置的纬度；
+				src = new plus.maps.Point(lng_val, lat_val);
+				dst = new plus.maps.Point(0, 0);
+			}
+
+			function navigateWithMap() {
+				if('Android' === plus.os.name && navigator.userAgent.indexOf('StreamApp') > 0) {
+					plus.nativeUI.toast('当前环境暂不支持地图插件');
+					return;
+				}
+				plus.maps.openSysMap(dst, shop_add, src);
+			}
+		</script>
+	</body>
+
+</html>

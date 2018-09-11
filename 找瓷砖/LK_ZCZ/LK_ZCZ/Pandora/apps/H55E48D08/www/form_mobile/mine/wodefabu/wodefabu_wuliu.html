@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>我的发布</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../../form_mobile/util/base.css" rel="stylesheet" />
+
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="css/wodefabuwuliu.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-slider {
+				overflow: inherit !important;
+			}
+		</style>
+		<style type="text/css">
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<header class="mui-header actionbar" style="position: fixed;top:0;z-index: 666;">
+			<div class="left mui-action-back" onclick="mui.back()">
+				<span class="left_icon  iconfont zuojiantou"><img src="../../../form_mobile/util/img/u4.png" style="width: 0.53rem;"/></span>
+			</div>
+			<span class="text" style="color: #333333;">我的发布</span>
+			<span id="editText" class="mui-text-right" style="margin-right: 2rem;font-size: 0.93rem;color: #333;">编辑</span>
+		</header>
+		<div class="mui-content">
+			<div class="gekai" style="height: 3.75rem;"></div>
+			<div id="xuanze" class="white mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" style="position: fixed;top: 3.75rem;left: 0;z-index: 666; background: #FFFFFF;border-bottom: 1px solid #e5e5e5;z-index: 999;">
+				<div class="mui-control-item mui-active" type="type2" id="xuanze2">瓷砖</div>
+				<div class="mui-control-item " type="type1" id="xuanze1">物流</div>
+				<div class="mui-control-item" type="type4" id="xuanze4">加工厂</div>
+				<div class="mui-control-item" type="type3" id="xuanze3">团购</div>				
+				<div class="mui-control-item" type="type5" id="xuanze5">服务</div>
+				<div class="mui-control-item" type="type6" id="xuanze6">招聘</div>
+			</div>
+			<!--没有发布-->
+			<div style="display: none;" id="none">
+				<div class="shopping_cart"><img src="../../../form_mobile/util/img/wufabu.png" /></div>
+				<div class="text1">
+					<span class="text_1">暂无发布哦</span>
+				</div>
+			</div>
+			<div id="content" class="mui-slider mui-fullscreen" style="margin-top: 2.8rem;position:absolute;z-index: 1;">
+				<div class="mui-slider-group group">
+					<div id="type1" class="mui-slider-item mui-control-content mui-hidden">
+						<div id="" class="wrapper">
+							<div class="mui-scroll scroll">
+								<div style="height: 3.5rem;background: #F0F0F0;"></div>
+								<ul id="mylogistics" class="content content">
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="type2" class="mui-slider-item mui-control-content ">
+						<div class="">
+							<div class="mui-scroll">
+								<div style="height: 3.5rem;background: #F0F0F0;"></div>
+								<ul id="myShopPro" class="content">
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="type3" class="mui-slider-item mui-control-content mui-hidden">
+						<div class="">
+							<div class="mui-scroll">
+								<div style="height: 3.5rem;background: #F0F0F0;"></div>
+								<ul id="myGroup" class="content">
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="type4" class="mui-slider-item mui-control-content mui-hidden">
+						<div class="">
+							<div class="mui-scroll">
+								<div style="height: 3.5rem;background: #F0F0F0;"></div>
+								<ul id="myfactory" class="content">
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="type5" class="mui-slider-item mui-control-content mui-hidden">
+						<div class="">
+							<div class="mui-scroll">
+								<div style="height: 3.5rem;background: #F0F0F0;"></div>
+								<ul id="myService" class="content">
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="type6" class="mui-slider-item mui-control-content mui-hidden">
+						<div class="">
+							<div class="mui-scroll">
+								<div style="height: 3.5rem;background: #F0F0F0;"></div>
+								<ul id="myRecruit" class="content">
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-select" id="chooseCarProAll" style="display:none ;">
+				<div class="content-select_1 choice1" id="shop_all"></div>
+				<span class="total">全选</span>
+				<div class="settlement" onclick="testDelCheck()">删除</div>
+			</div>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_mobile/util/base.js"></script>
+		<script src="js/myService.js"></script>
+		<script type="text/javascript">
+			mui.init({})
+			mui('.mui-slider').slider().stopped = true;
+			mui('.actionbar').on('tap', '.mui-text-right', function() {
+				if($("#editText").html() == "编辑") {
+					$("#editText").html("完成")
+					$('.choice1').css('display', 'inline-block')
+					$('.content-select').css('display', 'inline-block')
+					$('.settlement').css('display', 'inline-block');
+				} else if($("#editText").html() == "完成") {
+					$("#editText").html("编辑")
+					$('.choice1').css('display', 'none')
+					$('.content-select').css('display', 'none')
+					$('.settlement').css('display', 'none');
+				}
+			})
+			mui('#xuanze').on('tap', '#xuanze1', function() {
+				if($("#editText").html() == "完成") {
+					$("#editText").html("编辑")
+					$('.choice1').css('display', 'none')
+					$('.content-select').css('display', 'none')
+					$('.settlement').css('display', 'none');
+				}
+			})
+			mui('#xuanze').on('tap', '#xuanze2', function() {
+				if($("#editText").html() == "完成") {
+					$("#editText").html("编辑")
+					$('.choice1').css('display', 'none')
+					$('.content-select').css('display', 'none')
+					$('.settlement').css('display', 'none');
+				}
+			})
+			mui('#xuanze').on('tap', '#xuanze3', function() {
+				if($("#editText").html() == "完成") {
+					$("#editText").html("编辑")
+					$('.choice1').css('display', 'none')
+					$('.content-select').css('display', 'none')
+					$('.settlement').css('display', 'none');
+				}
+			})
+			mui('#xuanze').on('tap', '#xuanze4', function() {
+				if($("#editText").html() == "完成") {
+					$("#editText").html("编辑")
+					$('.choice1').css('display', 'none')
+					$('.content-select').css('display', 'none')
+					$('.settlement').css('display', 'none');
+				}
+			})
+			mui('#xuanze').on('tap', '#xuanze5', function() {
+				if($("#editText").html() == "完成") {
+					$("#editText").html("编辑")
+					$('.choice1').css('display', 'none')
+					$('.content-select').css('display', 'none')
+					$('.settlement').css('display', 'none');
+				}
+			})
+			mui('#xuanze').on('tap', '#xuanze6', function() {
+				if($("#editText").html() == "完成") {
+					$("#editText").html("编辑")
+					$('.choice1').css('display', 'none')
+					$('.content-select').css('display', 'none')
+					$('.settlement').css('display', 'none');
+				}
+			})
+
+			mui('.mui-content').on('tap', '.mui-control-item', function() {
+				var obj = $(".mui-active").eq(0)
+				var type1 = $(obj).attr("type")
+				$("#" + type1).addClass("mui-hidden");
+				var type = $(this).attr("type");
+				$("#" + type).removeClass("mui-hidden");
+			})
+
+			function checkBoxBtn(elementId, inpId) {
+				var obj = $("#" + elementId);
+				var inpObj = $("#" + inpId);
+				if(obj.hasClass("active")) {
+					obj.removeClass("active")
+					inpObj.prop("checked", false);
+				} else {
+					obj.addClass("active");
+					inpObj.prop("checked", true);
+				}
+			}
+			$(document).ready(function() {
+				$("#shop_all").click(function() {
+					if($(this).hasClass('active')) {
+						$(this).removeClass('active')
+						$("#content").find(".choice1").hasClass('active')
+						$("#content").find(".choice1").removeClass('active')
+					} else {
+						$(this).addClass('active')
+						$("#content").find(".choice1").addClass('active')
+					}
+				})
+			})
+		</script>
+		<script type="text/javascript">
+			mui.init({
+
+			});
+		</script>
+
+	</body>
+
+</html>

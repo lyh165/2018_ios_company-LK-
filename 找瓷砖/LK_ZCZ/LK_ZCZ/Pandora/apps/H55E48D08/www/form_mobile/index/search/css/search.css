@@ -1,0 +1,58 @@
+
+html{
+	background: white;
+}
+.hot{
+	background: white;
+	height: 4.68rem;
+	padding-left: 0.93rem;
+	border-bottom: 1px solid #E5E5E5;
+	padding-top: 0.6rem
+}
+.hot_one{
+	font-size: 0.9rem !important;
+}
+.hot div{
+	font-size: 0.87rem;
+	color: #333333;
+	padding: 0 0 0.76rem 0;
+}
+.hot span{
+	display: inline-block;
+/*	width: 3.12rem;*/
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	height: 1.18rem;
+	background: #f1f2f6;
+	font-size: 0.75rem;
+	color: #333333;
+	text-align: center;
+	line-height: 1.18rem;
+	margin-right: 0.5rem;
+	border-radius: 0.2rem;
+}
+ul{
+	margin-top: 0;
+	list-style-type: none;
+	padding: 0;
+	background: white;	
+}
+li{
+	
+	padding-left: 0.93rem;
+	height: 2.53rem;
+	line-height: 2.53rem;
+	border-bottom: 1px solid #E5E5E5;
+	font-size: 0.87rem;
+	color: #333333;s
+}
+.empty{
+	width: 13.56rem;
+	height: 2.25rem;
+	border: 1px solid #c7c7c7;
+	text-align: center;
+	margin: 1.31rem auto 0;
+	line-height: 2.25rem;
+	font-size: 0.87rem;
+	color: #666666;
+}

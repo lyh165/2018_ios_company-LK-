@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>搜索页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../util/base.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../form_util/mui/css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../../../form_util/mui/css/mui.picker.css" />
+		<link rel="stylesheet" href="css/processing_factory.css" />
+		<link rel="stylesheet" href="css/dialog.css" />
+		<!--联系客服样式-->
+		<style type="text/css">
+			.lianxikefu{
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+			.dv_dialog{
+				margin-top: 10rem;
+			}
+			
+			.wuliu a div {
+				display: inline-block;
+				position: initial;
+				margin-top: 0.8rem;
+			}
+			
+			.didian {
+				margin-top: -1.2rem;
+				margin-left: 4.6rem;
+			}
+			
+			.xiangqing {
+				margin-left: 4.6rem;
+			}
+			.mui-scroll-wrapper{
+				overflow-y: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+<div class="iconfont icon-lianxikefu lianxikefu"></div>
+<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon  iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">找服务</span>
+			<div class="right">
+			</div>
+		</div>
+		<div class="mui-content">
+			<div class="gekai" style="height: 2.7rem;"></div>
+			<ul id="sliderSegmentedControl" style="background: #FFFFFF; border-bottom: 1px solid #e5e5e5; z-index:2; position: fixed; width: 100vw;line-height: 2.53rem;">
+				<li class="mui-scroll white mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-control-item mui-icon mui-icon-arrowdown mui-active" id="service">公司所在地</div>
+					<div class="mui-control-item mui-icon mui-icon-arrowdown" id="service1">个人/公司 </div>
+					<div class="mui-control-item mui-icon mui-icon-arrowdown" id="service2">服务 </div>
+				</li>
+				<!--
+            	作者：571171552@qq.com
+            	时间：2018-04-14
+            	描述：公司所在地下拉框
+            -->
+				<div class="all" id="all" style="display: none;">
+					<ul id="ul">
+
+					</ul>
+					<ul id="ul_01" class="li_ul" style="display: none;">
+
+					</ul>
+				</div>
+				<!--
+            	作者：571171552@qq.com
+            	时间：2018-04-14
+            	描述：个人公司下拉框
+            -->
+				<div class="all" style="display: none;" id="all2">
+					<ul id="ul_3">
+
+					</ul>
+				</div>
+				<!--
+            	作者：571171552@qq.com
+            	时间：2018-04-14
+            	描述：公司所在地下拉框
+            -->
+				<div class="all" style="display: none;" id="all3">
+					<ul id="ul_2">
+						<li id="add1" class="li_1">
+							<!--<div class="li_1_1"></div>-->
+							<span class="li_1_2" onclick="ServiceNameAll(' ','ul_9')">全部</span>
+						</li>
+						<li id="add2" class="li_1">
+							<div class="li_1_1" style="display: none;"></div>
+							<span class="">设计</span>
+						</li>
+						<li id="add3" class="li_1">
+							<div class="li_1_1" style="display: none;"></div>
+							<span class="">印刷</span>
+						</li>
+					</ul>
+
+					<ul id="ul_9" class="li_ul">
+						<!--<li class="li_ul_li li_2_action" onclick="ServiceNameAll(' ','ul_9')">全部</li>-->
+					</ul>
+					<ul id="ul_12" class="li_ul" style="display: none;">
+						<li class="li_ul_li li_2_action" onclick="ServiceNameAll('设计','ul_12')">全部</li>
+						<li class="li_ul_li" style="text-align: center;border-bottom: none;">
+							<input class="input" id="sheji" type="text" placeholder="请输入你要找的设计" style="border-radius: 3rem;margin-top: 1rem;font-size: 0.875rem;width: 10rem;" />
+							<button onclick="ServiceNameAll('1','ul_12')" style="border: none;border-radius: 3rem;width: 6rem;background: #F62525;color: #FFFFFF;">搜索</button>
+						</li>
+					</ul>
+					<ul id="ul_13" class="li_ul" style="display: none;">
+						<li class="li_ul_li li_2_action" onclick="ServiceNameAll('印刷','ul_13')">全部</li>
+						<li class="li_ul_li" style="text-align: center;border-bottom: none;">
+							<input class="input" id="yinshua" type="text" placeholder="请输入你要找的印刷" style="border-radius: 3rem;margin-top: 1rem;font-size: 0.875rem;width: 10rem;" />
+							<button onclick="ServiceNameAll('2','ul_13')" style="border: none;border-radius: 3rem;width: 6rem;background: #F62525;color: #FFFFFF;">搜索</button>
+						</li>
+
+					</ul>
+				</div>
+
+			</ul>
+			<div id="slider" class="mui-slider mui-fullscreen" style="margin-top: 2.8rem;">
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div style="height: 3.5rem;background: #F0F0F0;"></div>
+								<div id="IndexServiceData"></div>
+
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div style="height: 3.5rem;background: #F0F0F0;"></div>
+								<div class="shopping_cart"><img src="../../util/img/geren.gonsi.png" style="width: 2.81rem;" /></div>
+								<div class="text1">
+									<span class="text_1">暂无服务内容哦，换个条件试试！</span>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div style="height: 3.5rem;background: #F0F0F0;"></div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="dv_dialog_box1" id="phoneTanKuang" style="display: none;">
+			<div class="dv_dialog">
+				<div class="dv_title" id="user_phone"></div>
+				<div class="dividerccc" style="background:#CCCCCC; height: 1px ; border:none"></div>
+				<div class="close horizontal">
+					<div class="dialog_cancel" onclick="changname_cancel()">取消</div>
+					<a id="playFactoryPhone" class="dialog_ok" style="background: #F62525;color: #ffffff;border-radius: 0 0 10px 0">呼叫</a>
+				</div>
+			</div>
+		</div>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../../../form_util/mui/js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/processing_factory.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui('.mui-slider').slider().stopped=true;
+			$(function() {
+				$(".li_1").click(function() {
+					clear();
+					$(this).addClass("li_1_action");
+				});
+
+				function clear() {
+					$(".li_1").each(function() {
+						if($(this).hasClass("li_1_action")) {
+							$(this).removeClass("li_1_action");
+						}
+					});
+				}
+			});
+			mui('.mui-segmented-control-inverted').on('tap', '#service1', function() {
+				$('#all2').css('display', 'inline-block')
+				$('#all').css('display', 'none')
+				$('#all3').css('display', 'none')
+			})
+			mui('.mui-segmented-control-inverted').on('tap', '#service2', function() {
+				$('#all3').css('display', 'inline-block')
+				$('#all').css('display', 'none')
+				$('#all2').css('display', 'none')
+			})
+
+			/*地址*/
+			mui('#ul').on('click', '#add1', function() {
+				$('#ul_01').css('display', '')
+				$('#ul_02').css('display', 'none')
+				$('#ul_10').css('display', 'none')
+			})
+			mui('#ul').on('click', '#add2', function() {
+				$('#ul_02').css('display', '')
+				$('#ul_10').css('display', 'none')
+				$('#ul_01').css('display', 'none')
+			})
+			mui('#ul').on('click', '#add3', function() {
+				$('#ul_10').css('display', '')
+				$('#ul_02').css('display', 'none')
+				$('#ul_01').css('display', 'none')
+			})
+			mui('#all3').on('click', '#add1', function() {
+				$('#ul_09').css('display', '')
+				$('#ul_12').css('display', 'none')
+				$('#ul_13').css('display', 'none')
+			})
+			mui('#all3').on('click', '#add2', function() {
+				$('#ul_12').css('display', '')
+				$('#ul_09').css('display', 'none')
+				$('#ul_13').css('display', 'none')
+			})
+			mui('#all3').on('click', '#add3', function() {
+				$('#ul_13').css('display', '')
+				$('#ul_09').css('display', 'none')
+				$('#ul_12').css('display', 'none')
+			})
+		</script>
+
+	</body>
+
+</html>

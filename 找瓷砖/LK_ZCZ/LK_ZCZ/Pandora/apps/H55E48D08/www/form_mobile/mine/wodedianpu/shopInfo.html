@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的店铺</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/wodedianpu.css" />
+		<link href="../../../form_util/mui/css/iconfont.css" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+			img {
+				vertical-align: middle;
+				border-radius: 4px;
+			}
+			
+			.lianxikefu {
+				position: fixed;
+				z-index: 999;
+				bottom: 120px;
+				right: 20px;
+				font-size: 30px;
+				color: #F62525;
+				border: 1px solid #F62525;
+				border-radius: 50%;
+				padding: 2px;
+				background-color: #FFF;
+				box-shadow: 0 0 6px rgba(255, 0, 0, 0.83);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<input type="hidden" readonly="readonly" id="shopName" value=""/>
+		<input type="hidden" readonly="readonly" id="shopShowAdd" value=""/>
+		<input type="hidden" readonly="readonly" id="shopWarehouseAdd" value=""/>
+		<input type="hidden" readonly="readonly" id="shopFactoryAdd" value=""/>
+		<input type="hidden" readonly="readonly" id="shopAdd" value=""/>
+		<div class="actionbar">
+			<div class="left mui-action-back">
+				<span class="left_icon iconfont zuojiantou"></span>
+			</div>
+			<span class="text" style="color: #333333;">我的店铺</span>
+			<div class="right" style="color: #f62525; font-size: 0.93rem;">
+			</div>
+		</div>
+		<div class="actionbar_white" style="height: 60px; background: #f0f0f0;"></div>
+
+		<div class="content_product">
+			<span class="product"></span>
+			<div class="content1-text" onclick="openUpdataBusiness()">
+				<div id="shopJ">
+					<span class="content-text1"></span>
+				</div>
+				<p class="content-text3"></p>
+				<div id="shopService"></div>
+			</div>
+		</div>
+		<div class="content-text7"></div>
+		<div class="shangchuan">
+			<span class="content-text9">经营资质</span>
+			<div class="zhenjian-1"></div>
+			<div class="zhenjian-2"></div>
+			<div class="zhenjian-3"></div>
+			<div class="zhuanweifu"></div>
+		</div>
+		<div class="zhanting">
+			<span class="content-text9" id="">展厅</span>
+			<div id="showroom">
+
+			</div>
+			<div class="content-text10 mui-navigate-right">
+				<div id="showroomAdd"></div>
+				<!--<div class="youjiantou" style="position: absolute;right: 0.2rem;top: 0.2rem;"></div>-->
+			</div>
+			<div class="zhuanweifu"></div>
+		</div>
+		<div class="zhanting">
+			<span class="content-text9" id="">仓库</span>
+			<div id="warehouse">
+
+			</div>
+			<div class="ckAddress">
+				<!--<div class="content-text10">
+					<div id="warehouseAdd"></div>
+					<div class="youjiantou" style="position: absolute;right: 0.2rem;top: 0.2rem;"></div>
+				</div>-->
+			</div>
+			<div class="zhuanweifu"></div>
+		</div>
+		<div class="zhanting">
+			<span class="content-text9" id="">工厂</span>
+			<div id="factory"></div>
+			<div class="content-text10 mui-navigate-right">
+				<div id="factoryAdd"></div>
+				<!--<div class="youjiantou" style="position: absolute;right: 0.2rem;top: 0.2rem;"></div>-->
+			</div>
+			<div class="zhuanweifu"></div>
+		</div>
+		<script src="../../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../util/base.js"></script>
+		<script src="js/shopInfo.js"></script>
+	</body>
+
+</html>

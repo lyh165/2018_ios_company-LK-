@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../form_util/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../form_mobile/util/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/future_occupation.css" />
+	</head>
+
+	<body>
+		<div class="occupation">选择你的职业愿景</div>
+		<div class="occupation1">让我们更懂你</div>
+		<div class="normal_button"  style="background: white;">
+			<div class="normal_button_1">
+				<button class="normal_button1" id="xiaoshou">销售</button>
+				<button class="normal_button1_1" style="display: none;">销售</button>
+				<button class="normal_button2" id="gendan">跟单</button>
+				<button class="normal_button2_2" style="display: none;">跟单</button>
+				<button class="normal_button10" id="zhanshi">展示</button>
+				<button class="normal_button10_1" style="display: none;" >展示</button>
+				<button class="normal_button3" id="wenan">文案</button>
+				<button class="normal_button3_1"  style="display: none;">文案</button>
+				<button class="normal_button03" id="cehua">策划</button>
+				<button class="normal_button3_2"  style="display: none;">策划</button>
+			</div>
+			<div class="normal_button_2"> 
+				<button class="normal_button5" id="peixun">培训</button>
+				<button class="normal_button5_1" style="display: none;">培训</button>
+				<button class="normal_button4" id="pingmian">平面</button>
+				<button class="normal_button4_1" style="display: none;">平面</button>
+				<button class="normal_button6" id="xingzheng">行政</button>
+				<button class="normal_button6_1" style="display: none;">行政</button>
+				<button class="normal_button9 huiji" id="kuaiji">会计</button>
+				<button class="normal_button9_01 huiji1" style="display: none;">会计</button>
+				<button class="normal_button9 canpinkaifa" id="chanpinkaifa">产品开发</button>
+				<button class="normal_button9_01 canpinkaifa1" style="display: none;">产品开发</button>
+			</div>
+			<div class="normal_button_3"> 
+				<button class="normal_button7 datangjingli" id="daqujinli">大区经理</button>
+				<button class="normal_button7_1 datangjingli1" style="display: none;">大区经理</button>
+				<button class="normal_button8 shejizongjian" id="shejizongjian">设计总监</button>
+				<button class="normal_button8_1 shejizongjian1" style="display: none;">设计总监</button>
+				<button class="normal_button7 shichangzongjian" id="shichangzongjian">市场总监</button>
+				<button class="normal_button7_1 shichangzongjian1" style="display: none;">市场总监</button>
+				<button class="normal_button7 xiaoshouzongjian" id="xiaoshouzongjian">销售总监</button>
+				<button class="normal_button7_1 xiaoshouzongjian1" style="display: none;">销售总监</button>
+			</div>
+		</div>
+		<div class="submit">
+			<button class="submit_2">选好了</button>
+			<button class="submit_1" style="display: none;" onclick="start()">选好了</button>
+		</div>
+		<script src="../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../util/base.js"></script>
+		<script src="js/future_occupation.js"></script>
+		<script type="text/javascript">
+			var a = 0;
+			mui.init()
+			mui('.normal_button_1').on('tap', '.normal_button1', function() {
+				a = a + 1;
+				$('.normal_button1').css('display','none')
+				$('.normal_button1_1').css('display','')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				
+			})
+			mui('.normal_button_1').on('tap', '.normal_button1_1', function() {
+				a = a - 1;
+				$('.normal_button1_1').css('display','none')
+				$('.normal_button1').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			
+			mui('.normal_button_1').on('tap', '.normal_button2', function() {
+				a = a + 1;
+				$('.normal_button2').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.normal_button2_2').css('display','')
+			})
+			mui('.normal_button_1').on('tap', '.normal_button2_2', function() {
+				a = a - 1;
+				$('.normal_button2_2').css('display','none')
+				$('.normal_button2').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			mui('.normal_button_1').on('tap', '.normal_button3', function() {
+				a = a + 1;
+				$('.normal_button3').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.normal_button3_1').css('display','')
+			})
+			mui('.normal_button_1').on('tap', '.normal_button3_1', function() {
+				a = a - 1;
+				$('.normal_button3_1').css('display','none')
+				$('.normal_button3').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			mui('.normal_button_1').on('tap', '.normal_button10', function() {
+				a = a + 1;
+				$('.normal_button10').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.normal_button10_1').css('display','')
+			})
+			mui('.normal_button_1').on('tap', '.normal_button10_1', function() {
+				a = a - 1;
+				$('.normal_button10_1').css('display','none')
+				$('.normal_button10').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			mui('.normal_button_1').on('tap', '.normal_button03', function() {
+				a = a + 1;
+				$('.normal_button03').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.normal_button3_2').css('display','')
+			})
+			mui('.normal_button_1').on('tap', '.normal_button3_2', function() {
+				a = a - 1;
+				$('.normal_button3_2').css('display','none')
+				$('.normal_button03').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			mui('.normal_button_2').on('tap', '.normal_button5', function() {
+				a = a + 1;
+				$('.normal_button5').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.normal_button5_1').css('display','')
+			})
+			mui('.normal_button_2').on('tap', '.normal_button5_1', function() {
+				a = a - 1;
+				$('.normal_button5_1').css('display','none')
+				$('.normal_button5').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			mui('.normal_button_2').on('tap', '.normal_button5', function() {
+				a = a + 1;
+				$('.normal_button5').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.normal_button5_1').css('display','')
+			})
+			mui('.normal_button_2').on('tap', '.normal_button5_1', function() {
+				a = a - 1;
+				$('.normal_button5_1').css('display','none')
+				$('.normal_button5').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			mui('.normal_button_2').on('tap', '.normal_button4', function() {
+				a = a + 1;
+				$('.normal_button4').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.normal_button4_1').css('display','')
+			})
+			mui('.normal_button_2').on('tap', '.normal_button4_1', function() {
+				a = a - 1;
+				$('.normal_button4_1').css('display','none')
+				$('.normal_button4').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			mui('.normal_button_2').on('tap', '.normal_button6', function() {
+				a = a + 1;
+				$('.normal_button6').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.normal_button6_1').css('display','')
+			})
+			mui('.normal_button_2').on('tap', '.normal_button6_1', function() {
+				a = a - 1;
+				$('.normal_button6_1').css('display','none')
+				$('.normal_button6').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			mui('.normal_button_2').on('tap', '.huiji', function() {
+				a = a + 1;
+				$('.huiji').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.huiji1').css('display','')
+			})
+			mui('.normal_button_2').on('tap', '.huiji1', function() {
+				a = a - 1;
+				$('.huiji1').css('display','none')
+				$('.huiji').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			mui('.normal_button_2').on('tap', '.canpinkaifa', function() {
+				a = a + 1;
+				$('.canpinkaifa').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.canpinkaifa1').css('display','')
+			})
+			mui('.normal_button_2').on('tap', '.canpinkaifa1', function() {
+				a = a - 1;
+				$('.canpinkaifa1').css('display','none')
+				$('.canpinkaifa').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			mui('.normal_button_3').on('tap', '.datangjingli', function() {
+				a = a + 1;
+				$('.datangjingli').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.datangjingli1').css('display','')
+			})
+			mui('.normal_button_3').on('tap', '.datangjingli1', function() {
+				a = a - 1;
+				$('.datangjingli1').css('display','none')
+				$('.datangjingli').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+			
+			mui('.normal_button_3').on('tap', '.shejizongjian', function() {
+				a = a + 1;
+				$('.shejizongjian').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.shejizongjian1').css('display','')
+			})
+			mui('.normal_button_3').on('tap', '.shejizongjian1', function() {
+				a = a - 1;
+				$('.shejizongjian1').css('display','none')
+				$('.shejizongjian').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+				
+			mui('.normal_button_3').on('tap', '.shichangzongjian', function() {
+				a = a + 1;
+				$('.shichangzongjian').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.shichangzongjian1').css('display','')
+			})
+			mui('.normal_button_3').on('tap', '.shichangzongjian1', function() {
+				a = a - 1;
+				$('.shichangzongjian1').css('display','none')
+				$('.shichangzongjian').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+				
+			mui('.normal_button_3').on('tap', '.xiaoshouzongjian', function() {
+				a = a + 1;
+				$('.xiaoshouzongjian').css('display','none')
+				$('.submit_2').css('display','none')
+				$('.submit_1').css('display','')
+				$('.xiaoshouzongjian1').css('display','')
+			})
+			mui('.normal_button_3').on('tap', '.xiaoshouzongjian1', function() {
+				a = a - 1;
+				$('.xiaoshouzongjian1').css('display','none')
+				$('.xiaoshouzongjian').css('display','');
+				if(a<=0){
+					$('.submit_1').css('display','none')
+					$('.submit_2').css('display','')
+				}
+			})
+		</script> 
+	</body>
+</html>

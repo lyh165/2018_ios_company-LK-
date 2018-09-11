@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="../util/swiper/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../form_util/mui/css/mui.min.css" />
+		<link href="../../form_util/mui/css/iconfont.css" rel="stylesheet" />
+		<link href="../../form_mobile/util/base.css" rel="stylesheet" />
+		<link href="css/index.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../form_util/mui/css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../../form_util/mui/css/mui.picker.css" />
+		<!--联系客服样式-->
+	</head>
+
+	<body style="line-height: normal; background: #FFFFFF;">
+		<!--联系客服-->
+		<div class="iconfont icon-lianxikefu lianxikefu"></div>
+		<iframe id="kf" src="http://tb.53kf.com/code/client/10182240/1" width="100%" height="100%" style="position: fixed;left: 0;top: 0; display: none; background-color: #FFFFFF; z-index: 999;"></iframe>
+
+		<div class="dv_dialog_box1" id="bg1" style="display: none;">
+			<div class="dv_dialog">
+				<div class="dv_title">189-2768-798</div>
+				<div class="dividerccc" style="background:#CCCCCC; height: 1px ; border:none"></div>
+				<div class="close horizontal">
+					<div class="dialog_cancel" onclick="changname_cancel()">取消</div>
+					<div class="dialog_ok" onclick="changename_sure()" style="background: #F62525;color: #ffffff;border-radius: 0 0 10px 0">呼叫</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="tabbar" class="mui-control-content mui-active mui-content" style="background: white;">
+			<div class="actionbar">
+				<div class="left" style="width:60px;" onclick="getRegion()">
+					<span class="dizhi"><span id="dingwei">定位中</span><img src="../../form_mobile/util/img/jiantouxia.png" alt=""></span>
+				</div>
+				<span class="text" style="color: #333333;">首页</span>
+				<a onclick="showSign()">
+					<div class="right" style="color: #333333; font-size: 14px;">
+						签到
+					</div>
+				</a>
+			</div>
+
+			<div class="gekai " style="height: 3.75rem;"></div>
+			<span id="advertising_data" onclick="openTuanGou()">
+				<!--广告图-->
+			</span>
+			<!--	<div id="slider" class="swiper-container mui-slider" style="margin-top: -0.4rem;">-->
+			<!--轮播-->
+			<!--<div class="swiper-wrapper" id="fristCarousel">
+				</div>
+				<div class="swiper-pagination">
+				</div>
+			</div>-->
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop" id="fristCarousel">
+
+				</div>
+				<div class="mui-slider-indicator" id="containers">
+
+				</div>
+			</div>
+		</div>
+		<div class="button">
+			<div class="mui-input-row mui-search" style="width: 17.43rem; left: 0.93rem; top: 0.8rem; position: absolute;">
+				<input type="search" id="searchData_4" class="mui-input-clear" placeholder="" style="border-radius: 10px 0 0 10px; background: white; border: 1px solid #ff0000; height: 1.87rem;">
+			</div>
+			<div><button class="zhaocizuan" onclick="getOnlineMall($('#searchData_4').val())">找瓷砖</button></div>
+		</div>
+
+		<div class="icon">
+			<a class="a2" onclick="getLogistics()">
+				<span class="mui-icon">
+						<img  src="../../form_mobile/util/img/wuliu2.png"/>
+					</span>
+				<span class="mui-tab-label">找物流</span>
+			</a>
+			<a class="a1" onclick="getJobHunting()">
+				<span class="mui-icon1">
+						<img  src="../../form_mobile/util/img/qiuzhi-jianbian.png"/>
+					</span>
+				<span class="mui-tab-label">招聘/求职</span>
+			</a>
+			<a class="a1" onclick="getService()">
+				<span class="mui-icon1">
+						<img  src="../../form_mobile/util/img/zhaofuwu3.png"/>
+					</span>
+				<span class="mui-tab-label">找服务</span>
+
+			</a>
+			<a class="a1" onclick="getProcess()">
+				<span class="mui-icon1">
+						<img  src="../../form_mobile/util/img/jiagongchang1.png"/>
+					</span>
+				<span class="mui-tab-label">加工厂</span>
+			</a>
+		</div>
+		<div class="content">
+			<div class="content-text">
+				<span class="content-text1">
+						不知道产品名字，没关系请使用精确查找。
+					</span>
+				<a href="#"><span class="accurate" onclick="getOnlineMall_1()">选择条件，精确找砖</span></a>
+			</div>
+			<div class="news">
+				<span class="news-text"></span>
+				<span class="news-text1">陶瓷圈</span>
+				<div id="groupData" onclick="openkuaibao()">
+					<span class="thermal-paper1_1">
+					<span class="thermal-paper1"></span>
+					<span class="thermal-paper1_2"></span>
+					</span>
+				</div>
+				<span class="fengexian1"></span>
+				<a onclick="openkuaibao()"><span class="gengduo1">更多</span></a>
+			</div>
+		</div>
+		<!--推荐店铺-->
+		<div style="padding-bottom: 10px;" onclick="openIBusiness()">
+			<input type="text" value="" id="business_id" style="display: none;" />
+			<a href=""><span class="shop_details">推荐店铺</span></a>
+			<div class="details">
+				<span class="picture1"><img id="business_img_1" src="" style="width: 14.05rem;"/></span>
+				<div style="float: right; margin-right: 0.8rem; margin-top: 0.2rem;">
+					<span class="picture2"><img id="business_img_2" src="" style="width: 7.75rem;"/></span>
+					<span class="picture3"><img id="business_img_3" src="" style="width: 7.75rem;"/></span>
+				</div>
+				<span class="logo"><img id="business_logo_img" src="../../form_mobile/util/img/cailiao2.png" style="width: 2.18rem;"/></span>
+				<div class="cailiao_1">
+					<span class="cailiao" id="business_name"></span>
+					<div id="isziying"> <span class="shop_1"></span></div>
+				</div>
+				<span><button class="shop_shop">进入店铺</button></span>
+			</div>
+		</div>
+		<span id="tejia_show">
+			<div class="special-offer">
+				<span>特价专区</span>
+		<span class="gengduo" onclick="openPage('commodity/commodity.html','commodity')">更多></span>
+		</div>
+
+		<div style="background: #F0F0F0;">
+			<div>
+				<ul class="ul">
+					<span id="special_zonedata">
+				    </span>
+				</ul>
+			</div>
+		</div>
+		</span>
+		<span id="tuijian_show">
+			<div class="special-offer1" style="text-align: center;">
+				<div class="xian"></div>
+				<div class="text1">商品推荐</div>
+				<div class="xian"></div>
+			</div>
+			<div style="background: #F0F0F0;">
+				<div class="shop_1_1">
+					<ul class="ul">
+						<span id="shop_pordata"></span>
+		</ul>
+		</div>
+		</div>
+		</span>
+		<!--推荐物流-->
+		<div class="special-offer1" id="wuliu_show">
+			<span>物流公司</span>
+			<span class="gengduo" onclick="getLogistics()">更多></span>
+		</div>
+		<span id="logisticsdata" class="shop_1_1"></span>
+		<!--推荐招聘-->
+		<div class="special-offer1" id="zhaopin_show">
+			<span>招聘求职</span>
+			<span class="gengduo" onclick="getJobHunting()">更多></span>
+		</div>
+		<div id="recruitdata" class="shop_1_1">
+		</div>
+		<!--推荐服务-->
+		<div class="special-offer1" id="fuwu_show">
+			<span>各种服务</span>
+			<span class="gengduo" onclick="getService()">更多></span>
+		</div>
+		<div id="servicedata" class="shop_1_1 height10">
+		</div>
+		<!--加工厂-->
+		<div class="special-offer1" id="gongchang_show">
+			<span>加工厂</span>
+			<span class="gengduo" onclick="getProcess()">更多></span>
+		</div>
+		<div id="factorydata" class="shop_1_1 height10">
+		</div>
+		<div style="width: 100vw; height: 3.52rem; float: left;"></div>
+
+		<nav class="footer mui-bar mui-bar-tab">
+			<a class="home12 page">
+				<span class="home_img12" style="display: block;"><img src="../../form_mobile/util/img/home01.png" style=" height: 1.34rem;"/></span>
+				<span class="home_12" style="color: #F62525;margin-top: 0.5rem;">首页</span>
+			</a>
+			<a class="online12 page" onclick="openMall()">
+				<span class="online_img12" style="display: block;"><img src="../../form_mobile/util/img/shangcheng.png" style=" height: 1.34rem;"/></span>
+				<span class="online01">在线商城</span>
+			</a>
+			<a class="shopping_12 page" onclick="openCart()">
+				<span class="shopping_img12 car_num" style="display: block;position: relative;"></span>
+				<span class="shopsping_13">购物车</span>
+			</a>
+			<a class="gerenzhongxin12 page" onclick="openMine()">
+				<span class="gerenzhongxin_img12" style="display: block;"><img src="../../form_mobile/util/img/wode.png" style=" height: 1.34rem;"/></span>
+				<span class="gerenzhongxin_12">我的</span>
+			</a>
+		</nav>
+
+		<script src="../../form_util/util/sys_js/jquery.js"></script>
+		<script src="../util/swiper/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../form_util/mui/js/mui.min.js"></script>
+		<script src="../../form_util/util/util_js/bodyUtil.js"></script>
+		<script src="../../form_util/util/util_js/strUtil.js"></script>
+		<script src="../../form_util/util/util_js/jsonUtil.js"></script>
+		<script src="../../form_util/util/util_js/validateUtil.js"></script>
+		<script src="../../form_util/util/util_js/ajaxUtil.js"></script>
+		<script src="../../form_util/util/util_js/publicJsonUtil.js"></script>
+		<script src="../../form_util/mui/js/mui.picker.js"></script>
+		<script src="../../form_util/mui/js/mui.poppicker.js"></script>
+		<script src="../util/base.js"></script>
+		<script src="../util/push.js"></script>
+		<script src="js/index.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init()
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+				interval: 3000 //自动轮播周期，若为0则不自动播放，默认为0；
+			});
+			mui.init({
+				keyEventBind: {
+					backbutton: true //打开back按键监听
+				}
+			});
+			mui.back = function() {
+				var btn = ["确定", "取消"];
+				mui.confirm(' ', '你确定要退出当前应用？', btn, function(e) {
+					if(e.index == 0) {
+						//执行mui封装好的窗口关闭逻辑；
+						plus.runtime.quit();
+					}
+				});
+			}
+		</script>
+	</body>
+
+</html>
